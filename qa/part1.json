@@ -1,0 +1,202 @@
+[
+    {
+      "question": "What is the difference between the specific purpose and the central idea of a speech?",
+      "options": [
+        "Specific purpose is the topic; central idea is the argument.",
+        "Specific purpose states what the speaker hopes to accomplish; the central idea states the main points of the speech.",
+        "Specific purpose is the audience goal; central idea is the speaker's opinion.",
+        "Specific purpose is the attention-getter; central idea is the conclusion."
+      ],
+      "correct_answer": "Specific purpose states what the speaker hopes to accomplish; the central idea states the main points of the speech."
+    },
+    {
+      "question": "What is a preparation outline?",
+      "options": [
+        "A brief outline used during delivery.",
+        "A list of sources for the speech.",
+        "An outline used for impromptu speeches.",
+        "A detailed outline used to plan the speech."
+      ],
+      "correct_answer": "A detailed outline used to plan the speech."
+    },
+    {
+      "question": "What is a speaking outline?",
+      "options": [
+        "A full-sentence outline used for preparation.",
+        "A brief outline used during the delivery of a speech.",
+        "A detailed outline used for research.",
+        "An outline that includes only statistics."
+      ],
+      "correct_answer": "A brief outline used during the delivery of a speech."
+    },
+    {
+      "question": "According to the sources, what are the three basic kinds of supporting materials?",
+      "options": [
+        "Stories, facts, and opinions.",
+        "Examples, data, and interviews.",
+        "Examples, statistics, and testimony.",
+        "Anecdotes, numbers, and expert opinions."
+      ],
+      "correct_answer": "Examples, statistics, and testimony."
+    },
+    {
+      "question": "What is extemporaneous delivery?",
+      "options": [
+        "Reading directly from a manuscript.",
+        "Carefully preparing the speech but choosing the exact wording at the moment of delivery.",
+        "Speaking with little or no immediate preparation.",
+        "Memorizing the speech word-for-word."
+      ],
+      "correct_answer": "Carefully preparing the speech but choosing the exact wording at the moment of delivery."
+    },
+    {
+      "question": "What is the fundamental purpose of a commemorative speech?",
+      "options": [
+        "To present an award.",
+        "To introduce a speaker.",
+        "To celebrate or pay tribute.",
+        "To thank an audience."
+      ],
+      "correct_answer": "To celebrate or pay tribute."
+    },
+    {
+      "question": "What are the two major kinds of online speeches?",
+      "options": [
+        "Synchronous and asynchronous.",
+        "Webinar and podcast.",
+        "Recorded and real-time.",
+        "Live and delayed."
+      ],
+      "correct_answer": "Recorded and real-time."
+    },
+    {
+      "question": "What is the difference between denotative and connotative meaning?",
+      "options": [
+        "Denotative is subjective, connotative is objective.",
+        "Denotative is figurative, connotative is literal.",
+        "Denotative is the dictionary definition, connotative is the suggested or implied meaning.",
+        "Denotative is abstract, connotative is concrete."
+      ],
+      "correct_answer": "Denotative is the dictionary definition, connotative is the suggested or implied meaning."
+    },
+    {
+      "question": "What are the three basic issues you must deal with when discussing a question of policy?",
+      "options": [
+        "Facts, values, and actions.",
+        "Need, plan, and practicality.",
+        "Problem, solution, and cost.",
+        "Evidence, reasoning, and emotion."
+      ],
+      "correct_answer": "Need, plan, and practicality."
+    },
+    {
+      "question": "What is Monroe's motivated sequence?",
+      "options": [
+        "A method for analyzing audience demographics.",
+        "A technique for using visual aids effectively.",
+        "A five-step organizational pattern for persuasive speeches seeking immediate action.",
+        "A strategy for organizing informative speeches."
+      ],
+      "correct_answer": "A five-step organizational pattern for persuasive speeches seeking immediate action."
+    },
+    {
+      "question": "What is credibility (ethos) in persuasive speaking?",
+      "options": [
+        "The use of emotional appeals.",
+        "The logical structure of an argument.",
+        "The audience's perception of the speaker's competence and character.",
+        "The quality of the visual aids used."
+      ],
+      "correct_answer": "The audience's perception of the speaker's competence and character."
+    },
+    {
+      "question": "What is the purpose of a preview statement in a speech introduction?",
+      "options": [
+        "To get the audience's attention.",
+        "To establish credibility.",
+        "To signal the end of the speech.",
+        "To summarize the main points to be discussed in the body."
+      ],
+      "correct_answer": "To summarize the main points to be discussed in the body."
+    },
+    {
+      "question": "Which organizational method is most appropriate for persuasive speeches advocating a change in policy by demonstrating a problem and then offering a solution?",
+      "options": [
+        "Chronological order.",
+        "Problem-solution order.",
+        "Topical order.",
+        "Causal order."
+      ],
+      "correct_answer": "Problem-solution order."
+    },
+    {
+      "question": "What should you do when answering audience questions in a Q&A session if you don't know the answer?",
+      "options": [
+        "Try to bluff your way through the answer.",
+        "Evade the question.",
+        "Ignore the question and move to the next one.",
+        "Be honest and say you don't know, offering to follow up."
+      ],
+      "correct_answer": "Be honest and say you don't know, offering to follow up."
+    },
+    {
+      "question": "According to the sources, what is the goal of a persuasive speech when the general purpose is to persuade?",
+      "options": [
+        "To inform the audience about a topic.",
+        "To entertain the audience.",
+        "To change the audience's attitudes or beliefs.",
+        "To win listeners over to your point of view."
+      ],
+      "correct_answer": "To win listeners over to your point of view."
+    },
+    {
+      "question": "What is the goal of an informative speech when the general purpose is to inform?",
+      "options": [
+        "To advocate for a specific policy.",
+        "To communicate information clearly, accurately, and interestingly.",
+        "To entertain the audience.",
+        "To change the audience's attitudes or beliefs."
+      ],
+      "correct_answer": "To communicate information clearly, accurately, and interestingly."
+    },
+    {
+      "question": "What are three criteria for evaluating the soundness of research materials found on the Internet?",
+      "options": [
+        "Length, readability, and source format.",
+        "Authorship, sponsorship, and recency.",
+        "Popularity, design, and user reviews.",
+        "Bias, cost, and ease of access."
+      ],
+      "correct_answer": "Authorship, sponsorship, and recency."
+    },
+    {
+      "question": "What is peer testimony?",
+      "options": [
+        "Testimony from recognized experts.",
+        "Testimony used only in legal settings.",
+        "Testimony from ordinary people with firsthand experience.",
+        "Testimony from friends or family."
+      ],
+      "correct_answer": "Testimony from ordinary people with firsthand experience."
+    },
+    {
+      "question": "What does it mean to tailor your message to your audience?",
+      "options": [
+        "Speaking in a casual, conversational tone.",
+        "Using technical jargon the audience won't understand.",
+        "Delivering the same speech to every audience.",
+        "Adapting your message to be clear and convincing to your specific listeners."
+      ],
+      "correct_answer": "Adapting your message to be clear and convincing to your specific listeners."
+    },
+    {
+      "question": "What is the burden of proof in persuasive speeches on questions of policy?",
+      "options": [
+        "The obligation to use statistical evidence.",
+        "The obligation resting with the speaker who advocates change to prove a need for it.",
+        "The obligation to prove the policy is practical.",
+        "The obligation to cite all sources orally."
+      ],
+      "correct_answer": "The obligation resting with the speaker who advocates change to prove a need for it."
+    }
+  ]

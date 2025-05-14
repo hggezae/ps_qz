@@ -1,0 +1,512 @@
+[
+{
+"question": "According to the sources, why is organization important in public speaking?",
+"options": [
+"It allows the speaker to improvise more easily.",
+"It reduces the need for supporting materials.",
+"It is only important for experienced speakers.",
+"It helps the audience understand and follow the speaker's ideas."
+],
+"correct_answer": "It helps the audience understand and follow the speaker's ideas."
+},
+{
+"question": "According to the sources, how many main points should most speeches contain?",
+"options": [
+"One to two",
+"Two to five",
+"Five to ten",
+"As many as needed to cover the topic"
+],
+"correct_answer": "Two to five"
+},
+{
+"question": "What is the first step in organizing the body of a speech?",
+"options": [
+"Writing the introduction.",
+"Gathering all supporting materials.",
+"Determining the main points.",
+"Creating the visual aids."
+],
+"correct_answer": "Determining the main points."
+},
+{
+"question": "According to the sources, what are main points?",
+"options": [
+"The examples used to support ideas.",
+"Words or phrases that connect ideas.",
+"The central features of your speech.",
+"The introduction and conclusion."
+],
+"correct_answer": "The central features of your speech."
+},
+{
+"question": "What method of speech organization follows a time pattern?",
+"options": [
+"Topical order",
+"Chronological order",
+"Spatial order",
+"Problem-solution order"
+],
+"correct_answer": "Chronological order"
+},
+{
+"question": "According to the sources, chronological order is most often used for what type of speeches?",
+"options": [
+"Speeches about controversial issues.",
+"Speeches about historical events or processes.",
+"Speeches arguing for policy changes.",
+"Speeches comparing two different things."
+],
+"correct_answer": "Speeches about historical events or processes."
+},
+{
+"question": "What method of speech organization follows a directional pattern?",
+"options": [
+"Spatial order",
+"Causal order",
+"Topical order",
+"Chronological order"
+],
+"correct_answer": "Spatial order"
+},
+{
+"question": "According to the sources, spatial order is most often used for what type of speeches?",
+"options": [
+"Speeches explaining a sequence of events.",
+"Speeches about objects or places.",
+"Speeches detailing causes and effects.",
+"Speeches on questions of value."
+],
+"correct_answer": "Speeches about objects or places."
+},
+{
+"question": "What method of speech organization is used when main points are organized according to their cause-effect relationship?",
+"options": [
+"Chronological order",
+"Topical order",
+"Causal order",
+"Spatial order"
+],
+"correct_answer": "Causal order"
+},
+{
+"question": "According to the sources, causal order is most often used for what type of speeches?",
+"options": [
+"Speeches explaining how to build something.",
+"Speeches detailing the physical layout of a place.",
+"Speeches about events and concepts.",
+"Speeches about causes and effects."
+],
+"correct_answer": "Speeches about causes and effects."
+},
+{
+"question": "What method of speech organization involves dividing the speech body into two main parts: one showing a problem and the second giving a solution?",
+"options": [
+"Topical order",
+"Problem-solution order",
+"Chronological order",
+"Spatial order"
+],
+"correct_answer": "Problem-solution order"
+},
+{
+"question": "According to the sources, problem-solution order is most appropriate for what type of speeches?",
+"options": [
+"Informative speeches about objects.",
+"Entertaining speeches.",
+"Ceremonial speeches.",
+"Persuasive speeches advocating a change in policy."
+],
+"correct_answer": "Persuasive speeches advocating a change in policy."
+},
+{
+"question": "What method of speech organization results when you divide the speech topic into subtopics, each becoming a main point?",
+"options": [
+"Topical order",
+"Causal order",
+"Spatial order",
+"Chronological order"
+],
+"correct_answer": "Topical order"
+},
+{
+"question": "According to the sources, topical order is applicable to almost any subject and type of speech. Why is it used more often than any other method?",
+"options": [
+"It is the easiest method to develop.",
+"It requires less research.",
+"It is applicable to almost any subject and to any kind of speech.",
+"It makes the speech shorter."
+],
+"correct_answer": "It is applicable to almost any subject and to any kind of speech."
+},
+{
+"question": "According to the sources, which organizational method for main points is used most often by public speakers?",
+"options": [
+"Chronological order",
+"Spatial order",
+"Problem-solution order",
+"Topical order"
+],
+"correct_answer": "Topical order"
+},
+{
+"question": "What is a key tip for preparing main points in a speech?",
+"options": [
+"Use as many main points as possible.",
+"Combine closely related ideas into one main point.",
+"Keep main points clearly separate from one another.",
+"Phrase main points as questions."
+],
+"correct_answer": "Keep main points clearly separate from one another."
+},
+{
+"question": "According to the sources, what is a helpful tip for wording your main points?",
+"options": [
+"Use complex sentence structures.",
+"Vary the wording pattern for each point.",
+"Try to use the same pattern of wording for all main points.",
+"Use jargon and technical terms."
+],
+"correct_answer": "Try to use the same pattern of wording for all main points."
+},
+{
+"question": "According to the sources, what should a speaker do regarding the amount of time devoted to each main point?",
+"options": [
+"Devote the most time to the first main point.",
+"Devote the least time to the final main point.",
+"Roughly balance the amount of time devoted to each main point.",
+"Spend most of the time on supporting materials."
+],
+"correct_answer": "Roughly balance the amount of time devoted to each main point."
+},
+{
+"question": "According to the sources, what are words or phrases that connect the ideas of a speech and indicate the relationships among them?",
+"options": [
+"Main points",
+"Central ideas",
+"Connectives",
+"Supporting materials"
+],
+"correct_answer": "Connectives"
+},
+{
+"question": "According to the sources, what is the main function of connectives in a speech?",
+"options": [
+"To replace supporting materials.",
+"To make the speech longer.",
+"To help the audience follow the speaker's train of thought.",
+"To signal the end of the speech."
+],
+"correct_answer": "To help the audience follow the speaker's train of thought."
+},
+{
+"question": "According to the sources, what type of connective indicates when a speaker has finished one thought and is moving on to another?",
+"options": [
+"Signpost",
+"Internal summary",
+"Transition",
+"Internal preview"
+],
+"correct_answer": "Transition"
+},
+{
+"question": "What is a statement in the body of the speech that lets the audience know what the speaker is going to discuss next?",
+"options": [
+"Transition",
+"Internal preview",
+"Internal summary",
+"Signpost"
+],
+"correct_answer": "Internal preview"
+},
+{
+"question": "What is a statement in the body of the speech that summarizes the speaker's preceding point(s)?",
+"options": [
+"Internal summary",
+"Internal preview",
+"Transition",
+"Signpost"
+],
+"correct_answer": "Internal summary"
+},
+{
+"question": "What is a very brief statement that indicates where a speaker is in the speech or that focuses attention on key ideas?",
+"options": [
+"Transition",
+"Internal preview",
+"Internal summary",
+"Signpost"
+],
+"correct_answer": "Signpost"
+},
+{
+"question": "According to the sources, which of the following is a type of connective?",
+"options": [
+"Bibliography",
+"Main point",
+"Signpost",
+"Central idea"
+],
+"correct_answer": "Signpost"
+},
+{
+"question": "According to the sources, what are the primary objectives of a speech introduction?",
+"options": [
+"To present supporting evidence and conclude.",
+"To get attention, reveal topic, establish credibility, and preview the body.",
+"To ask questions and get feedback.",
+"To summarize the main points and thank the audience."
+],
+"correct_answer": "To get attention, reveal topic, establish credibility, and preview the body."
+},
+{
+"question": "According to the sources, what is the first job of a speech introduction?",
+"options": [
+"To state the central idea.",
+"To present the first main point.",
+"To get the attention and interest of the audience.",
+"To explain the conclusion."
+],
+"correct_answer": "To get the attention and interest of the audience."
+},
+{
+"question": "According to the sources, which of the following is a method you can use in the introduction to get the audience's attention and interest?",
+"options": [
+"Presenting a detailed chart.",
+"Reading statistics from a report.",
+"Telling a story.",
+"Listing all your sources."
+],
+"correct_answer": "Telling a story."
+},
+{
+"question": "What is one method mentioned in the sources for getting the attention and interest of the audience in the introduction?",
+"options": [
+"Avoiding eye contact.",
+"Asking a question.",
+"Speaking in a monotone voice.",
+"Distributing a handout."
+],
+"correct_answer": "Asking a question."
+},
+{
+"question": "According to the sources, what is the second objective of a speech introduction?",
+"options": [
+"To summarize the main points.",
+"To reveal the topic of the speech.",
+"To present the first main point.",
+"To answer audience questions."
+],
+"correct_answer": "To reveal the topic of the speech."
+},
+{
+"question": "According to the sources, what is the third objective of a speech introduction?",
+"options": [
+"To distribute visual aids.",
+"To discuss limitations of the topic.",
+"To establish credibility and goodwill.",
+"To engage in a debate with the audience."
+],
+"correct_answer": "To establish credibility and goodwill."
+},
+{
+"question": "According to the sources, what refers to the audience's attitude toward whether a speaker is qualified to speak on a given topic?",
+"options": [
+"Goodwill",
+"Target audience",
+"Credibility",
+"Frame of reference"
+],
+"correct_answer": "Credibility"
+},
+{
+"question": "According to the sources, what is the fourth objective of a speech introduction?",
+"options": [
+"To present supporting materials.",
+"To entertain the audience.",
+"To preview the body of the speech.",
+"To signal the end of the speech."
+],
+"correct_answer": "To preview the body of the speech."
+},
+{
+"question": "What is a statement in the introduction of a speech that identifies the main points to be discussed in the body?",
+"options": [
+"Specific purpose statement",
+"Transition",
+"Central idea",
+"Preview statement"
+],
+"correct_answer": "Preview statement"
+},
+{
+"question": "According to the sources, approximately what percentage of the entire speech should the introduction be limited to?",
+"options": [
+"Less than 5 percent",
+"5 to 10 percent",
+"10 to 20 percent",
+"More than 20 percent"
+],
+"correct_answer": "10 to 20 percent"
+},
+{
+"question": "According to the sources, what is a tip for preparing your introduction?",
+"options": [
+"Avoid revealing the topic early.",
+"Don't worry about the wording until the speech is finished.",
+"Work out your introduction in detail and practice it.",
+"Make it as long as possible."
+],
+"correct_answer": "Work out your introduction in detail and practice it."
+},
+{
+"question": "According to the sources, what are the major functions of a speech conclusion?",
+"options": [
+"To introduce new ideas and sources.",
+"To present the final supporting materials.",
+"To signal the end and reinforce the central idea.",
+"To ask a series of open-ended questions."
+],
+"correct_answer": "To signal the end and reinforce the central idea."
+},
+{
+"question": "According to the sources, what is the first essential function of a speech conclusion?",
+"options": [
+"To summarize all the evidence.",
+"To introduce a call to action.",
+"To let the audience know you are about to finish.",
+"To apologize for any errors."
+],
+"correct_answer": "To let the audience know you are about to finish."
+},
+{
+"question": "According to the sources, what is the second essential function of a speech conclusion?",
+"options": [
+"To introduce a new perspective.",
+"To reinforce the central idea.",
+"To answer audience questions.",
+"To provide a detailed bibliography."
+],
+"correct_answer": "To reinforce the central idea."
+},
+{
+"question": "According to the sources, what is a common way to signal the end of a speech in the conclusion?",
+"options": [
+"Starting a new story.",
+"Increasing the rate of speaking dramatically.",
+"Using a transition phrase like 'In conclusion'.",
+"Distributing a final handout."
+],
+"correct_answer": "Using a transition phrase like 'In conclusion'."
+},
+{
+"question": "According to the sources, which of the following is a method to reinforce the central idea in the conclusion?",
+"options": [
+"Introducing new evidence.",
+"Asking the audience for their opinions.",
+"Summarizing the main points.",
+"Starting a discussion about unrelated topics."
+],
+"correct_answer": "Summarizing the main points."
+},
+{
+"question": "According to the sources, why is it important to outline your speeches?",
+"options": [
+"It is required for all types of speeches.",
+"It helps you organize your thoughts and visualize the speech structure.",
+"It reduces the need for delivery practice.",
+"It guarantees a perfect speech."
+],
+"correct_answer": "It helps you organize your thoughts and visualize the speech structure."
+},
+{
+"question": "What is a detailed outline developed during the process of speech preparation?",
+"options": [
+"Speaking outline",
+"Key-word outline",
+"Preparation outline",
+"Impromptu outline"
+],
+"correct_answer": "Preparation outline"
+},
+{
+"question": "According to the sources, what is the visual framework of an outline?",
+"options": [
+"The visual aids used in the speech.",
+"The relationships among the speaker's ideas shown by symbolization and indentation.",
+"The physical appearance of the speaker.",
+"The layout of the speaking venue."
+],
+"correct_answer": "The relationships among the speaker's ideas shown by symbolization and indentation."
+},
+{
+"question": "According to the sources, why should main points and subpoints be written in full sentences in the preparation outline?",
+"options": [
+"To make the outline shorter.",
+"To ensure you have a clear understanding of your ideas.",
+"To make it easier to memorize the speech word for word.",
+"To satisfy a specific grading requirement."
+],
+"correct_answer": "To ensure you have a clear understanding of your ideas."
+},
+{
+"question": "According to the sources, what parts of the speech should be clearly labeled in the preparation outline?",
+"options": [
+"Only the main points.",
+"The introduction, body, and conclusion.",
+"Only the supporting materials.",
+"The bibliography and title."
+],
+"correct_answer": "The introduction, body, and conclusion."
+},
+{
+"question": "What is a brief outline used to jog a speaker's memory during the presentation of a speech?",
+"options": [
+"Preparation outline",
+"Detailed outline",
+"Research outline",
+"Speaking outline"
+],
+"correct_answer": "Speaking outline"
+},
+{
+"question": "According to the sources, what is the aim of a speaking outline?",
+"options": [
+"To be submitted to the instructor for grading.",
+"To include every word of the speech.",
+"To help you remember what you want to say.",
+"To serve as a complete manuscript."
+],
+"correct_answer": "To help you remember what you want to say."
+},
+{
+"question": "According to the sources, what guideline should you follow for the speaking outline regarding the visual framework?",
+"options": [
+"Use a completely different visual framework than the preparation outline.",
+"Avoid using any indentation or symbols.",
+"Follow the same visual framework as the preparation outline.",
+"Make the visual framework as complex as possible."
+],
+"correct_answer": "Follow the same visual framework as the preparation outline."
+},
+{
+"question": "According to the sources, what are directions in a speaking outline to help a speaker remember how to deliver the speech?",
+"options": [
+"Main points",
+"Connectives",
+"Delivery cues",
+"Internal summaries"
+],
+"correct_answer": "Delivery cues"
+},
+{
+"question": "According to the sources, which of the following is a guideline for the speaking outline?",
+"options": [
+"Include full sentences for every point.",
+"Write out quotations in full.",
+"Avoid using any notes.",
+"Use a different pattern of indentation from the preparation outline."
+],
+"correct_answer": "Write out quotations in full."
+}
+]

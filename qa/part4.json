@@ -1,0 +1,406 @@
+[
+    {
+      "question": "What is the primary purpose of a speech outline?",
+      "options": [
+        "To memorize the speech word-for-word",
+        "To serve as a script for reading",
+        "To ensure coherent organization and flow",
+        "To impress the audience with writing skills"
+      ],
+      "correct_answer": "To ensure coherent organization and flow"
+    },
+    {
+      "question": "What are the two types of speech outlines discussed in the book?",
+      "options": [
+        "Verbal and written",
+        "Rough and final",
+        "Preparation and speaking",
+        "Introductory and concluding"
+      ],
+      "correct_answer": "Preparation and speaking"
+    },
+    {
+      "question": "Which of the following is a function of a good speech introduction?",
+      "options": [
+        "To summarize all key points",
+        "To provide complete citations",
+        "To gain attention and preview the main points",
+        "To define all terms used in the speech"
+      ],
+      "correct_answer": "To gain attention and preview the main points"
+    },
+    {
+      "question": "Which method is NOT recommended for gaining attention in an introduction?",
+      "options": [
+        "Telling a relevant story",
+        "Quoting a well-known expert",
+        "Apologizing for being unprepared",
+        "Asking a provocative question"
+      ],
+      "correct_answer": "Apologizing for being unprepared"
+    },
+    {
+      "question": "What is the function of a speech conclusion?",
+      "options": [
+        "Introduce a new idea",
+        "End the speech abruptly",
+        "Signal the end and reinforce the central idea",
+        "Restate the introduction word-for-word"
+      ],
+      "correct_answer": "Signal the end and reinforce the central idea"
+    },
+    {
+      "question": "What is one recommended way to reinforce the central idea in a conclusion?",
+      "options": [
+        "Introduce unrelated anecdotes",
+        "Summarize the main points",
+        "List references",
+        "Ask for questions"
+      ],
+      "correct_answer": "Summarize the main points"
+    },
+    {
+      "question": "Why is language choice important in public speaking?",
+      "options": [
+        "It increases the speech’s length",
+        "It makes the speaker sound more educated",
+        "It impacts how clearly ideas are understood",
+        "It ensures the audience is impressed"
+      ],
+      "correct_answer": "It impacts how clearly ideas are understood"
+    },
+    {
+      "question": "What does the term 'concrete language' refer to?",
+      "options": [
+        "Using abstract ideas to explain concepts",
+        "Language that refers to tangible objects",
+        "Words with multiple interpretations",
+        "Technical jargon"
+      ],
+      "correct_answer": "Language that refers to tangible objects"
+    },
+    {
+      "question": "Which of the following enhances rhythm in speech?",
+      "options": [
+        "Using monotone voice",
+        "Repeating the same phrase structure",
+        "Speaking as quickly as possible",
+        "Avoiding transitions"
+      ],
+      "correct_answer": "Repeating the same phrase structure"
+    },
+    {
+      "question": "Which of these is a vivid language technique?",
+      "options": [
+        "Metaphor",
+        "Statistical citation",
+        "Outline numbering",
+        "Subheadings"
+      ],
+      "correct_answer": "Metaphor"
+    },
+  
+  
+    {
+      "question": "What is the key benefit of practicing a speech out loud?",
+      "options": [
+        "To memorize every word",
+        "To discover how it sounds and improve delivery",
+        "To finish the speech faster",
+        "To avoid using an outline"
+      ],
+      "correct_answer": "To discover how it sounds and improve delivery"
+    },
+    {
+      "question": "What does extemporaneous delivery involve?",
+      "options": [
+        "Reading directly from a script",
+        "Memorizing every word",
+        "Delivering with a brief set of notes and preparation",
+        "Speaking with no preparation"
+      ],
+      "correct_answer": "Delivering with a brief set of notes and preparation"
+    },
+    {
+      "question": "Which of these should be avoided during speech delivery?",
+      "options": [
+        "Making eye contact",
+        "Gesturing naturally",
+        "Speaking clearly",
+        "Fidgeting excessively"
+      ],
+      "correct_answer": "Fidgeting excessively"
+    },
+    {
+      "question": "Which of the following is a guideline for using visual aids?",
+      "options": [
+        "Use as many slides as possible",
+        "Pass visual aids around during your talk",
+        "Explain visual aids clearly and integrate them into the speech",
+        "Read directly from the visual aid"
+      ],
+      "correct_answer": "Explain visual aids clearly and integrate them into the speech"
+    },
+    {
+      "question": "When should you reveal a visual aid?",
+      "options": [
+        "After you begin speaking about it",
+        "Before the speech starts",
+        "During your introduction",
+        "At the end of the speech"
+      ],
+      "correct_answer": "After you begin speaking about it"
+    },
+    {
+      "question": "What is the most important rule for using fonts on visual aids?",
+      "options": [
+        "Use fancy cursive fonts",
+        "Keep fonts small to save space",
+        "Make sure text is large and readable",
+        "Use multiple fonts for emphasis"
+      ],
+      "correct_answer": "Make sure text is large and readable"
+    },
+    {
+      "question": "Which type of delivery is considered most natural and conversational?",
+      "options": [
+        "Manuscript",
+        "Extemporaneous",
+        "Memorized",
+        "Impromptu"
+      ],
+      "correct_answer": "Extemporaneous"
+    },
+    {
+      "question": "Why should you avoid turning your back to the audience when using visual aids?",
+      "options": [
+        "It makes your voice louder",
+        "It’s a required academic rule",
+        "It breaks eye contact and disrupts engagement",
+        "It improves stage presence"
+      ],
+      "correct_answer": "It breaks eye contact and disrupts engagement"
+    },
+    {
+      "question": "Which vocal element should a speaker control to maintain audience interest?",
+      "options": [
+        "Volume, pitch, and rate",
+        "Outline and citations",
+        "Word count",
+        "Hand gestures"
+      ],
+      "correct_answer": "Volume, pitch, and rate"
+    },
+    {
+      "question": "Which of the following contributes most to a speaker’s credibility?",
+      "options": [
+        "Wearing formal attire",
+        "Citing statistics frequently",
+        "Speaking with confidence and clarity",
+        "Using complex language"
+      ],
+      "correct_answer": "Speaking with confidence and clarity"
+    },
+    {
+        "question": "What is the main purpose of a speech of acceptance?",
+        "options": [
+            "To explain how the award was won",
+            "To give thanks for an award",
+            "To promote future achievements",
+            "To persuade the audience to support a cause"
+        ],
+        "correct_answer": "To give thanks for an award"
+    },
+    {
+        "question": "Which element is most critical when speaking on special occasions?",
+        "options": [
+            "Technical language",
+            "Formal structure",
+            "Adaptation to the occasion and audience",
+            "Complex vocabulary"
+        ],
+        "correct_answer": "Adaptation to the occasion and audience"
+    },
+    {
+        "question": "In persuasive speaking, credibility is also known as:",
+        "options": [
+            "Logos",
+            "Ethos",
+            "Pathos",
+            "Mythos"
+        ],
+        "correct_answer": "Ethos"
+    },
+    {
+        "question": "Which persuasive appeal targets logic and evidence?",
+        "options": [
+            "Pathos",
+            "Ethos",
+            "Logos",
+            "Mythos"
+        ],
+        "correct_answer": "Logos"
+    },
+    {
+        "question": "How can a speaker best enhance credibility?",
+        "options": [
+            "By memorizing the speech",
+            "By citing sources and demonstrating expertise",
+            "By using emotional appeals",
+            "By speaking very quickly"
+        ],
+        "correct_answer": "By citing sources and demonstrating expertise"
+    },
+    {
+        "question": "What should a speaker avoid in persuasive reasoning?",
+        "options": [
+            "Use of statistics",
+            "Analogies",
+            "Logical fallacies",
+            "Expert opinions"
+        ],
+        "correct_answer": "Logical fallacies"
+    },
+    {
+        "question": "A speech to inspire people at a memorial event is a:",
+        "options": [
+            "Speech of presentation",
+            "Speech of policy",
+            "Commemorative speech",
+            "Informative speech"
+        ],
+        "correct_answer": "Commemorative speech"
+    },
+    {
+        "question": "The best way to foster group participation is to:",
+        "options": [
+            "Talk more than others",
+            "Dominate the conversation",
+            "Encourage contributions from all members",
+            "Speak only when prompted"
+        ],
+        "correct_answer": "Encourage contributions from all members"
+    },
+    {
+        "question": "Which fallacy assumes that because something is popular, it is right?",
+        "options": [
+            "Slippery slope",
+            "Ad hominem",
+            "Bandwagon",
+            "Red herring"
+        ],
+        "correct_answer": "Bandwagon"
+    },
+    {
+        "question": "The best approach to group leadership involves:",
+        "options": [
+            "Fulfilling all roles yourself",
+            "Encouraging cooperation and delegation",
+            "Avoiding responsibilities",
+            "Speaking the most in every meeting"
+        ],
+        "correct_answer": "Encouraging cooperation and delegation"
+    },
+    {
+        "question": "In group presentations, the function of a moderator is to:",
+        "options": [
+            "Do all the speaking",
+            "Handle only the conclusion",
+            "Introduce speakers and manage time",
+            "Prepare the visual aids"
+        ],
+        "correct_answer": "Introduce speakers and manage time"
+    },
+    {
+        "question": "Why is it important to tailor a persuasive speech to the audience?",
+        "options": [
+            "So you can finish quickly",
+            "To confuse them with new ideas",
+            "To address their beliefs and concerns",
+            "To use technical jargon effectively"
+        ],
+        "correct_answer": "To address their beliefs and concerns"
+    },
+    {
+        "question": "Which of these is a valid technique in persuasive speaking?",
+        "options": [
+            "Exaggerating facts",
+            "Appealing to audience values",
+            "Using vague statements",
+            "Skipping counterarguments"
+        ],
+        "correct_answer": "Appealing to audience values"
+    },
+    {
+        "question": "The final step in Monroe’s Motivated Sequence is:",
+        "options": [
+            "Action",
+            "Need",
+            "Satisfaction",
+            "Visualization"
+        ],
+        "correct_answer": "Action"
+    },
+    {
+        "question": "Groupthink can be harmful because:",
+        "options": [
+            "It results in too many opinions",
+            "It suppresses dissenting viewpoints",
+            "It increases productivity",
+            "It ensures diversity of ideas"
+        ],
+        "correct_answer": "It suppresses dissenting viewpoints"
+    },
+    {
+        "question": "A panel discussion is different from a symposium because:",
+        "options": [
+            "It uses only one speaker",
+            "It is more informal and interactive",
+            "It requires a script",
+            "It focuses on ceremonial speech"
+        ],
+        "correct_answer": "It is more informal and interactive"
+    },
+    {
+        "question": "Effective commemorative speeches should primarily:",
+        "options": [
+            "List achievements factually",
+            "Use emotional language and vivid imagery",
+            "Persuade the audience to vote",
+            "Debate controversial topics"
+        ],
+        "correct_answer": "Use emotional language and vivid imagery"
+    },
+    {
+        "question": "In persuasive speaking, evidence is more effective when it is:",
+        "options": [
+            "Vague and emotional",
+            "Current and credible",
+            "Repetitive and generalized",
+            "Confusing and complex"
+        ],
+        "correct_answer": "Current and credible"
+    },
+    {
+        "question": "What is the primary goal of using analogical reasoning?",
+        "options": [
+            "To entertain the audience",
+            "To show similarities between two cases",
+            "To present statistics",
+            "To dismiss opposing views"
+        ],
+        "correct_answer": "To show similarities between two cases"
+    },
+    {
+        "question": "Which kind of persuasive speech deals with moral and ethical judgments?",
+        "options": [
+            "Question of fact",
+            "Question of policy",
+            "Question of value",
+            "Speech of presentation"
+        ],
+        "correct_answer": "Question of value"
+    }
+
+  ]
+  

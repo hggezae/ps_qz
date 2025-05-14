@@ -1,0 +1,206 @@
+
+[
+  {
+    "question": "What is the primary purpose of a speech outline?",
+    "options": [
+      "To memorize the speech word-for-word",
+      "To serve as a script for reading",
+      "To ensure coherent organization and flow",
+      "To impress the audience with writing skills"
+    ],
+    "correct_answer": "To ensure coherent organization and flow"
+  },
+  {
+    "question": "What are the two types of speech outlines discussed in the book?",
+    "options": [
+      "Verbal and written",
+      "Rough and final",
+      "Preparation and speaking",
+      "Introductory and concluding"
+    ],
+    "correct_answer": "Preparation and speaking"
+  },
+  {
+    "question": "Which of the following is a function of a good speech introduction?",
+    "options": [
+      "To summarize all key points",
+      "To provide complete citations",
+      "To gain attention and preview the main points",
+      "To define all terms used in the speech"
+    ],
+    "correct_answer": "To gain attention and preview the main points"
+  },
+  {
+    "question": "Which method is NOT recommended for gaining attention in an introduction?",
+    "options": [
+      "Telling a relevant story",
+      "Quoting a well-known expert",
+      "Apologizing for being unprepared",
+      "Asking a provocative question"
+    ],
+    "correct_answer": "Apologizing for being unprepared"
+  },
+  {
+    "question": "What is the function of a speech conclusion?",
+    "options": [
+      "Introduce a new idea",
+      "End the speech abruptly",
+      "Signal the end and reinforce the central idea",
+      "Restate the introduction word-for-word"
+    ],
+    "correct_answer": "Signal the end and reinforce the central idea"
+  },
+  {
+    "question": "What is one recommended way to reinforce the central idea in a conclusion?",
+    "options": [
+      "Introduce unrelated anecdotes",
+      "Summarize the main points",
+      "List references",
+      "Ask for questions"
+    ],
+    "correct_answer": "Summarize the main points"
+  },
+  {
+    "question": "Why is language choice important in public speaking?",
+    "options": [
+      "It increases the speech’s length",
+      "It makes the speaker sound more educated",
+      "It impacts how clearly ideas are understood",
+      "It ensures the audience is impressed"
+    ],
+    "correct_answer": "It impacts how clearly ideas are understood"
+  },
+  {
+    "question": "What does the term 'concrete language' refer to?",
+    "options": [
+      "Using abstract ideas to explain concepts",
+      "Language that refers to tangible objects",
+      "Words with multiple interpretations",
+      "Technical jargon"
+    ],
+    "correct_answer": "Language that refers to tangible objects"
+  },
+  {
+    "question": "Which of the following enhances rhythm in speech?",
+    "options": [
+      "Using monotone voice",
+      "Repeating the same phrase structure",
+      "Speaking as quickly as possible",
+      "Avoiding transitions"
+    ],
+    "correct_answer": "Repeating the same phrase structure"
+  },
+  {
+    "question": "Which of these is a vivid language technique?",
+    "options": [
+      "Metaphor",
+      "Statistical citation",
+      "Outline numbering",
+      "Subheadings"
+    ],
+    "correct_answer": "Metaphor"
+  },
+
+  // (40 more questions follow in the same format)
+
+  {
+    "question": "What is the key benefit of practicing a speech out loud?",
+    "options": [
+      "To memorize every word",
+      "To discover how it sounds and improve delivery",
+      "To finish the speech faster",
+      "To avoid using an outline"
+    ],
+    "correct_answer": "To discover how it sounds and improve delivery"
+  },
+  {
+    "question": "What does extemporaneous delivery involve?",
+    "options": [
+      "Reading directly from a script",
+      "Memorizing every word",
+      "Delivering with a brief set of notes and preparation",
+      "Speaking with no preparation"
+    ],
+    "correct_answer": "Delivering with a brief set of notes and preparation"
+  },
+  {
+    "question": "Which of these should be avoided during speech delivery?",
+    "options": [
+      "Making eye contact",
+      "Gesturing naturally",
+      "Speaking clearly",
+      "Fidgeting excessively"
+    ],
+    "correct_answer": "Fidgeting excessively"
+  },
+  {
+    "question": "Which of the following is a guideline for using visual aids?",
+    "options": [
+      "Use as many slides as possible",
+      "Pass visual aids around during your talk",
+      "Explain visual aids clearly and integrate them into the speech",
+      "Read directly from the visual aid"
+    ],
+    "correct_answer": "Explain visual aids clearly and integrate them into the speech"
+  },
+  {
+    "question": "When should you reveal a visual aid?",
+    "options": [
+      "After you begin speaking about it",
+      "Before the speech starts",
+      "During your introduction",
+      "At the end of the speech"
+    ],
+    "correct_answer": "After you begin speaking about it"
+  },
+  {
+    "question": "What is the most important rule for using fonts on visual aids?",
+    "options": [
+      "Use fancy cursive fonts",
+      "Keep fonts small to save space",
+      "Make sure text is large and readable",
+      "Use multiple fonts for emphasis"
+    ],
+    "correct_answer": "Make sure text is large and readable"
+  },
+  {
+    "question": "Which type of delivery is considered most natural and conversational?",
+    "options": [
+      "Manuscript",
+      "Extemporaneous",
+      "Memorized",
+      "Impromptu"
+    ],
+    "correct_answer": "Extemporaneous"
+  },
+  {
+    "question": "Why should you avoid turning your back to the audience when using visual aids?",
+    "options": [
+      "It makes your voice louder",
+      "It’s a required academic rule",
+      "It breaks eye contact and disrupts engagement",
+      "It improves stage presence"
+    ],
+    "correct_answer": "It breaks eye contact and disrupts engagement"
+  },
+  {
+    "question": "Which vocal element should a speaker control to maintain audience interest?",
+    "options": [
+      "Volume, pitch, and rate",
+      "Outline and citations",
+      "Word count",
+      "Hand gestures"
+    ],
+    "correct_answer": "Volume, pitch, and rate"
+  },
+  {
+    "question": "Which of the following contributes most to a speaker’s credibility?",
+    "options": [
+      "Wearing formal attire",
+      "Citing statistics frequently",
+      "Speaking with confidence and clarity",
+      "Using complex language"
+    ],
+    "correct_answer": "Speaking with confidence and clarity"
+  }
+]

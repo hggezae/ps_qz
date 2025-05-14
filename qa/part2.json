@@ -1,0 +1,603 @@
+[
+  {
+    "question": "What are the two general purposes of most classroom speeches, according to the sources?",
+    "options": [
+      "To entertain or to demonstrate.",
+      "To inform or to persuade.",
+      "To educate or to analyze.",
+      "To summarize or to critique."
+    ],
+    "correct_answer": "To inform or to persuade."
+  },
+  {
+    "question": "Why is formulating a specific purpose considered an important early step in speech preparation?",
+    "options": [
+      "It helps determine the length of the speech.",
+      "It ensures the speaker uses visual aids effectively.",
+      "It makes it easier to decide what information is relevant.",
+      "It simplifies the delivery of the speech."
+    ],
+    "correct_answer": "It makes it easier to decide what information is relevant."
+  },
+  {
+    "question": "According to the sources, which of the following is a tip for formulating an effective specific purpose statement?",
+    "options": [
+      "Write it as a question to engage the audience.",
+      "Use figurative language for vividness.",
+      "Express it as a fragment for conciseness.",
+      "Write it as a full infinitive phrase."
+    ],
+    "correct_answer": "Write it as a full infinitive phrase."
+  },
+  {
+    "question": "What is the difference between the specific purpose and the central idea of a speech?",
+    "options": [
+      "The specific purpose is for the audience, the central idea is for the speaker.",
+      "The specific purpose states what the speaker hopes to accomplish; the central idea states the main points.",
+      "The specific purpose is written as a statement; the central idea is written as a question.",
+      "The specific purpose is stated in the introduction; the central idea is stated in the conclusion."
+    ],
+    "correct_answer": "The specific purpose states what the speaker hopes to accomplish; the central idea states the main points."
+  },
+  {
+    "question": "Which of the following is a guideline for formulating an effective central idea?",
+    "options": [
+      "Phrase it as a compelling question.",
+      "Include all possible subpoints.",
+      "Phrase it as a statement.",
+      "Use figurative language to make it memorable."
+    ],
+    "correct_answer": "Phrase it as a statement."
+  },
+  {
+    "question": "Why must a public speaker be audience-centered?",
+    "options": [
+      "To make the preparation process faster.",
+      "To ensure the speech is exactly what the speaker wants to say.",
+      "To achieve the goal of the speech.",
+      "To impress the audience with their knowledge."
+    ],
+    "correct_answer": "To achieve the goal of the speech."
+  },
+  {
+    "question": "According to the sources, what does it mean to say that people are egocentric?",
+    "options": [
+      "They are overly concerned with others' opinions.",
+      "They are focused on their own values, beliefs, and well-being.",
+      "They are naturally skeptical of new information.",
+      "They tend to speak more than they listen."
+    ],
+    "correct_answer": "They are focused on their own values, beliefs, and well-being."
+  },
+  {
+    "question": "Which of the following is a demographic trait of audiences discussed in the sources?",
+    "options": [
+      "Listening style.",
+      "Level of nervousness.",
+      "Group membership.",
+      "Speaking rate."
+    ],
+    "correct_answer": "Group membership."
+  },
+  {
+    "question": "What is situational audience analysis?",
+    "options": [
+      "Analyzing the audience's long-term values and beliefs.",
+      "Analyzing the audience in a particular speaking situation.",
+      "Analyzing the audience's prior knowledge of the topic.",
+      "Analyzing the audience's demographic characteristics."
+    ],
+    "correct_answer": "Analyzing the audience in a particular speaking situation."
+  },
+  {
+    "question": "According to the sources, what are the three kinds of questions used in audience-analysis questionnaires?",
+    "options": [
+      "Yes/No, Essay, Multiple Choice.",
+      "Fixed-alternative, Scale, Open-ended.",
+      "Personal, Situational, Topical.",
+      "Informative, Persuasive, Entertaining."
+    ],
+    "correct_answer": "Fixed-alternative, Scale, Open-ended."
+  },
+  {
+    "question": "What is the difference between fixed-alternative questions and scale questions in an audience-analysis questionnaire?",
+    "options": [
+      "Fixed-alternative questions require written answers, while scale questions require numerical answers.",
+      "Fixed-alternative questions offer a range of choices, while scale questions offer a limited number of choices.",
+      "Fixed-alternative questions offer a limited number of choices, while scale questions offer a range of choices.",
+      "Fixed-alternative questions ask about facts, while scale questions ask about opinions."
+    ],
+    "correct_answer": "Fixed-alternative questions offer a limited number of choices, while scale questions offer a range of choices."
+  },
+  {
+    "question": "According to the sources, what is a method a speaker can use to adapt their speech to the audience BEFORE speaking?",
+    "options": [
+      "Make eye contact with audience members.",
+      "Adjust their rate of speaking.",
+      "Anticipate questions and objections.",
+      "Use gestures to emphasize points."
+    ],
+    "correct_answer": "Anticipate questions and objections."
+  },
+  {
+    "question": "According to the sources, what is a method a speaker can use to adapt their speech to the audience DURING the speech?",
+    "options": [
+      "Circulate an audience-analysis questionnaire.",
+      "Keep an eye out for audience feedback.",
+      "Define the purpose of the interview.",
+      "Plan the questionnaire carefully."
+    ],
+    "correct_answer": "Keep an eye out for audience feedback."
+  },
+  {
+    "question": "Why is it important to draw on your own knowledge and experience when gathering materials for a speech?",
+    "options": [
+      "It ensures the speech is completely original.",
+      "It saves time on research.",
+      "It can provide a good starting point for your research.",
+      "It makes library research unnecessary."
+    ],
+    "correct_answer": "It can provide a good starting point for your research."
+  },
+  {
+    "question": "According to the sources, which of the following is a resource for finding information in the library?",
+    "options": [
+      "Social media platforms.",
+      "Personal blogs.",
+      "The library catalogue.",
+      "Online shopping sites."
+    ],
+    "correct_answer": "The library catalogue."
+  },
+  {
+    "question": "According to the sources, what is a criterion for evaluating the soundness of research materials found on the Internet?",
+    "options": [
+      "Number of links to other sites.",
+      "Visual design of the website.",
+      "Objectivity of the source.",
+      "Popularity of the website."
+    ],
+    "correct_answer": "Objectivity of the source."
+  },
+  {
+    "question": "What are the three stages of a research interview?",
+    "options": [
+      "Planning, Conducting, Reporting.",
+      "Before the interview, During the interview, After the interview.",
+      "Introduction, Body, Conclusion.",
+      "Questioning, Answering, Summarizing."
+    ],
+    "correct_answer": "Before the interview, During the interview, After the interview."
+  },
+  {
+    "question": "According to the sources, what should a speaker do BEFORE conducting a research interview?",
+    "options": [
+      "Dress appropriately.",
+      "Repeat the purpose of the interview.",
+      "Review their notes.",
+      "Define the purpose of the interview."
+    ],
+    "correct_answer": "Define the purpose of the interview."
+  },
+  {
+    "question": "According to the sources, what kind of question should a speaker avoid asking during a research interview?",
+    "options": [
+      "Questions about the interviewee's credentials.",
+      "Questions that seek clarification.",
+      "Questions you can answer without the interview.",
+      "Questions about controversial topics."
+    ],
+    "correct_answer": "Questions you can answer without the interview."
+  },
+  {
+    "question": "Why is it recommended to make a separate entry for each quotation or piece of information when taking research notes?",
+    "options": [
+      "It reduces the total number of notes needed.",
+      "It makes notes easier to review and organize.",
+      "It guarantees that all information is accurate.",
+      "It allows you to memorize the information more easily."
+    ],
+    "correct_answer": "It makes notes easier to review and organize."
+  },
+  {
+    "question": "According to the sources, how can a speaker avoid accidental plagiarism when taking research notes?",
+    "options": [
+      "By only using information from books.",
+      "By making a separate entry for each quotation or piece of information.",
+      "By discussing the information with friends.",
+      "By only using information from their own experience."
+    ],
+    "correct_answer": "By making a separate entry for each quotation or piece of information."
+  },
+  {
+    "question": "Why do speakers need supporting materials in their speeches?",
+    "options": [
+      "To make the speech longer.",
+      "To fill time when they forget what to say.",
+      "To make their ideas clear, credible, and vivid.",
+      "To distract the audience from the main points."
+    ],
+    "correct_answer": "To make their ideas clear, credible, and vivid."
+  },
+  {
+    "question": "According to the sources, what are the three kinds of examples discussed?",
+    "options": [
+      "Positive, Negative, Neutral.",
+      "Simple, Complex, Detailed.",
+      "Brief, Extended, Hypothetical.",
+      "Introductory, Supporting, Concluding."
+    ],
+    "correct_answer": "Brief, Extended, Hypothetical."
+  },
+  {
+    "question": "According to the sources, which of the following is a tip for effectively using examples in a speech?",
+    "options": [
+      "Use examples only in the introduction.",
+      "Use as many examples as possible to show extensive research.",
+      "Use examples to clarify unfamiliar or complex ideas.",
+      "Avoid using hypothetical examples."
+    ],
+    "correct_answer": "Use examples to clarify unfamiliar or complex ideas."
+  },
+  {
+    "question": "Why is it easy to lie with statistics?",
+    "options": [
+      "Because statistics are always out of date.",
+      "Because statistics can be easily manipulated or misrepresented.",
+      "Because most people do not understand numbers.",
+      "Because statistics are only useful in science."
+    ],
+    "correct_answer": "Because statistics can be easily manipulated or misrepresented."
+  },
+  {
+    "question": "According to the sources, what is a question a speaker should ask to judge the reliability of statistics?",
+    "options": [
+      "Are the statistics presented visually?",
+      "Are the statistics from a single source?",
+      "Are the statistics representative?",
+      "Are the statistics easy to understand?"
+    ],
+    "correct_answer": "Are the statistics representative?"
+  },
+  {
+    "question": "According to the sources, which of the following is a tip for effectively using statistics in a speech?",
+    "options": [
+      "Use statistics only in the conclusion.",
+      "Round off complicated statistics.",
+      "Read statistics quickly to avoid boring the audience.",
+      "Present statistics without identifying their source."
+    ],
+    "correct_answer": "Round off complicated statistics."
+  },
+  {
+    "question": "According to the sources, what is the difference between expert testimony and peer testimony?",
+    "options": [
+      "Expert testimony comes from personal experience, while peer testimony comes from research.",
+      "Expert testimony comes from recognized authorities, while peer testimony comes from ordinary people.",
+      "Expert testimony is used in informative speeches, while peer testimony is used in persuasive speeches.",
+      "Expert testimony is quoted directly, while peer testimony is paraphrased."
+    ],
+    "correct_answer": "Expert testimony comes from recognized authorities, while peer testimony comes from ordinary people."
+  },
+  {
+    "question": "According to the sources, which of the following is a tip for effectively using testimony in a speech?",
+    "options": [
+      "Paraphrase all testimony to save time.",
+      "Use testimony from anonymous sources to protect privacy.",
+      "Use testimony to reinforce your own ideas.",
+      "Avoid identifying the source of the testimony during the speech."
+    ],
+    "correct_answer": "Use testimony to reinforce your own ideas."
+  },
+  {
+    "question": "According to the sources, what piece of information should a speaker usually provide when making oral source citations?",
+    "options": [
+      "The specific page number of the source.",
+      "The date on which the document was published, posted, or updated.",
+      "The font size used in the source document.",
+      "The website address (URL) in full."
+    ],
+    "correct_answer": "The date on which the document was published, posted, or updated."
+  },
+  {
+    "question": "Why is it important that speeches be organized clearly and coherently?",
+    "options": [
+      "It makes the speaker appear more attractive.",
+      "Listeners demand coherence and cannot easily review ideas.",
+      "It allows the speaker to finish the speech more quickly.",
+      "It eliminates the need for supporting materials."
+    ],
+    "correct_answer": "Listeners demand coherence and cannot easily review ideas."
+  },
+  {
+    "question": "How many main points will a speaker's speeches usually contain, according to the sources?",
+    "options": [
+      "One to two.",
+      "Two to five.",
+      "Five to ten.",
+      "As many as needed to cover the topic fully."
+    ],
+    "correct_answer": "Two to five."
+  },
+  {
+    "question": "Which organizational pattern follows a time pattern?",
+    "options": [
+      "Spatial order.",
+      "Topical order.",
+      "Chronological order.",
+      "Causal order."
+    ],
+    "correct_answer": "Chronological order."
+  },
+  {
+    "question": "Which organizational pattern follows a directional pattern?",
+    "options": [
+      "Topical order.",
+      "Spatial order.",
+      "Problem-solution order.",
+      "Chronological order."
+    ],
+    "correct_answer": "Spatial order."
+  },
+  {
+    "question": "Which organizational pattern organizes main points according to their cause-effect relationship?",
+    "options": [
+      "Causal order.",
+      "Topical order.",
+      "Chronological order.",
+      "Spatial order."
+    ],
+    "correct_answer": "Causal order."
+  },
+  {
+    "question": "In problem-solution order, what is typically covered in the first main point?",
+    "options": [
+      "The solution to the problem.",
+      "The history of the problem.",
+      "The existence and seriousness of the problem.",
+      "The advantages of the current policy."
+    ],
+    "correct_answer": "The existence and seriousness of the problem."
+  },
+  {
+    "question": "Which organizational pattern results when you divide the speech topic into subtopics?",
+    "options": [
+      "Chronological order.",
+      "Causal order.",
+      "Topical order.",
+      "Spatial order."
+    ],
+    "correct_answer": "Topical order."
+  },
+  {
+    "question": "According to the sources, how should supporting materials be used in relation to main points?",
+    "options": [
+      "Supporting materials should replace main points for clarity.",
+      "Supporting materials should be listed before main points.",
+      "Supporting materials should back up and support main points.",
+      "Supporting materials should contradict main points to create interest."
+    ],
+    "correct_answer": "Supporting materials should back up and support main points."
+  },
+  {
+    "question": "What is a connective in a speech?",
+    "options": [
+      "A visual aid that connects ideas.",
+      "A question asked to the audience.",
+      "A word or phrase that connects the ideas of a speech.",
+      "A pause used for emphasis."
+    ],
+    "correct_answer": "A word or phrase that connects the ideas of a speech."
+  },
+  {
+    "question": "Which type of connective is a statement in the body of the speech that lets the audience know what the speaker is going to discuss next?",
+    "options": [
+      "Transition.",
+      "Internal summary.",
+      "Signpost.",
+      "Internal preview."
+    ],
+    "correct_answer": "Internal preview."
+  },
+  {
+    "question": "According to the sources, what is one of the four objectives of a speech introduction?",
+    "options": [
+      "Summarize the main points.",
+      "Reinforce the central idea.",
+      "Establish credibility and goodwill.",
+      "Present detailed evidence."
+    ],
+    "correct_answer": "Establish credibility and goodwill."
+  },
+  {
+    "question": "According to the sources, which of the following is a method a speaker can use in the introduction to gain audience attention and interest?",
+    "options": [
+      "Provide a detailed outline.",
+      "State the specific purpose.",
+      "Tell a story.",
+      "List all sources."
+    ],
+    "correct_answer": "Tell a story."
+  },
+  {
+    "question": "Why is it important for a speaker to establish their credibility in the introduction?",
+    "options": [
+      "To show they have completed their research.",
+      "To make the audience believe the speaker is qualified to speak on the topic.",
+      "To demonstrate they can speak fluently.",
+      "To make the audience like the speaker."
+    ],
+    "correct_answer": "To make the audience believe the speaker is qualified to speak on the topic."
+  },
+  {
+    "question": "What is a preview statement in a speech introduction?",
+    "options": [
+      "A brief story to gain attention.",
+      "A statement outlining the main points to be covered in the body.",
+      "A question posed to the audience.",
+      "A summary of the research conducted."
+    ],
+    "correct_answer": "A statement outlining the main points to be covered in the body."
+  },
+  {
+    "question": "According to the sources, what is one of the major functions of a speech conclusion?",
+    "options": [
+      "Introduce the next speaker.",
+      "Signal the end of the speech.",
+      "Present new information.",
+      "Argue for a controversial viewpoint."
+    ],
+    "correct_answer": "Signal the end of the speech."
+  },
+  {
+    "question": "According to the sources, what is one way a speaker can signal the end of their speech?",
+    "options": [
+      "By increasing their speaking rate.",
+      "By changing their tone of voice or pacing.",
+      "By avoiding eye contact.",
+      "By introducing a new topic."
+    ],
+    "correct_answer": "By changing their tone of voice or pacing."
+  },
+  {
+    "question": "According to the sources, what is one way a speaker can reinforce the central idea when concluding a speech?",
+    "options": [
+      "Presenting a list of statistics.",
+      "Making a dramatic statement.",
+      "Asking the audience questions.",
+      "Distributing a handout."
+    ],
+    "correct_answer": "Making a dramatic statement."
+  },
+  {
+    "question": "What is a preparation outline?",
+    "options": [
+      "A brief outline used for delivery.",
+      "A detailed outline developed during speech preparation.",
+      "An outline created after the speech is given.",
+      "A visual aid used during the speech."
+    ],
+    "correct_answer": "A detailed outline developed during speech preparation."
+  },
+  {
+    "question": "What is a speaking outline?",
+    "options": [
+      "A detailed outline containing full sentences.",
+      "A brief outline used to jog a speaker's memory during delivery.",
+      "An outline used only for impromptu speeches.",
+      "An outline that includes all supporting materials in full."
+    ],
+    "correct_answer": "A brief outline used to jog a speaker's memory during delivery."
+  },
+  {
+    "question": "According to the sources, how does language help create our sense of reality?",
+    "options": [
+      "By limiting our thoughts and feelings.",
+      "By providing the labels and categories we use to understand the world.",
+      "By allowing us to speak faster.",
+      "By making abstract ideas concrete."
+    ],
+    "correct_answer": "By providing the labels and categories we use to understand the world."
+  },
+  {
+    "question": "According to the sources, what is the difference between denotative and connotative meaning?",
+    "options": [
+      "Denotative meaning is figurative, while connotative meaning is literal.",
+      "Denotative meaning is emotional, while connotative meaning is logical.",
+      "Denotative meaning is subjective, while connotative meaning is objective.",
+      "Denotative meaning is the literal dictionary definition, while connotative meaning is the emotional or associated meaning."
+    ],
+    "correct_answer": "Denotative meaning is the literal dictionary definition, while connotative meaning is the emotional or associated meaning."
+  },
+  {
+    "question": "According to the sources, how can a speaker make their language clear?",
+    "options": [
+      "By using technical jargon.",
+      "By using only long, complex sentences.",
+      "By eliminating clutter.",
+      "By relying heavily on abstract words."
+    ],
+    "correct_answer": "By eliminating clutter."
+  },
+  {
+    "question": "According to the sources, what is a major advantage of using visual aids in a speech?",
+    "options": [
+      "They replace the need for oral delivery.",
+      "They make the speech shorter.",
+      "They can increase the clarity of the speaker's message.",
+      "They eliminate speaker nervousness."
+    ],
+    "correct_answer": "They can increase the clarity of the speaker's message."
+  },
+  {
+    "question": "According to the sources, what is a guideline for preparing visual aids?",
+    "options": [
+      "Include as much text as possible on each aid.",
+      "Use multiple typefaces and colors on a single aid.",
+      "Keep them simple and clear.",
+      "Use low-resolution images for smaller file sizes."
+    ],
+    "correct_answer": "Keep them simple and clear."
+  },
+  {
+    "question": "According to the sources, what method of delivery combines careful preparation with spontaneity?",
+    "options": [
+      "Reading from a manuscript.",
+      "Reciting from memory.",
+      "Speaking impromptu.",
+      "Speaking extemporaneously."
+    ],
+    "correct_answer": "Speaking extemporaneously."
+  },
+  {
+    "question": "What does conversational quality in speech delivery refer to?",
+    "options": [
+      "Speaking very quickly.",
+      "Sounding spontaneous while remaining in control.",
+      "Using slang and informal language.",
+      "Avoiding eye contact with the audience."
+     Magistrates, in ancient Rome, 5
+Main points.",
+    "correct_answer": "Sounding spontaneous while remaining in control."
+  },
+  {
+    "question": "According to the sources, what is pitch in relation to a speaker's voice?",
+    "options": [
+      "The loudness or softness of the voice.",
+      "The highness or lowness of the voice.",
+      "The speed at which the speaker talks.",
+      "The purity of vowel and consonant sounds."
+    ],
+    "correct_answer": "The highness or lowness of the voice."
+  },
+  {
+    "question": "According to the sources, what is articulation in speech delivery?",
+    "options": [
+      "Changes in the pitch or rate of the voice.",
+      "The rate at which a person speaks.",
+      "The physical production of speech sounds.",
+      "The accent or pronunciation pattern of a group."
+    ],
+    "correct_answer": "The physical production of speech sounds."
+  },
+  {
+    "question": "According to the sources, which aspect of a speaker's body is mentioned as important for delivery?",
+    "options": [
+      "Posture.",
+      "Handwriting.",
+      "Height.",
+      "Personal appearance."
+    ],
+    "correct_answer": "Personal appearance."
+  },
+  {
+    "question": "According to the sources, what should a speaker do during a question-and-answer session if they don't know the answer to a question?",
+    "options": [
+      "Try to bluff their way through it.",
+      "Change the subject to something they know.",
+      "Admit they don't know the answer.",
+      "Ignore the question and move on."
+    ],
+    "correct_answer": "Admit they don't know the answer."
+  }
+]
