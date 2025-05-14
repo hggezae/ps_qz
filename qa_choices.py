@@ -128,6 +128,58 @@ def init_db():
         )
         ''')
         
+        # Add achievements table
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS achievements (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_name TEXT NOT NULL,
+            achievement_name TEXT NOT NULL,
+            achievement_description TEXT NOT NULL,
+            earned_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            UNIQUE(user_name, achievement_name)
+        )
+        ''')
+        
+        # Add detailed analytics table
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS detailed_analytics (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_name TEXT NOT NULL,
+            quiz_name TEXT NOT NULL,
+            question_id TEXT NOT NULL,
+            time_spent REAL,
+            attempts INTEGER,
+            correct BOOLEAN,
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        ''')
+        
+        # Add quiz feedback table
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS quiz_feedback (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_name TEXT NOT NULL,
+            quiz_name TEXT NOT NULL,
+            rating INTEGER CHECK (rating >= 1 AND rating <= 5),
+            feedback_text TEXT,
+            difficulty_rating INTEGER CHECK (difficulty_rating >= 1 AND difficulty_rating <= 5),
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        ''')
+        
+        # Add learning paths table
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS learning_paths (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_name TEXT NOT NULL,
+            path_name TEXT NOT NULL,
+            current_level INTEGER DEFAULT 1,
+            completed_quizzes TEXT,
+            next_quiz TEXT,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        ''')
+        
         conn.commit()
 
 def load_user_scores():
@@ -648,6 +700,9 @@ def display_quiz_results(current_quiz_file=None, quiz_files=None):
             average_score=average_score
         )
         st.success(f"Results saved for user: {user_name}")
+        
+        # After saving score to database, check for achievements
+        check_achievements(user_name, score_percentage, quiz_name)
     
     # Button to start a new quiz
     if st.button("Start a New Quiz"):
@@ -791,244 +846,92 @@ def display_saved_sessions():
                 # Skip this session if there's a key conflict
                 continue
 
-def display_profile_page():
-    """Display the user profile page."""
-    st.title(f"👤 Profile: {st.session_state.user_name}")
+def display_quiz_review(current_quiz_file=None):
+    """Display quiz review mode with explanations and learning resources."""
+    st.title("📖 Quiz Review")
     
-    # Create tabs for different profile sections
-    tab1, tab2 = st.tabs(["My Statistics", "Account Settings"])
-    
-    with tab1:
-        # Load user scores
-        user_scores = load_user_scores()
-        if st.session_state.user_name in user_scores:
-            user_entries = user_scores[st.session_state.user_name]
-            
-            # Calculate statistics
-            all_scores = [entry["score"] for entry in user_entries]
-            best_score = max(all_scores) if all_scores else 0
-            avg_score = sum(all_scores) / len(all_scores) if all_scores else 0
-            total_attempts = len(user_entries)
-            
-            # Display user statistics
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.metric("Total Attempts", total_attempts)
-            with col2:
-                st.metric("Best Score", f"{best_score:.1f}%")
-            with col3:
-                st.metric("Average Score", f"{avg_score:.1f}%")
-            
-            # Display quiz history
-            st.subheader("Quiz History")
-            history_df = pd.DataFrame([
-                {
-                    "Date": entry["timestamp"],
-                    "Quiz": entry["quiz_name"],
-                    "Score": f"{entry['score']:.1f}%",
-                    "Time": format_time(entry["time_taken"])
-                }
-                for entry in user_entries
-            ])
-            st.dataframe(history_df, use_container_width=True)
-        else:
-            st.info("You haven't completed any quizzes yet. Take a quiz to see your statistics!")
-    
-    with tab2:
-        st.subheader("Change Password")
-        current_password = st.text_input("Current Password", type="password", key="current_password")
-        new_password = st.text_input("New Password", type="password", key="new_password")
-        confirm_password = st.text_input("Confirm New Password", type="password", key="confirm_new_password")
-        
-        if st.button("Update Password"):
-            if not current_password or not new_password or not confirm_password:
-                st.warning("Please fill in all password fields.")
-            elif new_password != confirm_password:
-                st.error("New passwords do not match.")
-            elif len(new_password) < 6:
-                st.error("New password must be at least 6 characters long.")
-            elif not authenticate_user(st.session_state.user_name, current_password):
-                st.error("Current password is incorrect.")
-            else:
-                # Update password
-                if update_user_password(st.session_state.user_name, new_password):
-                    st.success("Password updated successfully!")
-                else:
-                    st.error("Failed to update password. Please try again.")
-
-def update_user_password(username, new_password):
-    """Update a user's password."""
-    try:
-        # Generate a new salt
-        salt = os.urandom(32)
-        # Hash the new password with the salt
-        password_hash = hashlib.pbkdf2_hmac(
-            'sha256',
-            new_password.encode('utf-8'),
-            salt,
-            100000
-        )
-        
-        with get_db_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute('''
-            UPDATE users
-            SET password = ?, salt = ?
-            WHERE username = ?
-            ''', (password_hash.hex(), salt.hex(), username))
-            conn.commit()
-            return cursor.rowcount > 0
-    except Exception:
-        return False
-
-def display_quiz_questions(current_quiz_file=None):
-    """Display the current quiz questions with timer and progress bar."""
-    # Display current quiz info
-    if st.session_state.is_exam:
-        st.subheader("📚 50-Question Exam")
-    else:
-        st.subheader(f"Current Quiz: {Path(current_quiz_file).stem} (20 Questions)")
-    
-    # Calculate progress
-    total_questions = len(st.session_state.current_questions)
-    answered_questions = sum(1 for answer in st.session_state.user_answers if answer)
-    progress_percentage = int((answered_questions / total_questions) * 100)
-    
-    # Display progress bar
-    st.progress(progress_percentage / 100)
-    st.write(f"Progress: {answered_questions}/{total_questions} questions answered ({progress_percentage}%)")
-    
-    # Display timer
-    elapsed_time = time.time() - st.session_state.start_time
-    st.write(f"⏱️ Time elapsed: {format_time(elapsed_time)}")
-    
-    # Display questions
     for i, q in enumerate(st.session_state.current_questions):
         st.subheader(f"Question {i+1}: {q['question']}")
         
-        # Use radio buttons for options
-        answer = st.radio(
-            f"Select your answer for question {i+1}:",
-            q['options'],
-            key=f"q_{i}",
-            index=None if not st.session_state.user_answers[i] else q['options'].index(st.session_state.user_answers[i]),
-            disabled=st.session_state.submitted
-        )
+        # Display user's answer and correct answer
+        user_answer = st.session_state.user_answers[i]
+        correct_answer = q['correct_answer']
         
-        # Store the answer in session state and save session
-        if answer and answer != st.session_state.user_answers[i]:
-            st.session_state.user_answers[i] = answer
-            
-            # Save session after each answer
-            if not st.session_state.submitted:
-                session_data = {
-                    'user_name': st.session_state.user_name,
-                    'quiz_name': "50-Question Exam" if st.session_state.is_exam else Path(current_quiz_file).stem,
-                    'questions': st.session_state.current_questions,
-                    'user_answers': st.session_state.user_answers,
-                    'start_time': st.session_state.start_time,
-                    'is_exam': st.session_state.is_exam,
-                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                }
-                save_session(st.session_state.session_id, session_data)
+        col1, col2 = st.columns(2)
+        with col1:
+            st.write("Your Answer:", "✅ " if user_answer == correct_answer else "❌ ")
+            st.write(user_answer)
+        with col2:
+            st.write("Correct Answer:")
+            st.write(correct_answer)
+        
+        # Display explanation if available
+        if 'explanation' in q:
+            st.info(f"Explanation: {q['explanation']}")
+        
+        # Display learning resources if available
+        if 'resources' in q:
+            st.write("Learning Resources:")
+            for resource in q['resources']:
+                st.write(f"- {resource}")
         
         st.divider()
     
-    # Create two columns for submit and skip buttons
-    col1, col2 = st.columns(2)
-    
-    # Submit button
-    if not st.session_state.submitted:
-        with col1:
-            if st.button("Submit Quiz"):
-                # Check if all questions are answered
-                if "" in st.session_state.user_answers:
-                    st.error("Please answer all questions before submitting!")
-                else:
-                    st.session_state.submitted = True
-                    st.rerun()
-
-def display_quiz_results(current_quiz_file=None, quiz_files=None):
-    """Display quiz results after submission."""
-    correct_count = 0
-    results_data = []
-    
-    for i, q in enumerate(st.session_state.current_questions):
-        user_answer = st.session_state.user_answers[i]
-        correct = user_answer == q['correct_answer']
-        if correct:
-            correct_count += 1
-        
-        results_data.append({
-            "Question": q['question'],
-            "Your Answer": user_answer,
-            "Correct Answer": q['correct_answer'],
-            "Result": "✅ Correct" if correct else "❌ Wrong"
-        })
-    
-    # Calculate score and time
-    score_percentage = (correct_count / len(st.session_state.current_questions)) * 100
-    final_time = time.time() - st.session_state.start_time
-    
-    # Store the score for this quiz
-    quiz_name = "50-Question Exam" if st.session_state.is_exam else Path(current_quiz_file).stem
-    st.session_state.quiz_scores[quiz_name] = score_percentage
-    
-    # Calculate average score across all completed quizzes
-    completed_quizzes = len(st.session_state.quiz_scores)
-    total_score = sum(st.session_state.quiz_scores.values())
-    average_score = total_score / completed_quizzes if completed_quizzes > 0 else 0
-    
-    # Display score and time
-    st.header("Quiz Results")
-    st.subheader(f"Your Score: {correct_count}/{len(st.session_state.current_questions)} ({score_percentage:.1f}%)")
-    st.subheader(f"Time Taken: {format_time(final_time)}")
-    
-    # Display cumulative results
-    st.subheader("Cumulative Results")
-    st.write(f"Completed Quizzes: {completed_quizzes}")
-    st.write(f"Average Score: {average_score:.1f}%")
-    
-    # Display individual quiz scores
-    st.write("Individual Quiz Scores:")
-    for quiz, score in st.session_state.quiz_scores.items():
-        st.write(f"- {quiz}: {score:.1f}%")
-    
-    # Display results table
-    st.dataframe(pd.DataFrame(results_data), use_container_width=True)
-    
-    # Save score to database (using the logged-in username)
-    user_name = st.session_state.user_name
-    if user_name:
-        # Save score to database
-        save_user_scores(
-            user_name=user_name,
-            quiz_name=quiz_name,
-            score=score_percentage,
-            time_taken=final_time,
-            total_quizzes=completed_quizzes,
-            average_score=average_score
-        )
-        st.success(f"Results saved for user: {user_name}")
-    
-    # Button to start a new quiz
-    if st.button("Start a New Quiz"):
-        # Reset session state for a new quiz
+    if st.button("Back to Quiz Selection"):
         st.session_state.current_questions = None
         st.session_state.user_answers = None
         st.session_state.submitted = False
-        st.session_state.session_id = str(uuid.uuid4())
         st.rerun()
 
-def display_logout_button():
-    """Display a logout button in the sidebar."""
-    if st.sidebar.button("Logout"):
-        # Clear session state
-        for key in list(st.session_state.keys()):
-            if key != 'quiz_scores':  # Keep quiz scores across sessions
-                del st.session_state[key]
-        st.session_state.logged_in = False
-        st.rerun()
+def check_achievements(user_name, score, quiz_name):
+    """Check and award achievements based on user performance."""
+    achievements = []
+    
+    # Score-based achievements
+    if score >= 90:
+        achievements.append(("Perfect Score", "Achieved 90% or higher in a quiz"))
+    elif score >= 80:
+        achievements.append(("Great Performance", "Achieved 80% or higher in a quiz"))
+    
+    # Quiz-specific achievements
+    if quiz_name == "50-Question Exam":
+        achievements.append(("Exam Master", "Completed the 50-question exam"))
+    
+    # Save achievements
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        for achievement_name, description in achievements:
+            try:
+                cursor.execute('''
+                INSERT INTO achievements (user_name, achievement_name, achievement_description)
+                VALUES (?, ?, ?)
+                ''', (user_name, achievement_name, description))
+            except sqlite3.IntegrityError:
+                # Achievement already earned
+                pass
+        conn.commit()
+
+def display_achievements(user_name):
+    """Display user achievements."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+        SELECT achievement_name, achievement_description, earned_at
+        FROM achievements
+        WHERE user_name = ?
+        ORDER BY earned_at DESC
+        ''', (user_name,))
+        achievements = cursor.fetchall()
+        
+        if achievements:
+            st.subheader("🏆 Your Achievements")
+            for name, description, earned_at in achievements:
+                st.write(f"**{name}**")
+                st.write(f"_{description}_")
+                st.write(f"Earned: {earned_at}")
+                st.divider()
+        else:
+            st.info("Complete quizzes to earn achievements!")
 
 ###################
 # Main Application
@@ -1052,6 +955,61 @@ def display_quiz_selection(quiz_files):
             quiz_name = Path(quiz_file).stem
             if st.button(f"📝 {quiz_name}", key=f"quiz_{i}", use_container_width=True):
                 select_quiz(i, quiz_files)
+
+def display_analytics_dashboard():
+    """Display comprehensive analytics dashboard."""
+    st.title("📊 Analytics Dashboard")
+    
+    # Get user scores
+    user_scores = load_user_scores()
+    if st.session_state.user_name in user_scores:
+        user_entries = user_scores[st.session_state.user_name]
+        
+        # Performance over time
+        st.subheader("Performance Over Time")
+        performance_data = pd.DataFrame([
+            {
+                "Date": entry["timestamp"],
+                "Score": entry["score"],
+                "Quiz": entry["quiz_name"]
+            }
+            for entry in user_entries
+        ])
+        st.line_chart(performance_data.set_index("Date")["Score"])
+        
+        # Quiz performance
+        st.subheader("Performance by Quiz")
+        quiz_data = pd.DataFrame([
+            {
+                "Quiz": entry["quiz_name"],
+                "Score": entry["score"]
+            }
+            for entry in user_entries
+        ])
+        st.bar_chart(quiz_data.groupby("Quiz")["Score"].mean())
+        
+        # Time analysis
+        st.subheader("Time Analysis")
+        time_data = pd.DataFrame([
+            {
+                "Quiz": entry["quiz_name"],
+                "Time Taken": entry["time_taken"]
+            }
+            for entry in user_entries
+        ])
+        st.bar_chart(time_data.set_index("Quiz")["Time Taken"])
+        
+        # Overall statistics
+        st.subheader("Overall Statistics")
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Total Quizzes", len(user_entries))
+        with col2:
+            st.metric("Average Score", f"{sum(e['score'] for e in user_entries)/len(user_entries):.1f}%")
+        with col3:
+            st.metric("Total Time", format_time(sum(e['time_taken'] for e in user_entries)))
+    else:
+        st.info("Complete quizzes to see your analytics!")
 
 def main():
     # Initialize session state variables if they don't exist
@@ -1094,26 +1052,102 @@ def main():
     st.title("📝 Quiz App")
     st.write(f"Welcome, {st.session_state.user_name}!")
     
-    # If no quiz is in progress, show quiz selection
-    if st.session_state.current_questions is None:
-        display_quiz_selection(quiz_files)
-        display_saved_sessions()
-    else:
-        # If quiz is in progress but not submitted, show questions
-        if not st.session_state.submitted:
-            # Check if current_quiz_index is not None before using it as an index
-            current_quiz_file = None
-            if not st.session_state.is_exam and st.session_state.current_quiz_index is not None:
-                current_quiz_file = quiz_files[st.session_state.current_quiz_index]
-            display_quiz_questions(current_quiz_file)
-        # If quiz is submitted, show results
+    # Add navigation
+    st.sidebar.title("Navigation")
+    page = st.sidebar.radio("Go to", ["Home", "Analytics", "Achievements"])
+    
+    if page == "Home":
+        # Existing quiz functionality
+        if st.session_state.current_questions is None:
+            display_quiz_selection(quiz_files)
+            display_saved_sessions()
         else:
-            # Check if current_quiz_index is not None before using it as an index
-            current_quiz_file = None
-            if not st.session_state.is_exam and st.session_state.current_quiz_index is not None:
-                current_quiz_file = quiz_files[st.session_state.current_quiz_index]
-            display_quiz_results(current_quiz_file, quiz_files)
+            if not st.session_state.submitted:
+                current_quiz_file = None
+                if not st.session_state.is_exam and st.session_state.current_quiz_index is not None:
+                    current_quiz_file = quiz_files[st.session_state.current_quiz_index]
+                display_quiz_questions(current_quiz_file)
+            else:
+                current_quiz_file = None
+                if not st.session_state.is_exam and st.session_state.current_quiz_index is not None:
+                    current_quiz_file = quiz_files[st.session_state.current_quiz_index]
+                display_quiz_results(current_quiz_file, quiz_files)
+                display_quiz_review(current_quiz_file)
+    
+    elif page == "Analytics":
+        display_analytics_dashboard()
+    
+    elif page == "Achievements":
+        display_achievements(st.session_state.user_name)
 
+def track_question_performance(user_name, quiz_name, question_id, time_spent, attempts, correct):
+    """Track detailed performance for each question."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+        INSERT INTO detailed_analytics 
+        (user_name, quiz_name, question_id, time_spent, attempts, correct)
+        VALUES (?, ?, ?, ?, ?, ?)
+        ''', (user_name, quiz_name, question_id, time_spent, attempts, correct))
+        conn.commit()
+
+def export_quiz(quiz_name):
+    """Export a quiz to a shareable format."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+        SELECT questions, user_answers, quiz_name
+        FROM quiz_sessions
+        WHERE quiz_name = ?
+        ''', (quiz_name,))
+        quiz_data = cursor.fetchone()
+        
+        if quiz_data:
+            return {
+                "quiz_name": quiz_data[2],
+                "questions": json.loads(quiz_data[0]),
+                "answers": json.loads(quiz_data[1])
+            }
+        return None
+
+def import_quiz(quiz_data):
+    """Import a quiz from exported data."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+        INSERT INTO quiz_sessions 
+        (session_id, user_name, quiz_name, questions, user_answers, start_time, is_exam)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        ''', (
+            str(uuid.uuid4()),
+            "imported",
+            quiz_data["quiz_name"],
+            json.dumps(quiz_data["questions"]),
+            json.dumps(quiz_data["answers"]),
+            time.time(),
+            False
+        ))
+        conn.commit()
+
+def submit_quiz_feedback(user_name, quiz_name, rating, feedback_text, difficulty_rating):
+    """Submit feedback for a completed quiz."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+        INSERT INTO quiz_feedback (user_name, quiz_name, rating, feedback_text, difficulty_rating)
+        VALUES (?, ?, ?, ?, ?)
+        ''', (user_name, quiz_name, rating, feedback_text, difficulty_rating))
+        conn.commit()
+
+def create_learning_path(user_name, path_name):
+    """Create a personalized learning path for a user."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+        INSERT INTO learning_paths (user_name, path_name)
+        VALUES (?, ?)
+        ''', (user_name, path_name))
+        conn.commit()
 
 if __name__ == "__main__":
     main()
