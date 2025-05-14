@@ -10,6 +10,9 @@ import uuid
 import os
 import sqlite3
 from contextlib import contextmanager
+# Add these imports at the top
+import hashlib
+import os
 
 # Set page configuration
 st.set_page_config(
@@ -25,16 +28,14 @@ st.set_page_config(
 @contextmanager
 def get_db_connection():
     """Create a database connection."""
-    db_path = Path("quiz_data.db")
+    db_path = Path("quiz.db")
     conn = sqlite3.connect(str(db_path))
     try:
         yield conn
     finally:
         conn.close()
 
-# Add these imports at the top
-import hashlib
-import os
+
 
 # Replace the register_user function
 def register_user(username, password):
@@ -242,32 +243,6 @@ def list_sessions():
         return sessions
 
 # User authentication functions
-def register_user(username, password):
-    """Register a new user in the database."""
-    try:
-        with get_db_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute('''
-            INSERT INTO users (username, password)
-            VALUES (?, ?)
-            ''', (username, password))
-            conn.commit()
-            return True
-    except sqlite3.IntegrityError:
-        # Username already exists
-        return False
-
-def authenticate_user(username, password):
-    """Authenticate a user against the database."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-        cursor.execute('''
-        SELECT username FROM users
-        WHERE username = ? AND password = ?
-        ''', (username, password))
-        user = cursor.fetchone()
-        return user is not None
-
 def get_all_users():
     """Get a list of all registered usernames."""
     with get_db_connection() as conn:
@@ -1107,45 +1082,37 @@ def main():
         return
     
     # Display logout button in sidebar
-    display_logout_button() # Ensure this function is also defined
+    display_logout_button()
     
-    # Display navigation menu and get current page (if implemented)
-    # current_page = display_navigation() # Ensure this function is also defined
-
     # Display user statistics in sidebar
-    st.session_state.selected_user = display_user_statistics() # This line caused the error
+    st.session_state.selected_user = display_user_statistics()
     
     # Get quiz files
     quiz_files = get_quiz_files()
     
-    # Main content display logic based on current_page or quiz state
-    # (This part depends on whether you've implemented the navigation enhancement)
-
-    # Example: If using the navigation enhancement from previous suggestions
-    # current_page = st.session_state.current_page 
-    # if current_page == "Home":
-    #     st.title("📝 Quiz App")
-    #     st.write(f"Welcome, {st.session_state.user_name}!")
-    #     display_quiz_selection(quiz_files) # Ensure this is defined
-    # elif current_page == "Profile":
-    #     display_profile_page() # Ensure this is defined
-    # ... and so on for other pages ...
+    # Main content
+    st.title("📝 Quiz App")
+    st.write(f"Welcome, {st.session_state.user_name}!")
     
-    # Fallback or original logic if navigation is not yet fully integrated:
+    # If no quiz is in progress, show quiz selection
     if st.session_state.current_questions is None:
-        st.title("📝 Quiz App") # Add title here if not handled by navigation
-        st.write(f"Welcome, {st.session_state.user_name}!") # Add welcome message
-        display_quiz_selection(quiz_files) # Ensure this is defined
-        display_saved_sessions() # Ensure this is defined
+        display_quiz_selection(quiz_files)
+        display_saved_sessions()
     else:
         # If quiz is in progress but not submitted, show questions
         if not st.session_state.submitted:
-            current_quiz_file = quiz_files[st.session_state.current_quiz_index] if not st.session_state.is_exam else None
-            display_quiz_questions(current_quiz_file) # Ensure this is defined
+            # Check if current_quiz_index is not None before using it as an index
+            current_quiz_file = None
+            if not st.session_state.is_exam and st.session_state.current_quiz_index is not None:
+                current_quiz_file = quiz_files[st.session_state.current_quiz_index]
+            display_quiz_questions(current_quiz_file)
         # If quiz is submitted, show results
         else:
-            current_quiz_file = quiz_files[st.session_state.current_quiz_index] if not st.session_state.is_exam else None
-            display_quiz_results(current_quiz_file, quiz_files) # Ensure this is defined
+            # Check if current_quiz_index is not None before using it as an index
+            current_quiz_file = None
+            if not st.session_state.is_exam and st.session_state.current_quiz_index is not None:
+                current_quiz_file = quiz_files[st.session_state.current_quiz_index]
+            display_quiz_results(current_quiz_file, quiz_files)
 
 
 if __name__ == "__main__":
