@@ -1,0 +1,203 @@
+[
+    {
+      "question": "During a public forum, a speaker argues, 'This environmental bill is flawed because its main sponsor has accepted donations from oil companies.' Which fallacy is being committed?",
+      "options": [
+        "Red herring",
+        "False cause",
+        "Ad hominem",
+        "Appeal to novelty"
+      ],
+      "correct_answer": "Ad hominem"
+    },
+    {
+      "question": "A speaker says: 'If we allow just one exception to our curfew policy, everyone will expect special treatment, and it will become unenforceable.' Identify the fallacy.",
+      "options": [
+        "Appeal to tradition",
+        "False cause",
+        "Either-or",
+        "Slippery slope"
+      ],
+      "correct_answer": "Slippery slope"
+    },
+    {
+      "question": "A campaign ad argues: 'This candidate supports modernizing our transportation system—but why should we trust someone who’s been divorced twice?' What fallacy is used?",
+      "options": [
+        "Appeal to novelty",
+        "Red herring",
+        "Hasty generalization",
+        "Ad hominem"
+      ],
+      "correct_answer": "Ad hominem"
+    },
+    {
+      "question": "An editorial states: 'All successful entrepreneurs dropped out of college—clearly, college is not necessary for success.' What fallacy is at work here?",
+      "options": [
+        "False cause",
+        "Bandwagon",
+        "Hasty generalization",
+        "Invalid analogy"
+      ],
+      "correct_answer": "Hasty generalization"
+    },
+    {
+      "question": "A speaker claims: 'Every time we open a new community center, property crime drops. So community centers prevent crime.' Which fallacy does this reflect?",
+      "options": [
+        "Appeal to novelty",
+        "Bandwagon",
+        "False cause",
+        "Slippery slope"
+      ],
+      "correct_answer": "False cause"
+    },
+    {
+      "question": "During a debate, someone argues: 'This policy won’t work—we’ve never done anything like it before.' Identify the fallacy.",
+      "options": [
+        "Appeal to tradition",
+        "Red herring",
+        "Appeal to novelty",
+        "Invalid analogy"
+      ],
+      "correct_answer": "Appeal to tradition"
+    },
+    {
+      "question": "A city council member says: 'Our city has been using this funding model for 40 years. Why change it now?' Which fallacy is being committed?",
+      "options": [
+        "Slippery slope",
+        "Appeal to tradition",
+        "False cause",
+        "Red herring"
+      ],
+      "correct_answer": "Appeal to tradition"
+    },
+    {
+      "question": "A business executive claims: 'We should adopt this software—every Fortune 500 company is using it.' Which fallacy does this illustrate?",
+      "options": [
+        "Bandwagon",
+        "Invalid analogy",
+        "False cause",
+        "Either-or"
+      ],
+      "correct_answer": "Bandwagon"
+    },
+    {
+      "question": "A professor says: 'Students either support this new curriculum or they don't care about education.' What fallacy is committed here?",
+      "options": [
+        "Either-or",
+        "Red herring",
+        "Hasty generalization",
+        "Appeal to novelty"
+      ],
+      "correct_answer": "Either-or"
+    },
+    {
+      "question": "A blogger argues: 'Since crime dropped after the new mayor took office, her leadership is clearly the cause.' What is the fallacy?",
+      "options": [
+        "Slippery slope",
+        "Invalid analogy",
+        "False cause",
+        "Bandwagon"
+      ],
+      "correct_answer": "False cause"
+    },
+    {
+      "question": "In a team meeting, someone says: 'The last time we let marketing lead the project, we lost clients. So we can't let that happen again.' What fallacy does this reflect?",
+      "options": [
+        "Red herring",
+        "Hasty generalization",
+        "False cause",
+        "Ad hominem"
+      ],
+      "correct_answer": "Hasty generalization"
+    },
+    {
+      "question": "A parent says, 'You want to try a new parenting technique? That’s never worked for us in the past.' Identify the fallacy.",
+      "options": [
+        "Ad hominem",
+        "Appeal to novelty",
+        "Appeal to tradition",
+        "False cause"
+      ],
+      "correct_answer": "Appeal to tradition"
+    },
+    {
+      "question": "A speaker claims: 'Installing solar panels is clearly the right move—our competitors are all doing it.' What fallacy is being used?",
+      "options": [
+        "Bandwagon",
+        "Slippery slope",
+        "Ad hominem",
+        "Either-or"
+      ],
+      "correct_answer": "Bandwagon"
+    },
+    {
+      "question": "A social media post says: 'Don’t listen to the climate scientist—he lives in a big house and flies in private jets.' Identify the fallacy.",
+      "options": [
+        "Red herring",
+        "Ad hominem",
+        "False cause",
+        "Hasty generalization"
+      ],
+      "correct_answer": "Ad hominem"
+    },
+    {
+      "question": "A product pitch says: 'This new phone must be superior—it just launched last week!' Which fallacy is committed?",
+      "options": [
+        "False cause",
+        "Appeal to novelty",
+        "Bandwagon",
+        "Invalid analogy"
+      ],
+      "correct_answer": "Appeal to novelty"
+    },
+    {
+      "question": "In a speech, someone argues: 'If we allow this exception to the policy, it will lead to more exceptions, and soon the policy will be useless.' Identify the fallacy.",
+      "options": [
+        "Red herring",
+        "Appeal to novelty",
+        "Slippery slope",
+        "Invalid analogy"
+      ],
+      "correct_answer": "Slippery slope"
+    },
+    {
+      "question": "An author claims: 'This new diet plan is better than all others—it breaks with outdated ideas.' Which fallacy does this show?",
+      "options": [
+        "Bandwagon",
+        "Appeal to novelty",
+        "Red herring",
+        "Ad hominem"
+      ],
+      "correct_answer": "Appeal to novelty"
+    },
+    {
+      "question": "A politician says: 'We should ignore their argument because they’re just trying to score political points.' What fallacy is at work here?",
+      "options": [
+        "Slippery slope",
+        "Ad hominem",
+        "Appeal to tradition",
+        "Invalid analogy"
+      ],
+      "correct_answer": "Ad hominem"
+    },
+    {
+      "question": "A speaker compares updating healthcare policy to rebooting a failing app, stating that both need regular updates. What fallacy may this involve?",
+      "options": [
+        "False cause",
+        "Invalid analogy",
+        "Hasty generalization",
+        "Bandwagon"
+      ],
+      "correct_answer": "Invalid analogy"
+    },
+    {
+      "question": "A colleague argues: 'If we don’t switch to a remote work model now, we’re clearly not a forward-thinking company.' Which fallacy is this?",
+      "options": [
+        "False cause",
+        "Either-or",
+        "Appeal to novelty",
+        "Red herring"
+      ],
+      "correct_answer": "Either-or"
+    }
+  ]
+  

@@ -487,15 +487,5 @@
       "Developing main points."
     ],
     "correct_answer": "Maintaining eye contact."
-  },
-  {
-    "question": "What is Tad favorite color?",
-    "options": [
-      "White",
-      "Green",
-      "Blue",
-      "Red"
-    ],
-    "correct_answer": "Blue"
   }
 ]
