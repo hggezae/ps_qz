@@ -32,6 +32,57 @@ def get_db_connection():
     finally:
         conn.close()
 
+# Add these imports at the top
+import hashlib
+import os
+
+# Replace the register_user function
+def register_user(username, password):
+    """Register a new user in the database with hashed password."""
+    try:
+        # Generate a random salt
+        salt = os.urandom(32)
+        # Hash the password with the salt
+        password_hash = hashlib.pbkdf2_hmac(
+            'sha256',
+            password.encode('utf-8'),
+            salt,
+            100000
+        )
+        # Store both salt and password hash
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            INSERT INTO users (username, password, salt)
+            VALUES (?, ?, ?)
+            ''', (username, password_hash.hex(), salt.hex()))
+            conn.commit()
+            return True
+    except sqlite3.IntegrityError:
+        # Username already exists
+        return False
+
+# Replace the authenticate_user function
+def authenticate_user(username, password):
+    """Authenticate a user against the database using hashed password."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('SELECT password, salt FROM users WHERE username = ?', (username,))
+        user = cursor.fetchone()
+        if user:
+            stored_password, salt = user
+            # Hash the provided password with the stored salt
+            password_hash = hashlib.pbkdf2_hmac(
+                'sha256',
+                password.encode('utf-8'),
+                bytes.fromhex(salt),
+                100000
+            ).hex()
+            # Compare the hashed password with the stored hash
+            return password_hash == stored_password
+        return False
+
+# Update the init_db function to add salt column
 def init_db():
     """Initialize the database with required tables."""
     with get_db_connection() as conn:
@@ -62,6 +113,17 @@ def init_db():
             start_time REAL NOT NULL,
             is_exam BOOLEAN NOT NULL,
             timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        ''')
+        
+        # Create users table for authentication with salt column
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT UNIQUE NOT NULL,
+            password TEXT NOT NULL,
+            salt TEXT NOT NULL,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )
         ''')
         
@@ -178,6 +240,41 @@ def list_sessions():
             })
         
         return sessions
+
+# User authentication functions
+def register_user(username, password):
+    """Register a new user in the database."""
+    try:
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            INSERT INTO users (username, password)
+            VALUES (?, ?)
+            ''', (username, password))
+            conn.commit()
+            return True
+    except sqlite3.IntegrityError:
+        # Username already exists
+        return False
+
+def authenticate_user(username, password):
+    """Authenticate a user against the database."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+        SELECT username FROM users
+        WHERE username = ? AND password = ?
+        ''', (username, password))
+        user = cursor.fetchone()
+        return user is not None
+
+def get_all_users():
+    """Get a list of all registered usernames."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('SELECT username FROM users ORDER BY username')
+        users = cursor.fetchall()
+        return [user[0] for user in users]
 
 # Initialize database on startup
 init_db()
@@ -310,150 +407,163 @@ def start_exam():
 # UI Components
 ###################
 
-def display_user_statistics():
-    """Display user statistics in the sidebar."""
-    user_scores = load_user_scores()
+def display_login_page():
+    """Display the login and registration page."""
+    st.title("📝 Quiz App - Login")
     
-    st.sidebar.title("📊 User Statistics")
-    
-    if not user_scores:
-        st.sidebar.info("No scores recorded yet. Complete a quiz to see your statistics!")
-        return None
-    
-    # Create tabs for different views
-    tab1, tab2 = st.sidebar.tabs(["User Scores", "Leaderboard"])
+    # Create tabs for login and registration
+    tab1, tab2 = st.tabs(["Login", "Register"])
     
     with tab1:
-        # Select user to view
-        selected_user = st.selectbox(
-            "Select User",
-            options=list(user_scores.keys()),
-            key="user_selector_sidebar"
-        )
+        st.subheader("Login to Your Account")
+        username = st.text_input("Username", key="login_username")
+        password = st.text_input("Password", type="password", key="login_password")
         
-        if selected_user:
-            user_entries = user_scores[selected_user]
+        if st.button("Login"):
+            if username and password:
+                if authenticate_user(username, password):
+                    st.session_state.logged_in = True
+                    st.session_state.user_name = username
+                    st.success(f"Welcome back, {username}!")
+                    st.rerun()
+                else:
+                    st.error("Invalid username or password. Please try again.")
+            else:
+                st.warning("Please enter both username and password.")
+    
+    with tab2:
+        st.subheader("Create a New Account")
+        new_username = st.text_input("Choose a Username", key="register_username")
+        new_password = st.text_input("Choose a Password", type="password", key="register_password")
+        confirm_password = st.text_input("Confirm Password", type="password", key="confirm_password")
+        
+        if st.button("Register"):
+            if new_username and new_password:
+                if new_password != confirm_password:
+                    st.error("Passwords do not match. Please try again.")
+                elif len(new_password) < 6:
+                    st.error("Password must be at least 6 characters long.")
+                else:
+                    if register_user(new_username, new_password):
+                        st.success("Registration successful! You can now log in.")
+                        # Switch to login tab
+                        st.session_state.active_tab = "Login"
+                        st.rerun()
+                    else:
+                        st.error("Username already exists. Please choose a different username.")
+            else:
+                st.warning("Please fill in all fields.")
+
+def display_profile_page():
+    """Display the user profile page."""
+    st.title(f"👤 Profile: {st.session_state.user_name}")
+    
+    # Create tabs for different profile sections
+    tab1, tab2 = st.tabs(["My Statistics", "Account Settings"])
+    
+    with tab1:
+        # Load user scores
+        user_scores = load_user_scores()
+        if st.session_state.user_name in user_scores:
+            user_entries = user_scores[st.session_state.user_name]
             
             # Calculate statistics
             all_scores = [entry["score"] for entry in user_entries]
-            best_score = max(all_scores)
-            avg_score = sum(all_scores) / len(all_scores)
+            best_score = max(all_scores) if all_scores else 0
+            avg_score = sum(all_scores) / len(all_scores) if all_scores else 0
             total_attempts = len(user_entries)
             
             # Display user statistics
-            st.metric("Total Attempts", total_attempts)
-            st.metric("Best Score", f"{best_score:.1f}%")
-            st.metric("Average Score", f"{avg_score:.1f}%")
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.metric("Total Attempts", total_attempts)
+            with col2:
+                st.metric("Best Score", f"{best_score:.1f}%")
+            with col3:
+                st.metric("Average Score", f"{avg_score:.1f}%")
             
-            # Display recent attempts
-            st.subheader("Recent Attempts")
-            for entry in sorted(user_entries, key=lambda x: x["timestamp"], reverse=True)[:5]:
-                st.write(f"📝 {entry['quiz_name']}")
-                st.write(f"Score: {entry['score']:.1f}%")
-                st.write(f"Time: {format_time(entry['time_taken'])}")
-                st.write(f"Date: {entry['timestamp']}")
-                st.divider()
+            # Display quiz history
+            st.subheader("Quiz History")
+            history_df = pd.DataFrame([
+                {
+                    "Date": entry["timestamp"],
+                    "Quiz": entry["quiz_name"],
+                    "Score": f"{entry['score']:.1f}%",
+                    "Time": format_time(entry["time_taken"])
+                }
+                for entry in user_entries
+            ])
+            st.dataframe(history_df, use_container_width=True)
+        else:
+            st.info("You haven't completed any quizzes yet. Take a quiz to see your statistics!")
     
     with tab2:
-        # Calculate and display leaderboard
-        leaderboard_data = []
-        for user, entries in user_scores.items():
-            scores = [entry["score"] for entry in entries]
-            leaderboard_data.append({
-                "User": user,
-                "Best Score": max(scores),
-                "Average Score": sum(scores) / len(scores),
-                "Total Attempts": len(entries)
-            })
+        st.subheader("Change Password")
+        current_password = st.text_input("Current Password", type="password", key="current_password")
+        new_password = st.text_input("New Password", type="password", key="new_password")
+        confirm_password = st.text_input("Confirm New Password", type="password", key="confirm_new_password")
         
-        # Sort by best score
-        leaderboard_data.sort(key=lambda x: x["Best Score"], reverse=True)
+        if st.button("Update Password"):
+            if not current_password or not new_password or not confirm_password:
+                st.warning("Please fill in all password fields.")
+            elif new_password != confirm_password:
+                st.error("New passwords do not match.")
+            elif len(new_password) < 6:
+                st.error("New password must be at least 6 characters long.")
+            elif not authenticate_user(st.session_state.user_name, current_password):
+                st.error("Current password is incorrect.")
+            else:
+                # Update password
+                if update_user_password(st.session_state.user_name, new_password):
+                    st.success("Password updated successfully!")
+                else:
+                    st.error("Failed to update password. Please try again.")
+
+def update_user_password(username, new_password):
+    """Update a user's password."""
+    try:
+        # Generate a new salt
+        salt = os.urandom(32)
+        # Hash the new password with the salt
+        password_hash = hashlib.pbkdf2_hmac(
+            'sha256',
+            new_password.encode('utf-8'),
+            salt,
+            100000
+        )
         
-        # Display leaderboard
-        st.subheader("🏆 Leaderboard")
-        for i, entry in enumerate(leaderboard_data, 1):
-            st.write(f"{i}. {entry['User']}")
-            st.write(f"   Best: {entry['Best Score']:.1f}% | Avg: {entry['Average Score']:.1f}%")
-            st.write(f"   Attempts: {entry['Total Attempts']}")
-            st.divider()
-    
-    return selected_user
-
-def display_saved_sessions():
-    """Display saved sessions that can be resumed."""
-    sessions = list_sessions()
-    
-    if not sessions:
-        return
-    
-    st.divider()
-    st.subheader("💾 Saved Sessions")
-    
-    # Create a container for the sessions list
-    sessions_container = st.container()
-    
-    # Display sessions in a grid layout
-    cols = st.columns(3)  # Adjust the number of columns as needed
-    for i, session in enumerate(sessions):
-        with cols[i % 3]:
-            # Create a unique key using timestamp and session ID
-            unique_key = f"session_{session['timestamp'].replace(' ', '_')}_{session['id']}"
-            try:
-                if st.button(
-                    f"📝 {session['user_name']}\n"
-                    f"Quiz: {session['quiz_name']}\n"
-                    f"Progress: {session['progress']}\n"
-                    f"Saved: {session['timestamp']}",
-                    key=unique_key,
-                    use_container_width=True
-                ):
-                    # Load and restore session
-                    session_data = load_session(session['id'])
-                    if session_data:
-                        st.session_state.current_questions = session_data['questions']
-                        st.session_state.user_answers = session_data['user_answers']
-                        st.session_state.start_time = session_data['start_time']
-                        st.session_state.is_exam = session_data.get('is_exam', False)
-                        st.session_state.session_id = session['id']
-                        st.session_state.user_name = session_data['user_name']
-                        st.rerun()
-            except Exception as e:
-                # Skip this session if there's a key conflict
-                continue
-
-def display_quiz_selection(quiz_files):
-    """Display available quizzes as clickable buttons."""
-    st.subheader("Available Quizzes")
-    st.write("Click on any quiz below to start:")
-    
-    # Create a container for quiz links
-    quiz_container = st.container()
-    
-    # Display quiz links in a grid layout
-    cols = st.columns(3)  # Adjust the number of columns as needed
-    for i, quiz_file in enumerate(quiz_files):
-        quiz_name = Path(quiz_file).stem
-        with cols[i % 3]:
-            if st.button(
-                f"📝 {quiz_name}",
-                key=f"quiz_link_{i}",
-                use_container_width=True
-            ):
-                st.session_state.is_exam = False
-                select_quiz(i, quiz_files)
-    
-    # Add 50-question exam button
-    st.divider()
-    if st.button("📚 Start 50-Question Exam", use_container_width=True):
-        start_exam()
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            UPDATE users
+            SET password = ?, salt = ?
+            WHERE username = ?
+            ''', (password_hash.hex(), salt.hex(), username))
+            conn.commit()
+            return cursor.rowcount > 0
+    except Exception:
+        return False
 
 def display_quiz_questions(current_quiz_file=None):
-    """Display the current quiz questions."""
+    """Display the current quiz questions with timer and progress bar."""
     # Display current quiz info
     if st.session_state.is_exam:
         st.subheader("📚 50-Question Exam")
     else:
         st.subheader(f"Current Quiz: {Path(current_quiz_file).stem} (20 Questions)")
+    
+    # Calculate progress
+    total_questions = len(st.session_state.current_questions)
+    answered_questions = sum(1 for answer in st.session_state.user_answers if answer)
+    progress_percentage = int((answered_questions / total_questions) * 100)
+    
+    # Display progress bar
+    st.progress(progress_percentage / 100)
+    st.write(f"Progress: {answered_questions}/{total_questions} questions answered ({progress_percentage}%)")
+    
+    # Display timer
+    elapsed_time = time.time() - st.session_state.start_time
+    st.write(f"⏱️ Time elapsed: {format_time(elapsed_time)}")
     
     # Display questions
     for i, q in enumerate(st.session_state.current_questions):
@@ -550,15 +660,9 @@ def display_quiz_results(current_quiz_file=None, quiz_files=None):
     # Display results table
     st.dataframe(pd.DataFrame(results_data), use_container_width=True)
     
-    # User name input and score saving
-    st.divider()
-    st.subheader("Save Your Results")
-    
-    # Get user name from input or use selected user
-    user_name = st.text_input("Enter your name to save your results:", value=st.session_state.user_name or st.session_state.selected_user)
+    # Save score to database (using the logged-in username)
+    user_name = st.session_state.user_name
     if user_name:
-        st.session_state.user_name = user_name
-        
         # Save score to database
         save_user_scores(
             user_name=user_name,
@@ -568,122 +672,481 @@ def display_quiz_results(current_quiz_file=None, quiz_files=None):
             total_quizzes=completed_quizzes,
             average_score=average_score
         )
-        st.success(f"Results saved for {user_name}!")
-        
-        # Display user statistics
-        st.subheader("User Statistics")
-        user_scores = load_user_scores()
-        user_entries = user_scores.get(user_name, [])
-        if len(user_entries) > 1:
-            all_scores = [entry["score"] for entry in user_entries]
-            st.write(f"Total Attempts: {len(user_entries)}")
-            st.write(f"Best Score: {max(all_scores):.1f}%")
-            st.write(f"Average Score: {sum(all_scores)/len(all_scores):.1f}%")
+        st.success(f"Results saved for user: {user_name}")
     
-    # Create two columns for buttons
+    # Button to start a new quiz
+    if st.button("Start a New Quiz"):
+        # Reset session state for a new quiz
+        st.session_state.current_questions = None
+        st.session_state.user_answers = None
+        st.session_state.submitted = False
+        st.session_state.session_id = str(uuid.uuid4())
+        st.rerun()
+
+def display_logout_button():
+    """Display a logout button in the sidebar."""
+    if st.sidebar.button("Logout"):
+        # Clear session state
+        for key in list(st.session_state.keys()):
+            if key != 'quiz_scores':  # Keep quiz scores across sessions
+                del st.session_state[key]
+        st.session_state.logged_in = False
+        st.rerun()
+
+###################
+# UI Components
+###################
+
+def display_user_statistics():
+    """Display user statistics in the sidebar."""
+    user_scores = load_user_scores()
+
+    st.sidebar.title("📊 User Statistics")
+
+    if not user_scores:
+        st.sidebar.info("No scores recorded yet. Complete a quiz to see your statistics!")
+        return None
+
+    # Create tabs for different views
+    tab1, tab2 = st.sidebar.tabs(["User Scores", "Leaderboard"])
+
+    with tab1:
+        # Select user to view - use all registered users for the dropdown
+        all_users = get_all_users()
+        user_options = [user for user in all_users if user in user_scores]
+
+        if not user_options:
+            st.sidebar.info("No users with scores yet.")
+            return None
+
+        selected_user = st.sidebar.selectbox(
+            "Select User",
+            options=user_options,
+            key="user_selector_sidebar"
+        )
+
+        if selected_user:
+            user_entries = user_scores[selected_user]
+
+            # Calculate statistics
+            all_scores = [entry["score"] for entry in user_entries]
+            best_score = max(all_scores) if all_scores else 0
+            avg_score = sum(all_scores) / len(all_scores) if all_scores else 0
+            total_attempts = len(user_entries)
+
+            # Display user statistics
+            st.sidebar.metric("Total Attempts", total_attempts)
+            st.sidebar.metric("Best Score", f"{best_score:.1f}%")
+            st.sidebar.metric("Average Score", f"{avg_score:.1f}%")
+
+            # Display recent attempts
+            st.sidebar.subheader("Recent Attempts")
+            for entry in sorted(user_entries, key=lambda x: x["timestamp"], reverse=True)[:5]:
+                st.sidebar.write(f"📝 {entry['quiz_name']}")
+                st.sidebar.write(f"Score: {entry['score']:.1f}%")
+                st.sidebar.write(f"Time: {format_time(entry['time_taken'])}")
+                st.sidebar.write(f"Date: {entry['timestamp']}")
+                st.sidebar.divider()
+    
+    with tab2:
+        # Calculate and display leaderboard
+        leaderboard_data = []
+        for user, entries in user_scores.items():
+            scores = [entry["score"] for entry in entries]
+            leaderboard_data.append({
+                "User": user,
+                "Best Score": max(scores) if scores else 0,
+                "Average Score": sum(scores) / len(scores) if scores else 0,
+                "Total Attempts": len(entries)
+            })
+        
+        # Sort by best score
+        leaderboard_data.sort(key=lambda x: x["Best Score"], reverse=True)
+        
+        # Display leaderboard
+        st.sidebar.subheader("🏆 Leaderboard")
+        for i, entry in enumerate(leaderboard_data, 1):
+            st.sidebar.write(f"{i}. {entry['User']}")
+            st.sidebar.write(f"   Best: {entry['Best Score']:.1f}% | Avg: {entry['Average Score']:.1f}%")
+            st.sidebar.write(f"   Attempts: {entry['Total Attempts']}")
+            st.sidebar.divider()
+    
+    return selected_user
+
+def display_saved_sessions():
+    """Display saved sessions that can be resumed."""
+    # Only show sessions for the current logged-in user
+    sessions = list_sessions()
+    current_user = st.session_state.user_name
+    user_sessions = [s for s in sessions if s['user_name'] == current_user]
+    
+    if not user_sessions:
+        return
+    
+    st.divider()
+    st.subheader("💾 Your Saved Sessions")
+    
+    # Create a container for the sessions list
+    sessions_container = st.container()
+    
+    # Display sessions in a grid layout
+    cols = st.columns(3)  # Adjust the number of columns as needed
+    for i, session in enumerate(user_sessions):
+        with cols[i % 3]:
+            # Create a unique key using timestamp and session ID
+            unique_key = f"session_{session['timestamp'].replace(' ', '_')}_{session['id']}"
+            try:
+                if st.button(
+                    f"📝 {session['quiz_name']}\n"
+                    f"Progress: {session['progress']}\n"
+                    f"Saved: {session['timestamp']}",
+                    key=unique_key,
+                    use_container_width=True
+                ):
+                    # Load and restore session
+                    session_data = load_session(session['id'])
+                    if session_data:
+                        st.session_state.current_questions = session_data['questions']
+                        st.session_state.user_answers = session_data['user_answers']
+                        st.session_state.start_time = session_data['start_time']
+                        st.session_state.is_exam = session_data.get('is_exam', False)
+                        st.session_state.session_id = session['id']
+                        st.rerun()
+            except Exception as e:
+                # Skip this session if there's a key conflict
+                continue
+
+def display_profile_page():
+    """Display the user profile page."""
+    st.title(f"👤 Profile: {st.session_state.user_name}")
+    
+    # Create tabs for different profile sections
+    tab1, tab2 = st.tabs(["My Statistics", "Account Settings"])
+    
+    with tab1:
+        # Load user scores
+        user_scores = load_user_scores()
+        if st.session_state.user_name in user_scores:
+            user_entries = user_scores[st.session_state.user_name]
+            
+            # Calculate statistics
+            all_scores = [entry["score"] for entry in user_entries]
+            best_score = max(all_scores) if all_scores else 0
+            avg_score = sum(all_scores) / len(all_scores) if all_scores else 0
+            total_attempts = len(user_entries)
+            
+            # Display user statistics
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.metric("Total Attempts", total_attempts)
+            with col2:
+                st.metric("Best Score", f"{best_score:.1f}%")
+            with col3:
+                st.metric("Average Score", f"{avg_score:.1f}%")
+            
+            # Display quiz history
+            st.subheader("Quiz History")
+            history_df = pd.DataFrame([
+                {
+                    "Date": entry["timestamp"],
+                    "Quiz": entry["quiz_name"],
+                    "Score": f"{entry['score']:.1f}%",
+                    "Time": format_time(entry["time_taken"])
+                }
+                for entry in user_entries
+            ])
+            st.dataframe(history_df, use_container_width=True)
+        else:
+            st.info("You haven't completed any quizzes yet. Take a quiz to see your statistics!")
+    
+    with tab2:
+        st.subheader("Change Password")
+        current_password = st.text_input("Current Password", type="password", key="current_password")
+        new_password = st.text_input("New Password", type="password", key="new_password")
+        confirm_password = st.text_input("Confirm New Password", type="password", key="confirm_new_password")
+        
+        if st.button("Update Password"):
+            if not current_password or not new_password or not confirm_password:
+                st.warning("Please fill in all password fields.")
+            elif new_password != confirm_password:
+                st.error("New passwords do not match.")
+            elif len(new_password) < 6:
+                st.error("New password must be at least 6 characters long.")
+            elif not authenticate_user(st.session_state.user_name, current_password):
+                st.error("Current password is incorrect.")
+            else:
+                # Update password
+                if update_user_password(st.session_state.user_name, new_password):
+                    st.success("Password updated successfully!")
+                else:
+                    st.error("Failed to update password. Please try again.")
+
+def update_user_password(username, new_password):
+    """Update a user's password."""
+    try:
+        # Generate a new salt
+        salt = os.urandom(32)
+        # Hash the new password with the salt
+        password_hash = hashlib.pbkdf2_hmac(
+            'sha256',
+            new_password.encode('utf-8'),
+            salt,
+            100000
+        )
+        
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            UPDATE users
+            SET password = ?, salt = ?
+            WHERE username = ?
+            ''', (password_hash.hex(), salt.hex(), username))
+            conn.commit()
+            return cursor.rowcount > 0
+    except Exception:
+        return False
+
+def display_quiz_questions(current_quiz_file=None):
+    """Display the current quiz questions with timer and progress bar."""
+    # Display current quiz info
+    if st.session_state.is_exam:
+        st.subheader("📚 50-Question Exam")
+    else:
+        st.subheader(f"Current Quiz: {Path(current_quiz_file).stem} (20 Questions)")
+    
+    # Calculate progress
+    total_questions = len(st.session_state.current_questions)
+    answered_questions = sum(1 for answer in st.session_state.user_answers if answer)
+    progress_percentage = int((answered_questions / total_questions) * 100)
+    
+    # Display progress bar
+    st.progress(progress_percentage / 100)
+    st.write(f"Progress: {answered_questions}/{total_questions} questions answered ({progress_percentage}%)")
+    
+    # Display timer
+    elapsed_time = time.time() - st.session_state.start_time
+    st.write(f"⏱️ Time elapsed: {format_time(elapsed_time)}")
+    
+    # Display questions
+    for i, q in enumerate(st.session_state.current_questions):
+        st.subheader(f"Question {i+1}: {q['question']}")
+        
+        # Use radio buttons for options
+        answer = st.radio(
+            f"Select your answer for question {i+1}:",
+            q['options'],
+            key=f"q_{i}",
+            index=None if not st.session_state.user_answers[i] else q['options'].index(st.session_state.user_answers[i]),
+            disabled=st.session_state.submitted
+        )
+        
+        # Store the answer in session state and save session
+        if answer and answer != st.session_state.user_answers[i]:
+            st.session_state.user_answers[i] = answer
+            
+            # Save session after each answer
+            if not st.session_state.submitted:
+                session_data = {
+                    'user_name': st.session_state.user_name,
+                    'quiz_name': "50-Question Exam" if st.session_state.is_exam else Path(current_quiz_file).stem,
+                    'questions': st.session_state.current_questions,
+                    'user_answers': st.session_state.user_answers,
+                    'start_time': st.session_state.start_time,
+                    'is_exam': st.session_state.is_exam,
+                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                }
+                save_session(st.session_state.session_id, session_data)
+        
+        st.divider()
+    
+    # Create two columns for submit and skip buttons
     col1, col2 = st.columns(2)
     
-    with col1:
-        # Restart current quiz button
-        if st.button("Restart Current Quiz"):
-            if st.session_state.is_exam:
-                start_exam()
-            else:
-                select_quiz(st.session_state.current_quiz_index, quiz_files)
+    # Submit button
+    if not st.session_state.submitted:
+        with col1:
+            if st.button("Submit Quiz"):
+                # Check if all questions are answered
+                if "" in st.session_state.user_answers:
+                    st.error("Please answer all questions before submitting!")
+                else:
+                    st.session_state.submitted = True
+                    st.rerun()
+
+def display_quiz_results(current_quiz_file=None, quiz_files=None):
+    """Display quiz results after submission."""
+    correct_count = 0
+    results_data = []
     
-    with col2:
-        # Next quiz button (only show if there are more quizzes and not in exam mode)
-        if not st.session_state.is_exam and st.session_state.current_quiz_index < len(quiz_files) - 1:
-            if st.button("Next Quiz"):
-                st.session_state.current_quiz_index += 1
-                select_quiz(st.session_state.current_quiz_index, quiz_files)
+    for i, q in enumerate(st.session_state.current_questions):
+        user_answer = st.session_state.user_answers[i]
+        correct = user_answer == q['correct_answer']
+        if correct:
+            correct_count += 1
+        
+        results_data.append({
+            "Question": q['question'],
+            "Your Answer": user_answer,
+            "Correct Answer": q['correct_answer'],
+            "Result": "✅ Correct" if correct else "❌ Wrong"
+        })
+    
+    # Calculate score and time
+    score_percentage = (correct_count / len(st.session_state.current_questions)) * 100
+    final_time = time.time() - st.session_state.start_time
+    
+    # Store the score for this quiz
+    quiz_name = "50-Question Exam" if st.session_state.is_exam else Path(current_quiz_file).stem
+    st.session_state.quiz_scores[quiz_name] = score_percentage
+    
+    # Calculate average score across all completed quizzes
+    completed_quizzes = len(st.session_state.quiz_scores)
+    total_score = sum(st.session_state.quiz_scores.values())
+    average_score = total_score / completed_quizzes if completed_quizzes > 0 else 0
+    
+    # Display score and time
+    st.header("Quiz Results")
+    st.subheader(f"Your Score: {correct_count}/{len(st.session_state.current_questions)} ({score_percentage:.1f}%)")
+    st.subheader(f"Time Taken: {format_time(final_time)}")
+    
+    # Display cumulative results
+    st.subheader("Cumulative Results")
+    st.write(f"Completed Quizzes: {completed_quizzes}")
+    st.write(f"Average Score: {average_score:.1f}%")
+    
+    # Display individual quiz scores
+    st.write("Individual Quiz Scores:")
+    for quiz, score in st.session_state.quiz_scores.items():
+        st.write(f"- {quiz}: {score:.1f}%")
+    
+    # Display results table
+    st.dataframe(pd.DataFrame(results_data), use_container_width=True)
+    
+    # Save score to database (using the logged-in username)
+    user_name = st.session_state.user_name
+    if user_name:
+        # Save score to database
+        save_user_scores(
+            user_name=user_name,
+            quiz_name=quiz_name,
+            score=score_percentage,
+            time_taken=final_time,
+            total_quizzes=completed_quizzes,
+            average_score=average_score
+        )
+        st.success(f"Results saved for user: {user_name}")
+    
+    # Button to start a new quiz
+    if st.button("Start a New Quiz"):
+        # Reset session state for a new quiz
+        st.session_state.current_questions = None
+        st.session_state.user_answers = None
+        st.session_state.submitted = False
+        st.session_state.session_id = str(uuid.uuid4())
+        st.rerun()
+
+def display_logout_button():
+    """Display a logout button in the sidebar."""
+    if st.sidebar.button("Logout"):
+        # Clear session state
+        for key in list(st.session_state.keys()):
+            if key != 'quiz_scores':  # Keep quiz scores across sessions
+                del st.session_state[key]
+        st.session_state.logged_in = False
+        st.rerun()
 
 ###################
 # Main Application
 ###################
 
-def main():
-    """Main application function."""
-    # Display user statistics in sidebar and get selected user
-    selected_user = display_user_statistics()
+def display_quiz_selection(quiz_files):
+    """Display the quiz selection interface."""
+    st.subheader("📚 Select a Quiz to Start")
     
-    # Store selected user in session state
-    if 'selected_user' not in st.session_state:
-        st.session_state.selected_user = selected_user
+    # Create a grid layout for quiz selection
+    cols = st.columns(3)  # Adjust number of columns as needed
     
-    st.title("Quiz for Habu Gummama!")
-    
-    # Initialize user name in session state
-    if 'user_name' not in st.session_state:
-        st.session_state.user_name = selected_user if selected_user else ""
-    
-    # Initialize exam state
-    if 'is_exam' not in st.session_state:
-        st.session_state.is_exam = False
-    
-    # Get all quiz files
-    quiz_files = get_quiz_files()
-    
-    if not quiz_files:
-        st.error("No quiz files found in the qa folder!")
-        return
-    
-    # Initialize session state for current quiz index
-    if 'current_quiz_index' not in st.session_state:
-        st.session_state.current_quiz_index = 0
-    
-    # Initialize timer
-    if 'start_time' not in st.session_state:
-        st.session_state.start_time = time.time()
-    
-    # Initialize quiz scores tracking
-    if 'quiz_scores' not in st.session_state:
-        st.session_state.quiz_scores = {}
-    
-    # Load current quiz if not in exam mode
-    current_quiz_file = None
-    if not st.session_state.is_exam:
-        current_quiz_file = quiz_files[st.session_state.current_quiz_index]
-        questions = load_questions(current_quiz_file)
-        
-        if questions is None:
-            st.error("Failed to load the current quiz. Please try selecting another quiz.")
-            return
-        
-        # Get 20 random questions if not already set
-        if 'current_questions' not in st.session_state:
-            st.session_state.current_questions = get_random_questions(questions, 20)
-    else:
-        # For exam mode, ensure we have questions
-        if 'current_questions' not in st.session_state:
+    # Add a button for the 50-question exam
+    with cols[0]:
+        if st.button("📝 Take 50-Question Exam", use_container_width=True):
             start_exam()
     
-    # Initialize or update session state for storing answers
-    if 'user_answers' not in st.session_state or len(st.session_state.user_answers) != len(st.session_state.current_questions):
-        reset_quiz_state(st.session_state.current_questions)
-    
+    # Add buttons for individual quizzes
+    for i, quiz_file in enumerate(quiz_files):
+        with cols[(i+1) % 3]:  # +1 to account for the exam button
+            quiz_name = Path(quiz_file).stem
+            if st.button(f"📝 {quiz_name}", key=f"quiz_{i}", use_container_width=True):
+                select_quiz(i, quiz_files)
+
+def main():
+    # Initialize session state variables if they don't exist
+    if 'current_questions' not in st.session_state:
+        st.session_state.current_questions = None
+    if 'user_answers' not in st.session_state:
+        st.session_state.user_answers = None
     if 'submitted' not in st.session_state:
         st.session_state.submitted = False
+    if 'start_time' not in st.session_state:
+        st.session_state.start_time = None
+    if 'current_quiz_index' not in st.session_state:
+        st.session_state.current_quiz_index = None
+    if 'is_exam' not in st.session_state:
+        st.session_state.is_exam = False
+    if 'quiz_scores' not in st.session_state:
+        st.session_state.quiz_scores = {}
+    if 'user_name' not in st.session_state:
+        st.session_state.user_name = None
+    if 'logged_in' not in st.session_state:
+        st.session_state.logged_in = False
+    if 'current_page' not in st.session_state: # If you've implemented navigation
+        st.session_state.current_page = "Home"
     
-    # Display timer
-    if not st.session_state.submitted:
-        elapsed_time = time.time() - st.session_state.start_time
-        st.markdown(f"### ⏱️ Time Elapsed: {format_time(elapsed_time)}")
+    # Check if user is logged in
+    if not st.session_state.logged_in:
+        display_login_page()
+        return
     
-    # Display quiz questions or results
-    if st.session_state.submitted:
-        display_quiz_results(current_quiz_file, quiz_files)
+    # Display logout button in sidebar
+    display_logout_button() # Ensure this function is also defined
+    
+    # Display navigation menu and get current page (if implemented)
+    # current_page = display_navigation() # Ensure this function is also defined
+
+    # Display user statistics in sidebar
+    st.session_state.selected_user = display_user_statistics() # This line caused the error
+    
+    # Get quiz files
+    quiz_files = get_quiz_files()
+    
+    # Main content display logic based on current_page or quiz state
+    # (This part depends on whether you've implemented the navigation enhancement)
+
+    # Example: If using the navigation enhancement from previous suggestions
+    # current_page = st.session_state.current_page 
+    # if current_page == "Home":
+    #     st.title("📝 Quiz App")
+    #     st.write(f"Welcome, {st.session_state.user_name}!")
+    #     display_quiz_selection(quiz_files) # Ensure this is defined
+    # elif current_page == "Profile":
+    #     display_profile_page() # Ensure this is defined
+    # ... and so on for other pages ...
+    
+    # Fallback or original logic if navigation is not yet fully integrated:
+    if st.session_state.current_questions is None:
+        st.title("📝 Quiz App") # Add title here if not handled by navigation
+        st.write(f"Welcome, {st.session_state.user_name}!") # Add welcome message
+        display_quiz_selection(quiz_files) # Ensure this is defined
+        display_saved_sessions() # Ensure this is defined
     else:
-        display_quiz_questions(current_quiz_file)
-    
-    # Add a divider before the quiz selection section
-    st.divider()
-    
-    # Display available quizzes
-    display_quiz_selection(quiz_files)
-    
-    # Display saved sessions at the bottom
-    display_saved_sessions()
+        # If quiz is in progress but not submitted, show questions
+        if not st.session_state.submitted:
+            current_quiz_file = quiz_files[st.session_state.current_quiz_index] if not st.session_state.is_exam else None
+            display_quiz_questions(current_quiz_file) # Ensure this is defined
+        # If quiz is submitted, show results
+        else:
+            current_quiz_file = quiz_files[st.session_state.current_quiz_index] if not st.session_state.is_exam else None
+            display_quiz_results(current_quiz_file, quiz_files) # Ensure this is defined
+
 
 if __name__ == "__main__":
     main()
