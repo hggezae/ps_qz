@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is one method for choosing a speech topic?",
+    "options": [
+      "Selecting a topic you know nothing about.",
+      "Brainstorming to generate a list of potential topics.",
+      "Choosing a topic unrelated to the audience.",
+      "Focusing only on controversial issues."
+    ],
+    "correct_answer": "Brainstorming to generate a list of potential topics."
+  },
+  {
+    "question": "What is the general purpose of a speech?",
+    "options": [
+      "The specific goal the speaker wants to achieve.",
+      "The broad goal, such as to inform or persuade.",
+      "The main point of the speech.",
+      "The audience's reaction to the speech."
+    ],
+    "correct_answer": "The broad goal, such as to inform or persuade."
+  },
+  {
+    "question": "What is a characteristic of a well-formulated specific purpose statement?",
+    "options": [
+      "It includes multiple ideas to cover.",
+      "It is written as a full sentence with a clear focus.",
+      "It is vague to allow flexibility.",
+      "It focuses only on the speaker's background."
+    ],
+    "correct_answer": "It is written as a full sentence with a clear focus."
+  },
+  {
+    "question": "What is the central idea of a speech?",
+    "options": [
+      "The title of the speech.",
+      "The specific purpose statement.",
+      "The main message or thesis the speaker wants to convey.",
+      "The introduction of the speech."
+    ],
+    "correct_answer": "The main message or thesis the speaker wants to convey."
+  },
+  {
+    "question": "What is a question to ask about your specific purpose?",
+    "options": [
+      "Is it entertaining enough for the audience?",
+      "Is it relevant to my audience's interests and needs?",
+      "Does it include enough visual aids?",
+      "Is it focused on my personal experiences?"
+    ],
+    "correct_answer": "Is it relevant to my audience's interests and needs?"
+  }
+]

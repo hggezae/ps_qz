@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is one step in preparing your first speech?",
+    "options": [
+      "Memorizing the entire speech word-for-word.",
+      "Developing the speech with a clear introduction, body, and conclusion.",
+      "Using only visual aids to convey the message.",
+      "Avoiding any rehearsal to keep the speech spontaneous."
+    ],
+    "correct_answer": "Developing the speech with a clear introduction, body, and conclusion."
+  },
+  {
+    "question": "What is a characteristic of extemporaneous speaking?",
+    "options": [
+      "Reading directly from a manuscript.",
+      "Delivering a speech with prepared notes and a conversational tone.",
+      "Memorizing the entire speech.",
+      "Speaking without any preparation."
+    ],
+    "correct_answer": "Delivering a speech with prepared notes and a conversational tone."
+  },
+  {
+    "question": "Why is rehearsing the first speech important?",
+    "options": [
+      "It eliminates the need for an outline.",
+      "It helps improve delivery and builds confidence.",
+      "It ensures the speech is memorized completely.",
+      "It allows the speaker to avoid using notes."
+    ],
+    "correct_answer": "It helps improve delivery and builds confidence."
+  },
+  {
+    "question": "What should the introduction of your first speech do?",
+    "options": [
+      "Summarize the entire speech.",
+      "Get the audience's attention and preview the main points.",
+      "Present all supporting materials.",
+      "Focus only on the speaker's credentials."
+    ],
+    "correct_answer": "Get the audience's attention and preview the main points."
+  },
+  {
+    "question": "What is a tip for presenting your first speech?",
+    "options": [
+      "Avoid eye contact to reduce nervousness.",
+      "Speak as quickly as possible to finish early.",
+      "Start the speech confidently and maintain eye contact.",
+      "Read the speech directly from the outline."
+    ],
+    "correct_answer": "Start the speech confidently and maintain eye contact."
+  }
+]

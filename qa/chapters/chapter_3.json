@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Why is listening important in public speaking?",
+    "options": [
+      "It helps the speaker memorize the speech.",
+      "It allows the audience to evaluate and learn from the speaker.",
+      "It reduces the need for visual aids.",
+      "It ensures the speaker uses proper pronunciation."
+    ],
+    "correct_answer": "It allows the audience to evaluate and learn from the speaker."
+  },
+  {
+    "question": "What is one cause of poor listening mentioned in the chapter?",
+    "options": [
+      "Taking detailed notes during the speech.",
+      "Focusing on the speaker's delivery and appearance.",
+      "Asking questions during the speech.",
+      "Summarizing the main points mentally."
+    ],
+    "correct_answer": "Focusing on the speaker's delivery and appearance."
+  },
+  {
+    "question": "What is a recommended way to become a better listener?",
+    "options": [
+      "Focus only on the speaker's gestures.",
+      "Take listening seriously and be active.",
+      "Interrupt the speaker to clarify points.",
+      "Avoid taking any notes during the speech."
+    ],
+    "correct_answer": "Take listening seriously and be active."
+  },
+  {
+    "question": "What does it mean to 'resist distractions' while listening?",
+    "options": [
+      "Ignore the speaker's main points.",
+      "Focus on external noises instead of the speech.",
+      "Concentrate on the speech despite external or internal distractions.",
+      "Take notes on every word the speaker says."
+    ],
+    "correct_answer": "Concentrate on the speech despite external or internal distractions."
+  },
+  {
+    "question": "What is a key feature of the key-word outline system for note-taking?",
+    "options": [
+      "Writing down every word the speaker says.",
+      "Recording only the speaker's gestures.",
+      "Using brief phrases to capture main ideas.",
+      "Focusing on the speaker's visual aids."
+    ],
+    "correct_answer": "Using brief phrases to capture main ideas."
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What does audience-centeredness mean in public speaking?",
+    "options": [
+      "Focusing only on the speaker's goals.",
+      "Tailoring the speech to the needs and interests of the audience.",
+      "Using complex language to impress the audience.",
+      "Ignoring the audience's feedback."
+    ],
+    "correct_answer": "Tailoring the speech to the needs and interests of the audience."
+  },
+  {
+    "question": "What is demographic audience analysis?",
+    "options": [
+      "Analyzing the physical setting of the speech.",
+      "Examining characteristics like age, gender, and cultural background.",
+      "Focusing only on the audience's prior knowledge.",
+      "Adapting the speech during delivery."
+    ],
+    "correct_answer": "Examining characteristics like age, gender, and cultural background."
+  },
+  {
+    "question": "What is one factor in situational audience analysis?",
+    "options": [
+      "The speaker's personal experiences.",
+      "The size of the audience.",
+      "The speaker's credentials.",
+      "The type of visual aids used."
+    ],
+    "correct_answer": "The size of the audience."
+  },
+  {
+    "question": "How can speakers gather information about their audience?",
+    "options": [
+      "By using only their own assumptions.",
+      "By conducting an audience-analysis questionnaire.",
+      "By ignoring audience feedback.",
+      "By focusing only on the speech content."
+    ],
+    "correct_answer": "By conducting an audience-analysis questionnaire."
+  },
+  {
+    "question": "What is a way to adapt to the audience during a speech?",
+    "options": [
+      "Sticking strictly to the prepared script.",
+      "Adjusting delivery based on audience feedback.",
+      "Using more technical jargon.",
+      "Avoiding eye contact with the audience."
+    ],
+    "correct_answer": "Adjusting delivery based on audience feedback."
+  }
+]

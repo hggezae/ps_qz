@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is one source for gathering speech materials?",
+    "options": [
+      "Using only personal opinions.",
+      "Conducting interviews with experts.",
+      "Ignoring library resources.",
+      "Focusing only on visual aids."
+    ],
+    "correct_answer": "Conducting interviews with experts."
+  },
+  {
+    "question": "What is a benefit of using library research for a speech?",
+    "options": [
+      "It provides access to academic databases and reference works.",
+      "It eliminates the need for personal knowledge.",
+      "It focuses only on Internet sources.",
+      "It avoids the need for citations."
+    ],
+    "correct_answer": "It provides access to academic databases and reference works."
+  },
+  {
+    "question": "How should you evaluate Internet documents for a speech?",
+    "options": [
+      "Use only the first search result.",
+      "Check for authorship, sponsorship, and recency.",
+      "Ignore the source of the information.",
+      "Assume all websites are reliable."
+    ],
+    "correct_answer": "Check for authorship, sponsorship, and recency."
+  },
+  {
+    "question": "What is a tip for conducting an interview for research?",
+    "options": [
+      "Arrive unprepared to keep the interview spontaneous.",
+      "Ask leading questions to get desired answers.",
+      "Prepare questions in advance and listen carefully.",
+      "Avoid taking notes during the interview."
+    ],
+    "correct_answer": "Prepare questions in advance and listen carefully."
+  },
+  {
+    "question": "What is a recommended practice for efficient research?",
+    "options": [
+      "Start research the day before the speech.",
+      "Make a preliminary bibliography to organize sources.",
+      "Use only one source for all information.",
+      "Avoid thinking about the material until the speech."
+    ],
+    "correct_answer": "Make a preliminary bibliography to organize sources."
+  }
+]

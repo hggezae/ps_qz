@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the purpose of a preparation outline?",
+    "options": [
+      "To deliver the speech directly from it.",
+      "To organize the speech content and ensure clarity.",
+      "To use during rehearsal without changes.",
+      "To replace the need for a speaking outline."
+    ],
+    "correct_answer": "To organize the speech content and ensure clarity."
+  },
+  {
+    "question": "What is a guideline for a preparation outline?",
+    "options": [
+      "Use brief phrases instead of full sentences.",
+      "Include a bibliography of sources.",
+      "Avoid labeling the introduction and conclusion.",
+      "Use inconsistent symbolization."
+    ],
+    "correct_answer": "Include a bibliography of sources."
+  },
+  {
+    "question": "What is a characteristic of a speaking outline?",
+    "options": [
+      "It includes full sentences for all points.",
+      "It is brief and used for rehearsal and delivery.",
+      "It contains the entire bibliography.",
+      "It avoids delivery cues."
+    ],
+    "correct_answer": "It is brief and used for rehearsal and delivery."
+  },
+  {
+    "question": "What is a delivery cue in a speaking outline?",
+    "options": [
+      "A full sentence explaining a main point.",
+      "A note indicating how to deliver a specific part, like 'pause'.",
+      "A detailed summary of the conclusion.",
+      "A citation for a source."
+    ],
+    "correct_answer": "A note indicating how to deliver a specific part, like 'pause'."
+  },
+  {
+    "question": "Why is consistent symbolization important in a preparation outline?",
+    "options": [
+      "It makes the outline longer.",
+      "It ensures clarity and visual structure.",
+      "It replaces the need for a speaking outline.",
+      "It avoids the need for transitions."
+    ],
+    "correct_answer": "It ensures clarity and visual structure."
+  }
+]

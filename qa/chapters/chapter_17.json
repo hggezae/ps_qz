@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is one factor of credibility in persuasive speaking?",
+    "options": [
+      "Using complex language.",
+      "Demonstrating competence and character.",
+      "Avoiding any evidence.",
+      "Focusing only on emotional appeals."
+    ],
+    "correct_answer": "Demonstrating competence and character."
+  },
+  {
+    "question": "What is the role of evidence in persuasive speaking?",
+    "options": [
+      "To confuse the audience with details.",
+      "To support claims and enhance credibility.",
+      "To replace the need for reasoning.",
+      "To avoid addressing audience objections."
+    ],
+    "correct_answer": "To support claims and enhance credibility."
+  },
+  {
+    "question": "What is analogical reasoning in persuasion?",
+    "options": [
+      "Drawing conclusions based on cause and effect.",
+      "Comparing two similar cases to argue they will have similar outcomes.",
+      "Using specific instances to make a general conclusion.",
+      "Basing arguments on a general principle."
+    ],
+    "correct_answer": "Comparing two similar cases to argue they will have similar outcomes."
+  },
+  {
+    "question": "What is a fallacy in persuasive reasoning?",
+    "options": [
+      "A logical argument supported by evidence.",
+      "An error in reasoning that weakens an argument.",
+      "A type of emotional appeal.",
+      "A method to enhance credibility."
+    ],
+    "correct_answer": "An error in reasoning that weakens an argument."
+  },
+  {
+    "question": "What is a guideline for using emotional appeals ethically?",
+    "options": [
+      "Use emotional appeals to manipulate the audience.",
+      "Combine emotional appeals with logical arguments.",
+      "Avoid any emotional language.",
+      "Focus only on fear-based appeals."
+    ],
+    "correct_answer": "Combine emotional appeals with logical arguments."
+  }
+]

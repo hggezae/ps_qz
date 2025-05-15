@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the purpose of using examples in a speech?",
+    "options": [
+      "To confuse the audience with complex details.",
+      "To clarify, reinforce, or personalize ideas.",
+      "To replace the need for statistics.",
+      "To focus only on the speaker's credentials."
+    ],
+    "correct_answer": "To clarify, reinforce, or personalize ideas."
+  },
+  {
+    "question": "What is a characteristic of a hypothetical example?",
+    "options": [
+      "It is always based on real events.",
+      "It describes an imaginary or fictitious situation.",
+      "It must be supported by statistics.",
+      "It cannot be used to personalize ideas."
+    ],
+    "correct_answer": "It describes an imaginary or fictitious situation."
+  },
+  {
+    "question": "What should you do to ensure statistics are effective in a speech?",
+    "options": [
+      "Use as many statistics as possible.",
+      "Explain the statistics clearly to the audience.",
+      "Avoid citing the source of the statistics.",
+      "Use complicated statistics without simplification."
+    ],
+    "correct_answer": "Explain the statistics clearly to the audience."
+  },
+  {
+    "question": "What is expert testimony?",
+    "options": [
+      "Statements from people with no knowledge of the topic.",
+      "Quotations from peers with similar experiences.",
+      "Statements from individuals with specialized knowledge.",
+      "Hypothetical examples created by the speaker."
+    ],
+    "correct_answer": "Statements from individuals with specialized knowledge."
+  },
+  {
+    "question": "Why is citing sources orally important in a speech?",
+    "options": [
+      "It makes the speech longer.",
+      "It enhances credibility and avoids plagiarism.",
+      "It distracts the audience from the main points.",
+      "It eliminates the need for written citations."
+    ],
+    "correct_answer": "It enhances credibility and avoids plagiarism."
+  }
+]

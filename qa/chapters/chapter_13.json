@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is a characteristic of good delivery in public speaking?",
+    "options": [
+      "Reading directly from a manuscript.",
+      "Maintaining a conversational quality.",
+      "Avoiding any eye contact with the audience.",
+      "Speaking in a monotone voice."
+    ],
+    "correct_answer": "Maintaining a conversational quality."
+  },
+  {
+    "question": "What is extemporaneous delivery?",
+    "options": [
+      "Delivering a speech with prepared notes and a conversational tone.",
+      "Reading a speech word-for-word from a manuscript.",
+      "Memorizing the entire speech.",
+      "Speaking without any preparation."
+    ],
+    "correct_answer": "Delivering a speech with prepared notes and a conversational tone."
+  },
+  {
+    "question": "Why is eye contact important during a speech?",
+    "options": [
+      "It distracts the audience from the content.",
+      "It helps engage the audience and build rapport.",
+      "It allows the speaker to avoid gestures.",
+      "It eliminates the need for vocal variety."
+    ],
+    "correct_answer": "It helps engage the audience and build rapport."
+  },
+  {
+    "question": "What is vocal variety in delivery?",
+    "options": [
+      "Speaking at a constant volume and pitch.",
+      "Varying pitch, rate, and volume for emphasis.",
+      "Using only pauses to create rhythm.",
+      "Avoiding any changes in tone."
+    ],
+    "correct_answer": "Varying pitch, rate, and volume for emphasis."
+  },
+  {
+    "question": "What is a tip for practicing delivery?",
+    "options": [
+      "Avoid rehearsing to keep the speech spontaneous.",
+      "Practice only the introduction and conclusion.",
+      "Rehearse multiple times to refine delivery.",
+      "Read the speech silently without speaking."
+    ],
+    "correct_answer": "Rehearse multiple times to refine delivery."
+  }
+]

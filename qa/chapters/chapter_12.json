@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the difference between denotative and connotative meanings of words?",
+    "options": [
+      "Denotative is emotional; connotative is literal.",
+      "Denotative is literal; connotative is emotional or implied.",
+      "Denotative is vague; connotative is specific.",
+      "Denotative is for written speeches; connotative is for oral."
+    ],
+    "correct_answer": "Denotative is literal; connotative is emotional or implied."
+  },
+  {
+    "question": "What is a guideline for using language clearly in a speech?",
+    "options": [
+      "Use complex and unfamiliar words.",
+      "Choose concrete words over abstract ones.",
+      "Include as much clutter as possible.",
+      "Avoid simple sentence structures."
+    ],
+    "correct_answer": "Choose concrete words over abstract ones."
+  },
+  {
+    "question": "What is imagery in the context of public speaking?",
+    "options": [
+      "The use of complex statistical data.",
+      "The creation of vivid mental pictures through words.",
+      "The inclusion of multiple transitions.",
+      "The avoidance of metaphors and similes."
+    ],
+    "correct_answer": "The creation of vivid mental pictures through words."
+  },
+  {
+    "question": "What is parallelism in language use?",
+    "options": [
+      "Using unrelated ideas in a sentence.",
+      "Repeating similar grammatical structures for rhythm.",
+      "Avoiding repetition of key phrases.",
+      "Using only one type of sentence structure."
+    ],
+    "correct_answer": "Repeating similar grammatical structures for rhythm."
+  },
+  {
+    "question": "Why is inclusive language important in a speech?",
+    "options": [
+      "It makes the speech longer.",
+      "It avoids alienating or stereotyping audience members.",
+      "It focuses only on the speaker's perspective.",
+      "It eliminates the need for vivid imagery."
+    ],
+    "correct_answer": "It avoids alienating or stereotyping audience members."
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is one objective of a speech introduction?",
+    "options": [
+      "To summarize the entire speech.",
+      "To get the audience's attention and interest.",
+      "To present all supporting materials.",
+      "To conclude the speech."
+    ],
+    "correct_answer": "To get the audience's attention and interest."
+  },
+  {
+    "question": "How can a speaker gain attention in the introduction?",
+    "options": [
+      "By avoiding any reference to the topic.",
+      "By relating the topic to the audience.",
+      "By presenting complex statistics.",
+      "By focusing only on the conclusion."
+    ],
+    "correct_answer": "By relating the topic to the audience."
+  },
+  {
+    "question": "What is a purpose of the conclusion in a speech?",
+    "options": [
+      "To introduce the main points.",
+      "To reinforce the central idea.",
+      "To present new evidence.",
+      "To avoid summarizing the speech."
+    ],
+    "correct_answer": "To reinforce the central idea."
+  },
+  {
+    "question": "What is a crescendo ending in a conclusion?",
+    "options": [
+      "A gradual fading of intensity.",
+      "A dramatic build-up to a high point.",
+      "A restatement of the introduction.",
+      "A summary of supporting materials."
+    ],
+    "correct_answer": "A dramatic build-up to a high point."
+  },
+  {
+    "question": "What is a tip for preparing an effective introduction?",
+    "options": [
+      "Make the introduction as long as possible.",
+      "Keep the introduction brief and focused.",
+      "Avoid previewing the body of the speech.",
+      "Focus only on the speaker's credentials."
+    ],
+    "correct_answer": "Keep the introduction brief and focused."
+  }
+]

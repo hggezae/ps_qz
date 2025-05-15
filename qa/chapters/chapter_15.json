@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the primary goal of an informative speech?",
+    "options": [
+      "To persuade the audience to take action.",
+      "To convey information clearly and memorably.",
+      "To entertain the audience with humor.",
+      "To avoid using any visual aids."
+    ],
+    "correct_answer": "To convey information clearly and memorably."
+  },
+  {
+    "question": "What is a type of informative speech mentioned in the chapter?",
+    "options": [
+      "Speeches about policies.",
+      "Speeches about objects.",
+      "Speeches of acceptance.",
+      "Speeches to persuade."
+    ],
+    "correct_answer": "Speeches about objects."
+  },
+  {
+    "question": "What is a guideline for effective informative speaking?",
+    "options": [
+      "Overestimate the audience's prior knowledge.",
+      "Relate the subject directly to the audience.",
+      "Use highly technical terms without explanation.",
+      "Avoid personalizing the topic."
+    ],
+    "correct_answer": "Relate the subject directly to the audience."
+  },
+  {
+    "question": "Why should you avoid abstractions in informative speeches?",
+    "options": [
+      "They make the speech more entertaining.",
+      "They can confuse the audience and reduce clarity.",
+      "They eliminate the need for examples.",
+      "They replace the need for visual aids."
+    ],
+    "correct_answer": "They can confuse the audience and reduce clarity."
+  },
+  {
+    "question": "What is a way to personalize ideas in an informative speech?",
+    "options": [
+      "Use only statistical data.",
+      "Include human examples or stories.",
+      "Avoid mentioning the audience.",
+      "Focus only on abstract concepts."
+    ],
+    "correct_answer": "Include human examples or stories."
+  }
+]

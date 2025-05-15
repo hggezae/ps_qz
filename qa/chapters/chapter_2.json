@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Why is ethics important in public speaking?",
+    "options": [
+      "It ensures the speaker uses visual aids effectively.",
+      "It helps the speaker gain immediate audience approval.",
+      "It establishes trust and credibility with the audience.",
+      "It allows the speaker to avoid preparing for the speech."
+    ],
+    "correct_answer": "It establishes trust and credibility with the audience."
+  },
+  {
+    "question": "What is one guideline for ethical speaking mentioned in the chapter?",
+    "options": [
+      "Use as many statistics as possible to impress the audience.",
+      "Be fully prepared for each speech.",
+      "Always use humor to engage the audience.",
+      "Focus only on the speaker's personal experiences."
+    ],
+    "correct_answer": "Be fully prepared for each speech."
+  },
+  {
+    "question": "What is global plagiarism?",
+    "options": [
+      "Taking small parts of a speech without crediting the source.",
+      "Using a speech entirely from one source without credit.",
+      "Quoting a source accurately but forgetting to cite it.",
+      "Paraphrasing a source with proper citation."
+    ],
+    "correct_answer": "Using a speech entirely from one source without credit."
+  },
+  {
+    "question": "What should ethical listeners do during a speech?",
+    "options": [
+      "Focus only on the speaker's delivery style.",
+      "Be courteous and attentive.",
+      "Interrupt with questions to clarify points.",
+      "Take notes only on visual aids."
+    ],
+    "correct_answer": "Be courteous and attentive."
+  },
+  {
+    "question": "What is incremental plagiarism?",
+    "options": [
+      "Failing to give credit for specific parts of a speech, like quotations.",
+      "Using an entire speech from another source.",
+      "Creating a speech from multiple sources with proper citation.",
+      "Adapting a speech to a new audience without permission."
+    ],
+    "correct_answer": "Failing to give credit for specific parts of a speech, like quotations."
+  }
+]

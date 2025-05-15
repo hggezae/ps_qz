@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Why is organization important in the body of a speech?",
+    "options": [
+      "It allows the speaker to avoid preparation.",
+      "It helps the audience understand and follow the speaker's ideas.",
+      "It eliminates the need for visual aids.",
+      "It focuses only on the speaker's delivery."
+    ],
+    "correct_answer": "It helps the audience understand and follow the speaker's ideas."
+  },
+  {
+    "question": "What is a characteristic of main points in a speech?",
+    "options": [
+      "They should be unrelated to each other.",
+      "They should support the central idea and be distinct.",
+      "They should be presented in random order.",
+      "They should include all supporting materials."
+    ],
+    "correct_answer": "They should support the central idea and be distinct."
+  },
+  {
+    "question": "What is chronological order for organizing main points?",
+    "options": [
+      "Arranging points based on their physical location.",
+      "Arranging points in the order of time or sequence.",
+      "Arranging points to show cause and effect.",
+      "Arranging points by dividing the topic into subtopics."
+    ],
+    "correct_answer": "Arranging points in the order of time or sequence."
+  },
+  {
+    "question": "What is the purpose of connectives in a speech?",
+    "options": [
+      "To replace the main points.",
+      "To link main points and enhance coherence.",
+      "To provide statistical data.",
+      "To summarize the entire speech."
+    ],
+    "correct_answer": "To link main points and enhance coherence."
+  },
+  {
+    "question": "What is an internal preview in a speech?",
+    "options": [
+      "A summary of the entire speech.",
+      "A statement that forecasts what is coming next in the speech.",
+      "A transition to the conclusion.",
+      "A restatement of the introduction."
+    ],
+    "correct_answer": "A statement that forecasts what is coming next in the speech."
+  }
+]

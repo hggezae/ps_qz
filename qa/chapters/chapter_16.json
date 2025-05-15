@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the primary goal of a persuasive speech?",
+    "options": [
+      "To inform the audience about a topic.",
+      "To influence the audience's beliefs or actions.",
+      "To entertain the audience with stories.",
+      "To avoid any audience interaction."
+    ],
+    "correct_answer": "To influence the audience's beliefs or actions."
+  },
+  {
+    "question": "What is a persuasive speech on a question of fact?",
+    "options": [
+      "A speech that argues for a specific policy change.",
+      "A speech that seeks to establish the truth of a proposition.",
+      "A speech that evaluates moral standards.",
+      "A speech that entertains the audience."
+    ],
+    "correct_answer": "A speech that seeks to establish the truth of a proposition."
+  },
+  {
+    "question": "What is the target audience in persuasive speaking?",
+    "options": [
+      "The entire audience regardless of their views.",
+      "The portion of the audience the speaker most wants to persuade.",
+      "The audience members who already agree with the speaker.",
+      "The audience members who are neutral."
+    ],
+    "correct_answer": "The portion of the audience the speaker most wants to persuade."
+  },
+  {
+    "question": "What is Monroe's motivated sequence?",
+    "options": [
+      "A method for organizing informative speeches.",
+      "A five-step strategy for organizing persuasive speeches.",
+      "A technique for using visual aids.",
+      "A way to conclude a speech."
+    ],
+    "correct_answer": "A five-step strategy for organizing persuasive speeches."
+  },
+  {
+    "question": "What is a question of policy in persuasive speaking?",
+    "options": [
+      "A question about whether something is true.",
+      "A question about moral or ethical standards.",
+      "A question about whether a course of action should be taken.",
+      "A question about the speaker's credentials."
+    ],
+    "correct_answer": "A question about whether a course of action should be taken."
+  }
+]

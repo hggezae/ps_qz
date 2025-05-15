@@ -320,7 +320,7 @@ def format_time(seconds):
 
 def get_quiz_files():
     """Get all quiz files from the qa directory."""
-    quiz_files = sorted(glob.glob("qa/*.json"))
+    quiz_files = sorted(glob.glob("qa/**/*.json", recursive=True))
     return quiz_files
 
 def load_questions(file_path):
@@ -573,70 +573,90 @@ def update_user_password(username, new_password):
 
 def display_quiz_questions(current_quiz_file=None):
     """Display the current quiz questions with timer and progress bar."""
-    # Display current quiz info
-    if st.session_state.is_exam:
-        st.subheader("📚 50-Question Exam")
-    else:
-        st.subheader(f"Current Quiz: {Path(current_quiz_file).stem} (20 Questions)")
+    # Create a container for the fixed header
+    header_container = st.container()
     
-    # Calculate progress
-    total_questions = len(st.session_state.current_questions)
-    answered_questions = sum(1 for answer in st.session_state.user_answers if answer)
-    progress_percentage = int((answered_questions / total_questions) * 100)
+    # Create a container for the questions
+    questions_container = st.container()
     
-    # Display progress bar
-    st.progress(progress_percentage / 100)
-    st.write(f"Progress: {answered_questions}/{total_questions} questions answered ({progress_percentage}%)")
-    
-    # Display timer
-    elapsed_time = time.time() - st.session_state.start_time
-    st.write(f"⏱️ Time elapsed: {format_time(elapsed_time)}")
-    
-    # Display questions
-    for i, q in enumerate(st.session_state.current_questions):
-        st.subheader(f"Question {i+1}: {q['question']}")
+    with header_container:
+        # Display current quiz info
+        if st.session_state.is_exam:
+            st.subheader("📚 50-Question Exam")
+        else:
+            quiz_name = st.session_state.current_quiz_name if current_quiz_file is None else Path(current_quiz_file).stem
+            st.subheader(f"Current Quiz: {quiz_name} (20 Questions)")
         
-        # Use radio buttons for options
-        answer = st.radio(
-            f"Select your answer for question {i+1}:",
-            q['options'],
-            key=f"q_{i}",
-            index=None if not st.session_state.user_answers[i] else q['options'].index(st.session_state.user_answers[i]),
-            disabled=st.session_state.submitted
-        )
+        # Calculate progress
+        total_questions = len(st.session_state.current_questions)
+        answered_questions = sum(1 for answer in st.session_state.user_answers if answer)
+        progress_percentage = int((answered_questions / total_questions) * 100)
         
-        # Store the answer in session state and save session
-        if answer and answer != st.session_state.user_answers[i]:
-            st.session_state.user_answers[i] = answer
-            
-            # Save session after each answer
-            if not st.session_state.submitted:
-                session_data = {
-                    'user_name': st.session_state.user_name,
-                    'quiz_name': "50-Question Exam" if st.session_state.is_exam else Path(current_quiz_file).stem,
-                    'questions': st.session_state.current_questions,
-                    'user_answers': st.session_state.user_answers,
-                    'start_time': st.session_state.start_time,
-                    'is_exam': st.session_state.is_exam,
-                    'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                }
-                save_session(st.session_state.session_id, session_data)
+        # Create three columns for progress indicators
+        col1, col2, col3 = st.columns([2, 1, 1])
         
+        with col1:
+            # Display progress bar
+            st.progress(progress_percentage / 100)
+        
+        with col2:
+            # Display progress text
+            st.write(f"Progress: {answered_questions}/{total_questions}")
+        
+        with col3:
+            # Display timer
+            elapsed_time = time.time() - st.session_state.start_time
+            st.write(f"⏱️ {format_time(elapsed_time)}")
+        
+        # Add a divider to separate header from questions
         st.divider()
     
-    # Create two columns for submit and skip buttons
-    col1, col2 = st.columns(2)
-    
-    # Submit button
-    if not st.session_state.submitted:
-        with col1:
-            if st.button("Submit Quiz"):
-                # Check if all questions are answered
-                if "" in st.session_state.user_answers:
-                    st.error("Please answer all questions before submitting!")
-                else:
-                    st.session_state.submitted = True
-                    st.rerun()
+    with questions_container:
+        # Display questions
+        for i, q in enumerate(st.session_state.current_questions):
+            st.subheader(f"Question {i+1}: {q['question']}")
+            
+            # Use radio buttons for options
+            answer = st.radio(
+                f"Select your answer for question {i+1}:",
+                q['options'],
+                key=f"q_{i}",
+                index=None if not st.session_state.user_answers[i] else q['options'].index(st.session_state.user_answers[i]),
+                disabled=st.session_state.submitted
+            )
+            
+            # Store the answer in session state and save session
+            if answer and answer != st.session_state.user_answers[i]:
+                st.session_state.user_answers[i] = answer
+                
+                # Save session after each answer
+                if not st.session_state.submitted:
+                    session_data = {
+                        'user_name': st.session_state.user_name,
+                        'quiz_name': "50-Question Exam" if st.session_state.is_exam else Path(current_quiz_file).stem,
+                        'questions': st.session_state.current_questions,
+                        'user_answers': st.session_state.user_answers,
+                        'start_time': st.session_state.start_time,
+                        'is_exam': st.session_state.is_exam,
+                        'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    }
+                    save_session(st.session_state.session_id, session_data)
+            
+            st.divider()
+        
+        # Create two columns for submit and skip buttons
+        col1, col2 = st.columns(2)
+        
+        # Submit button
+        if not st.session_state.submitted:
+            with col1:
+                if st.button("Submit Quiz"):
+                    # Check if all questions are answered
+                    if "" in st.session_state.user_answers:
+                        st.error("Please answer all questions before submitting!")
+                    else:
+                        st.session_state.submitted = True
+                        st.rerun()
 
 def display_quiz_results(current_quiz_file=None, quiz_files=None):
     """Display quiz results after submission."""
@@ -803,21 +823,23 @@ def display_user_statistics():
     
     return selected_user
 
-def display_saved_sessions():
-    """Display saved sessions that can be resumed."""
+def display_saved_sessions_page():
+    """Display the saved sessions page with navigation."""
+    st.title("💾 Saved Sessions")
+    
+    # Add a back button
+    if st.button("← Back to Home"):
+        st.session_state.current_page = "Home"
+        st.rerun()
+    
     # Only show sessions for the current logged-in user
     sessions = list_sessions()
     current_user = st.session_state.user_name
     user_sessions = [s for s in sessions if s['user_name'] == current_user]
     
     if not user_sessions:
+        st.info("You don't have any saved sessions yet.")
         return
-    
-    st.divider()
-    st.subheader("💾 Your Saved Sessions")
-    
-    # Create a container for the sessions list
-    sessions_container = st.container()
     
     # Display sessions in a grid layout
     cols = st.columns(3)  # Adjust the number of columns as needed
@@ -841,6 +863,9 @@ def display_saved_sessions():
                         st.session_state.start_time = session_data['start_time']
                         st.session_state.is_exam = session_data.get('is_exam', False)
                         st.session_state.session_id = session['id']
+                        st.session_state.current_quiz_name = session_data['quiz_name']
+                        # Switch back to home page after loading session
+                        st.session_state.current_page = "Home"
                         st.rerun()
             except Exception as e:
                 # Skip this session if there's a key conflict
@@ -1054,13 +1079,12 @@ def main():
     
     # Add navigation
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ["Home", "Analytics", "Achievements"])
+    page = st.sidebar.radio("Go to", ["Home", "Saved Sessions", "Analytics", "Achievements"])
     
     if page == "Home":
         # Existing quiz functionality
         if st.session_state.current_questions is None:
             display_quiz_selection(quiz_files)
-            display_saved_sessions()
         else:
             if not st.session_state.submitted:
                 current_quiz_file = None
@@ -1073,6 +1097,9 @@ def main():
                     current_quiz_file = quiz_files[st.session_state.current_quiz_index]
                 display_quiz_results(current_quiz_file, quiz_files)
                 display_quiz_review(current_quiz_file)
+    
+    elif page == "Saved Sessions":
+        display_saved_sessions_page()
     
     elif page == "Analytics":
         display_analytics_dashboard()
