@@ -1,0 +1,103 @@
+[
+    {
+      "question": "What is the main purpose of the Human Behavior and the Social Environment (HB&SE) construct in social work?",
+      "options": [
+        "To focus solely on human biology and genetics.",
+        "To integrate theories that explain human behavior within environmental contexts.",
+        "To prioritize psychoanalytic theories of individual development.",
+        "To separate social environment from human behavior."
+      ],
+      "correct_answer": "To integrate theories that explain human behavior within environmental contexts."
+    },
+    {
+      "question": "According to the chapter, why is the process of 'borrowing' theories from other disciplines complex for social work?",
+      "options": [
+        "Because social work rejects theories from psychology and sociology.",
+        "Because theories are often created for goals unrelated to social work values or applications.",
+        "Because all social work theories must originate in medical sciences.",
+        "Because the CSWE forbids external theoretical influence."
+      ],
+      "correct_answer": "Because theories are often created for goals unrelated to social work values or applications."
+    },
+    {
+      "question": "What is the 'person-in-environment' perspective central to social work?",
+      "options": [
+        "It isolates individual psychology from the environment.",
+        "It emphasizes the interconnectedness between individuals and their social contexts.",
+        "It focuses only on organizational behavior.",
+        "It describes biological processes of human growth."
+      ],
+      "correct_answer": "It emphasizes the interconnectedness between individuals and their social contexts."
+    },
+    {
+      "question": "What does Goldstein’s (1990) three-part model suggest about social work knowledge development?",
+      "options": [
+        "It should focus on practice wisdom alone.",
+        "It develops best through connections among theory, research, and practice.",
+        "It excludes accumulated research and implicit theories.",
+        "It discourages using evidence from social sciences."
+      ],
+      "correct_answer": "It develops best through connections among theory, research, and practice."
+    },
+    {
+      "question": "Why do scholars advocate for the use of middle-range theories in social work?",
+      "options": [
+        "Because they are easily tested and directly applicable to practice.",
+        "Because they replace the need for empirical research.",
+        "Because they are broad and abstract conceptual schemes.",
+        "Because they are unrelated to practice."
+      ],
+      "correct_answer": "Because they are easily tested and directly applicable to practice."
+    },
+    {
+      "question": "What is a key challenge when using middle-range theories in HB&SE?",
+      "options": [
+        "They often explain only narrow aspects of complex phenomena.",
+        "They are too abstract to apply to practice.",
+        "They focus exclusively on group-level analysis.",
+        "They reject empirical evidence."
+      ],
+      "correct_answer": "They often explain only narrow aspects of complex phenomena."
+    },
+    {
+      "question": "How did the Council on Social Work Education (CSWE) standards evolve regarding HB&SE content?",
+      "options": [
+        "They removed all focus on biological theories.",
+        "They increasingly emphasized reciprocal relationships and diversity in human development.",
+        "They discouraged including cultural and spiritual perspectives.",
+        "They prioritized psychoanalysis over ecological approaches."
+      ],
+      "correct_answer": "They increasingly emphasized reciprocal relationships and diversity in human development."
+    },
+    {
+      "question": "Which of the following best describes the debate about levels of analysis in social work theory?",
+      "options": [
+        "The need to identify whether human behavior should be studied at individual, group, or societal levels.",
+        "The belief that only macro-level theories are valid in social work.",
+        "The rejection of environmental influences on behavior.",
+        "The preference for biological over sociological explanations."
+      ],
+      "correct_answer": "The need to identify whether human behavior should be studied at individual, group, or societal levels."
+    },
+    {
+      "question": "What does Elder’s (1995) life course perspective emphasize?",
+      "options": [
+        "That individual development occurs in isolation from social context.",
+        "That development is shaped by life trajectories, timing, agency, and linked lives.",
+        "That social work should ignore historical time and place.",
+        "That only childhood experiences determine adult outcomes."
+      ],
+      "correct_answer": "That development is shaped by life trajectories, timing, agency, and linked lives."
+    },
+    {
+      "question": "What is a main limitation of the life course perspective as discussed in the chapter?",
+      "options": [
+        "It neglects developmental processes entirely.",
+        "It focuses mainly on individuals while overlooking communities and institutions.",
+        "It overemphasizes the role of genetics.",
+        "It ignores cultural and social structures."
+      ],
+      "correct_answer": "It focuses mainly on individuals while overlooking communities and institutions."
+    }
+  ]
+  
