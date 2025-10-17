@@ -318,9 +318,9 @@ def format_time(seconds):
 # File Operations
 ###################
 
-def get_quiz_files():
+def get_quiz_files(path_dir="swe"):
     """Get all quiz files from the qa directory."""
-    quiz_files = sorted(glob.glob("qa/**/*.json", recursive=True))
+    quiz_files = sorted(glob.glob(f"{path_dir}/**/*.json", recursive=True))
     return quiz_files
 
 def load_questions(file_path):
