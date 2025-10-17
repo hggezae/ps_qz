@@ -318,7 +318,7 @@ def format_time(seconds):
 # File Operations
 ###################
 
-def get_quiz_files(path_dir="swe"):
+def get_quiz_files(path_dir="qa"):
     """Get all quiz files from the qa directory."""
     quiz_files = sorted(glob.glob(f"{path_dir}/**/*.json", recursive=True))
     return quiz_files
@@ -698,6 +698,12 @@ def display_quiz_results(current_quiz_file=None, quiz_files=None):
     st.subheader("Cumulative Results")
     st.write(f"Completed Quizzes: {completed_quizzes}")
     st.write(f"Average Score: {average_score:.1f}%")
+    
+    # Add Return to Home button
+    if st.button("Return to Home"):
+        st.session_state.page = "home"
+        st.session_state.submitted = False
+        st.rerun()
     
     # Display individual quiz scores
     st.write("Individual Quiz Scores:")
