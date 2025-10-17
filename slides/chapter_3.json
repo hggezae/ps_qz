@@ -1,0 +1,102 @@
+[
+  {
+    "question": "A child stops interrupting in class after the teacher ignores disruptive comments but praises polite participation. Which process best explains this change?",
+    "options": [
+      "Negative punishment removing attention for interruptions.",
+      "Positive reinforcement strengthening polite behavior.",
+      "Extinction of the disruptive response through withdrawal of reinforcement.",
+      "Negative reinforcement reducing teacher control."
+    ],
+    "correct_answer": "Extinction of the disruptive response through withdrawal of reinforcement."
+  },
+  {
+    "question": "Which statement most accurately differentiates operant learning from respondent learning?",
+    "options": [
+      "Operant learning depends on associations between stimuli and involuntary responses.",
+      "Operant learning occurs through consequences that modify voluntary behavior.",
+      "Respondent learning involves conscious decision-making guided by rewards.",
+      "Respondent learning uses reinforcement schedules to control frequency of actions."
+    ],
+    "correct_answer": "Operant learning occurs through consequences that modify voluntary behavior."
+  },
+  {
+    "question": "A factory worker is paid for every 10 items assembled, regardless of time. What reinforcement schedule is being used?",
+    "options": [
+      "Fixed-interval schedule, based on time elapsed.",
+      "Fixed-ratio schedule, based on the number of responses.",
+      "Variable-interval schedule, based on random timing.",
+      "Variable-ratio schedule, based on random performance count."
+    ],
+    "correct_answer": "Fixed-ratio schedule, based on the number of responses."
+  },
+  {
+    "question": "Which of the following scenarios most clearly represents negative reinforcement rather than punishment?",
+    "options": [
+      "A student is scolded for being late and stops arriving late.",
+      "A patient exercises to prevent back pain from returning.",
+      "A teen loses phone privileges after missing curfew.",
+      "A driver receives a fine for speeding and drives slower."
+    ],
+    "correct_answer": "A patient exercises to prevent back pain from returning."
+  },
+  {
+    "question": "A supervisor increases praise for punctual employees but notices no improvement. Which principle is most likely being violated?",
+    "options": [
+      "Reinforcement was not contingent on the desired behavior.",
+      "Punishment was too inconsistent.",
+      "Reinforcement used a fixed-interval schedule instead of variable ratio.",
+      "Discriminative stimuli were overused."
+    ],
+    "correct_answer": "Reinforcement was not contingent on the desired behavior."
+  },
+  {
+    "question": "In operant conditioning, why does variable-ratio reinforcement typically produce the highest response rate?",
+    "options": [
+      "Because reinforcement is predictable, allowing for rapid responding.",
+      "Because reinforcement occurs after varying responses, maintaining high motivation.",
+      "Because reinforcement occurs after fixed time intervals, creating anticipation.",
+      "Because extinction happens faster under variable schedules."
+    ],
+    "correct_answer": "Because reinforcement occurs after varying responses, maintaining high motivation."
+  },
+  {
+    "question": "A client is taught to complete daily hygiene routines by reinforcing each small step (turning on water, applying soap, rinsing). This is an example of:",
+    "options": [
+      "Chaining, where sequential behaviors are linked together.",
+      "Shaping, where approximations toward the final behavior are reinforced.",
+      "Discrimination training using antecedent stimuli.",
+      "Generalization across similar environmental cues."
+    ],
+    "correct_answer": "Shaping, where approximations toward the final behavior are reinforced."
+  },
+  {
+    "question": "A therapist wants a client to complete a 3-step coping routine: deep breathing, journaling, and calling a friend. The entire sequence must occur before reinforcement. What technique applies?",
+    "options": [
+      "Stimulus generalization.",
+      "Chaining.",
+      "Fixed-interval scheduling.",
+      "Positive punishment."
+    ],
+    "correct_answer": "Chaining."
+  },
+  {
+    "question": "Why is behavior learned under intermittent reinforcement more resistant to extinction than behavior learned under continuous reinforcement?",
+    "options": [
+      "Intermittent schedules make reinforcement unpredictable, reducing dependency on consistent rewards.",
+      "Continuous reinforcement creates stronger associations with the stimulus.",
+      "Intermittent reinforcement eliminates discriminative stimuli entirely.",
+      "Continuous reinforcement prevents spontaneous recovery."
+    ],
+    "correct_answer": "Intermittent schedules make reinforcement unpredictable, reducing dependency on consistent rewards."
+  },
+  {
+    "question": "A student studies only when reminded that grades are released every two weeks. This studying pattern best reflects:",
+    "options": [
+      "Fixed-interval schedule producing bursts of activity near reinforcement times.",
+      "Fixed-ratio schedule creating steady response rates.",
+      "Variable-ratio schedule maintaining consistent responding.",
+      "Variable-interval schedule eliminating post-reinforcement pauses."
+    ],
+    "correct_answer": "Fixed-interval schedule producing bursts of activity near reinforcement times."
+  }
+]

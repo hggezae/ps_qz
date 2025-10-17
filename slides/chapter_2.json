@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Respondent learning differs from operant learning primarily because:",
+    "options": [
+      "It relies on rewards and punishments to shape behavior.",
+      "It focuses on voluntary behaviors influenced by outcomes.",
+      "It involves automatic responses to stimuli without conscious control.",
+      "It requires reinforcement schedules to maintain responses."
+    ],
+    "correct_answer": "It involves automatic responses to stimuli without conscious control."
+  },
+  {
+    "question": "In respondent learning, a neutral stimulus becomes a conditioned stimulus only when:",
+    "options": [
+      "It follows a behavior that is rewarded.",
+      "It precedes and is repeatedly paired with an unconditioned stimulus.",
+      "It replaces the unconditioned stimulus after extinction.",
+      "It is reinforced through positive feedback."
+    ],
+    "correct_answer": "It precedes and is repeatedly paired with an unconditioned stimulus."
+  },
+  {
+    "question": "Which example best blurs the boundary between operant and respondent learning?",
+    "options": [
+      "A student studies hard to earn praise from a teacher.",
+      "A child’s heart races when seeing a parent’s angry face.",
+      "A dog sits on command to receive a treat.",
+      "A client feels anxious before therapy because it previously followed distressing sessions."
+    ],
+    "correct_answer": "A client feels anxious before therapy because it previously followed distressing sessions."
+  },
+  {
+    "question": "According to classical conditioning principles, the 'unconditioned response' is:",
+    "options": [
+      "A learned behavior shaped by reinforcement.",
+      "A spontaneous behavior triggered by a previously neutral cue.",
+      "An automatic reaction to a naturally occurring stimulus.",
+      "A reaction that requires conscious decision-making."
+    ],
+    "correct_answer": "An automatic reaction to a naturally occurring stimulus."
+  },
+  {
+    "question": "A child associates the sound of a toy truck with fear after witnessing an accident. Which pairing best represents the conditioned stimulus (CS)?",
+    "options": [
+      "The fear the child feels after the accident.",
+      "The accident itself that caused fear.",
+      "The sound of the toy truck after the accident.",
+      "The child’s physiological reaction to fear."
+    ],
+    "correct_answer": "The sound of the toy truck after the accident."
+  },
+  {
+    "question": "Why does 'timing' between stimuli matter in classical conditioning?",
+    "options": [
+      "Because the conditioned response strengthens only if the conditioned stimulus follows the unconditioned stimulus.",
+      "Because the association is strongest when the neutral stimulus appears just before the unconditioned stimulus.",
+      "Because responses extinguish if stimuli overlap too closely in time.",
+      "Because reinforcement schedules depend on consistent intervals."
+    ],
+    "correct_answer": "Because the association is strongest when the neutral stimulus appears just before the unconditioned stimulus."
+  },
+  {
+    "question": "Which situation represents 'respondent extinction' rather than 'forgetting'?",
+    "options": [
+      "A client stops reacting to a trauma cue after repeated safe exposures to the same setting.",
+      "A student forgets material learned in class after a semester.",
+      "A child loses interest in a toy after a week of play.",
+      "A dog stops responding to food after a change in diet."
+    ],
+    "correct_answer": "A client stops reacting to a trauma cue after repeated safe exposures to the same setting."
+  },
+  {
+    "question": "Vicarious conditioning differs from direct conditioning because:",
+    "options": [
+      "It depends on physical reinforcement of the observer.",
+      "The observer experiences the same stimulus directly.",
+      "It occurs through observing others’ conditioned reactions without direct stimulus exposure.",
+      "It only occurs in laboratory settings with animals."
+    ],
+    "correct_answer": "It occurs through observing others’ conditioned reactions without direct stimulus exposure."
+  },
+  {
+    "question": "Second-order conditioning can be best understood as:",
+    "options": [
+      "Strengthening the original conditioned response after extinction.",
+      "Linking a new neutral stimulus to an existing conditioned stimulus to evoke the same reaction.",
+      "Replacing the unconditioned stimulus with a novel reward.",
+      "Generalizing a learned response to all similar stimuli."
+    ],
+    "correct_answer": "Linking a new neutral stimulus to an existing conditioned stimulus to evoke the same reaction."
+  },
+  {
+    "question": "Which concept explains why a war veteran might feel sudden panic at fireworks years after returning home?",
+    "options": [
+      "Generalization of a conditioned response to similar stimuli.",
+      "Vicarious punishment.",
+      "Operant reinforcement.",
+      "Conditioned inhibition."
+    ],
+    "correct_answer": "Generalization of a conditioned response to similar stimuli."
+  },
+  {
+    "question": "A client becomes calm when hearing a song often played during meditation sessions. When a new sound (a soft chime) is paired with the same song, the chime later induces calmness alone. What process occurred?",
+    "options": [
+      "Respondent discrimination.",
+      "Second-order conditioning.",
+      "Operant reinforcement.",
+      "Spontaneous recovery."
+    ],
+    "correct_answer": "Second-order conditioning."
+  },
+  {
+    "question": "A person’s fear of public speaking fades after multiple anxiety-free presentations. However, the fear briefly reappears months later during a similar event. This is an example of:",
+    "options": [
+      "Respondent discrimination.",
+      "Spontaneous recovery.",
+      "Habituation.",
+      "Generalization."
+    ],
+    "correct_answer": "Spontaneous recovery."
+  },
+  {
+    "question": "Which of the following illustrates 'sensitization' rather than conditioning?",
+    "options": [
+      "Becoming increasingly jumpy after multiple stressful events.",
+      "Salivating at the sound of a bell after pairing with food.",
+      "Learning to smile in response to praise.",
+      "Avoiding a place associated with prior embarrassment."
+    ],
+    "correct_answer": "Becoming increasingly jumpy after multiple stressful events."
+  },
+  {
+    "question": "In classical conditioning, which pairing would most likely fail to produce a conditioned response?",
+    "options": [
+      "A neutral tone presented several seconds after the unconditioned stimulus.",
+      "A neutral tone presented immediately before the unconditioned stimulus.",
+      "A neutral light paired repeatedly with food delivery.",
+      "A vibration paired closely with a shock."
+    ],
+    "correct_answer": "A neutral tone presented several seconds after the unconditioned stimulus."
+  },
+  {
+    "question": "A client reports fear triggered by a therapist’s office scent after a distressing session. The scent best functions as:",
+    "options": [
+      "A conditioned stimulus that elicits a conditioned response.",
+      "An unconditioned response produced by association.",
+      "A reinforcement cue signaling safety.",
+      "A discriminative stimulus in operant learning."
+    ],
+    "correct_answer": "A conditioned stimulus that elicits a conditioned response."
+  },
+  {
+    "question": "A child’s fear of a barking dog extends to all dogs, regardless of breed or size. Which concept best describes this?",
+    "options": [
+      "Discrimination.",
+      "Generalization.",
+      "Spontaneous recovery.",
+      "Extinction."
+    ],
+    "correct_answer": "Generalization."
+  },
+  {
+    "question": "When a conditioned stimulus is consistently paired with a new environment, and the response begins occurring in that environment as well, this is an example of:",
+    "options": [
+      "Contextual generalization of conditioning.",
+      "Respondent extinction.",
+      "Negative reinforcement.",
+      "Operant discrimination."
+    ],
+    "correct_answer": "Contextual generalization of conditioning."
+  },
+  {
+    "question": "A client learns to associate the sound of a therapist’s pen tapping with calm breathing exercises. After several sessions, hearing any tapping sound induces relaxation. Which concept applies?",
+    "options": [
+      "Stimulus generalization of a conditioned response.",
+      "Discrimination learning.",
+      "Operant reinforcement.",
+      "Respondent extinction."
+    ],
+    "correct_answer": "Stimulus generalization of a conditioned response."
+  },
+  {
+    "question": "In the classic 'Little Albert' study, Albert’s fear of furry animals after being conditioned to fear a white rat best illustrates:",
+    "options": [
+      "Generalization across similar stimuli.",
+      "Spontaneous recovery after extinction.",
+      "Operant shaping.",
+      "Respondent discrimination."
+    ],
+    "correct_answer": "Generalization across similar stimuli."
+  },
+  {
+    "question": "A client’s startle response to loud noise diminishes after repeated harmless exposures, but later intensifies when a new noise occurs in the same setting. Which principle explains this rebound?",
+    "options": [
+      "Sensitization following prior conditioning.",
+      "Permanent extinction of reflexive response.",
+      "Conditioned inhibition of new stimulus.",
+      "Operant shaping of fear reaction."
+    ],
+    "correct_answer": "Sensitization following prior conditioning."
+  }
+]

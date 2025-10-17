@@ -1,0 +1,102 @@
+[
+  {
+    "question": "According to Erikson’s psychosocial framework, development is best understood as:",
+    "options": [
+      "A linear biological process with minimal environmental influence.",
+      "A series of crises in which individuals balance personal needs with social expectations.",
+      "A sequence of unconscious drives shaping adult behavior.",
+      "A random progression of unrelated developmental milestones."
+    ],
+    "correct_answer": "A series of crises in which individuals balance personal needs with social expectations."
+  },
+  {
+    "question": "Which principle explains why unresolved issues in one psychosocial stage may reappear in later stages?",
+    "options": [
+      "The regression principle.",
+      "The epigenetic principle, which states that growth builds systematically on earlier stages.",
+      "The reinforcement principle.",
+      "The behavioral continuity principle."
+    ],
+    "correct_answer": "The epigenetic principle, which states that growth builds systematically on earlier stages."
+  },
+  {
+    "question": "In Erikson’s model, 'ego qualities' refer to:",
+    "options": [
+      "Fixed personality traits that emerge from genetic predispositions.",
+      "Positive orientations that develop following successful resolution of a psychosocial crisis.",
+      "Transient emotions unrelated to developmental stages.",
+      "Social reinforcements provided during infancy and childhood."
+    ],
+    "correct_answer": "Positive orientations that develop following successful resolution of a psychosocial crisis."
+  },
+  {
+    "question": "Which of the following best distinguishes Erikson’s psychosocial theory from Freud’s psychosexual theory?",
+    "options": [
+      "Freud emphasized ego development across the lifespan, while Erikson focused on childhood only.",
+      "Freud emphasized unconscious drives, whereas Erikson emphasized the ego’s adaptive capacity and societal demands.",
+      "Both limited development to adolescence and early adulthood.",
+      "Erikson dismissed the influence of early childhood entirely."
+    ],
+    "correct_answer": "Freud emphasized unconscious drives, whereas Erikson emphasized the ego’s adaptive capacity and societal demands."
+  },
+  {
+    "question": "A client struggles with feelings of stagnation and loss of purpose during midlife. According to Erikson, this crisis primarily concerns:",
+    "options": [
+      "Autonomy vs. shame and doubt.",
+      "Generativity vs. stagnation.",
+      "Intimacy vs. social isolation.",
+      "Integrity vs. despair."
+    ],
+    "correct_answer": "Generativity vs. stagnation."
+  },
+  {
+    "question": "What is meant by the term 'radii of significant relationships' in psychosocial theory?",
+    "options": [
+      "The expanding social network that reinforces societal expectations at each developmental stage.",
+      "The intensity of emotional attachment between parent and child only.",
+      "A metaphor for the internal conflict between ego and id impulses.",
+      "A measure of biological maturation linked to social functioning."
+    ],
+    "correct_answer": "The expanding social network that reinforces societal expectations at each developmental stage."
+  },
+  {
+    "question": "In psychosocial theory, which of the following is NOT considered a valid criticism?",
+    "options": [
+      "The model may underrepresent diverse cultural life experiences.",
+      "The theory’s fixed sequence of stages may not reflect nontraditional life paths.",
+      "It fails to recognize any role of social context in shaping personality.",
+      "Some argue it generalizes male developmental experiences as universal."
+    ],
+    "correct_answer": "It fails to recognize any role of social context in shaping personality."
+  },
+  {
+    "question": "What social-work intervention aligns most closely with Erikson’s concept of resolving crises through reflection and meaning-making in later adulthood?",
+    "options": [
+      "Behavioral activation therapy.",
+      "Life review or reminiscence therapy.",
+      "Systematic desensitization.",
+      "Exposure-based conditioning."
+    ],
+    "correct_answer": "Life review or reminiscence therapy."
+  },
+  {
+    "question": "Which of the following pairs incorrectly matches an Eriksonian stage with its psychosocial crisis?",
+    "options": [
+      "Infancy – Trust vs. Mistrust.",
+      "Adolescence – Industry vs. Inferiority.",
+      "Young Adulthood – Intimacy vs. Social Isolation.",
+      "Old Age – Integrity vs. Despair."
+    ],
+    "correct_answer": "Adolescence – Industry vs. Inferiority."
+  },
+  {
+    "question": "According to Erikson’s later writings, what does his concept of the 'wise adult' illustrate?",
+    "options": [
+      "That adulthood is static once identity is formed.",
+      "That mature ego development continues across adulthood, integrating insight, morality, and cultural perspective.",
+      "That spiritual growth replaces psychosocial growth in old age.",
+      "That generativity is limited to midlife rather than a lifelong process."
+    ],
+    "correct_answer": "That mature ego development continues across adulthood, integrating insight, morality, and cultural perspective."
+  }
+]

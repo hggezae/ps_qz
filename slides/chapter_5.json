@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Which statement most accurately captures Bowlby’s view of the attachment bond?",
+    "options": [
+      "Attachment behaviors develop mainly after two years of age and are learned through conditioning.",
+      "Attachment represents an innate behavioral system evolved to ensure infant survival through proximity to caregivers.",
+      "Attachment reflects a temporary emotional dependence created by reinforcement schedules.",
+      "Attachment arises only after cognitive maturity enables recognition of caregivers."
+    ],
+    "correct_answer": "Attachment represents an innate behavioral system evolved to ensure infant survival through proximity to caregivers."
+  },
+  {
+    "question": "According to Bowlby, which of the following features does NOT describe an essential characteristic of attachment?",
+    "options": [
+      "Proximity maintenance – desire to be near the attachment figure.",
+      "Safe haven – turning to the caregiver for comfort during distress.",
+      "Secure base – a dependable foundation for exploration.",
+      "Reinforcement loop – reward given to maintain closeness behavior."
+    ],
+    "correct_answer": "Reinforcement loop – reward given to maintain closeness behavior."
+  },
+  {
+    "question": "Which phase of attachment development is characterized by infants showing no preference for specific caregivers but using behaviors such as crying and smiling to attract attention?",
+    "options": [
+      "Goal-corrected partnership.",
+      "Attachment-in-the-making.",
+      "Preattachment.",
+      "Clear-cut attachment."
+    ],
+    "correct_answer": "Preattachment."
+  },
+  {
+    "question": "During which stage of Bowlby’s model do children begin to understand that caregivers have their own needs and goals, leading to more flexible relationships?",
+    "options": [
+      "Attachment-in-the-making.",
+      "Goal-corrected partnership.",
+      "Clear-cut attachment.",
+      "Preattachment."
+    ],
+    "correct_answer": "Goal-corrected partnership."
+  },
+  {
+    "question": "In Ainsworth’s Strange Situation, which behavior pattern reflects an ambivalent attachment style?",
+    "options": [
+      "The child shows indifference when the mother leaves or returns.",
+      "The child becomes upset when the mother leaves and remains difficult to console upon return.",
+      "The child explores confidently and is easily soothed when the caregiver returns.",
+      "The child displays aggressive behaviors but no anxiety during separation."
+    ],
+    "correct_answer": "The child becomes upset when the mother leaves and remains difficult to console upon return."
+  },
+  {
+    "question": "Which pairing is incorrect regarding Ainsworth’s classifications of attachment?",
+    "options": [
+      "Securely attached – seeks proximity, comforted upon reunion.",
+      "Ambivalent – clings excessively, reluctant to explore.",
+      "Avoidant – displays independence but shows underlying anger.",
+      "Insecure-disorganized – calm and self-soothing during separation."
+    ],
+    "correct_answer": "Insecure-disorganized – calm and self-soothing during separation."
+  },
+  {
+    "question": "A mother and daughter both exhibit anxious-preoccupied patterns in adult relationships, showing over-dependence and fear of abandonment. This finding best supports which idea?",
+    "options": [
+      "Generational transmission of attachment styles.",
+      "Operant reinforcement in parenting models.",
+      "Cognitive reconstruction of family scripts.",
+      "Fixed-ratio emotional conditioning."
+    ],
+    "correct_answer": "Generational transmission of attachment styles."
+  },
+  {
+    "question": "Which assessment tool would a social worker most likely use to explore a client’s early attachment experiences and current relationship patterns?",
+    "options": [
+      "Adult Attachment Interview (AAI).",
+      "Minnesota Multiphasic Personality Inventory (MMPI).",
+      "Beck Depression Inventory (BDI).",
+      "Functional Behavioral Analysis (FBA)."
+    ],
+    "correct_answer": "Adult Attachment Interview (AAI)."
+  },
+  {
+    "question": "According to the social-work applications in the presentation, what macro-level insight does attachment theory offer?",
+    "options": [
+      "Government services can act as symbolic parental figures, influencing citizens’ sense of trust and security.",
+      "Social alienation is unrelated to patterns of early bonding or trust.",
+      "Policy attachment occurs when voters identify with political leaders.",
+      "Attachment theory applies only to micro-level counseling interventions."
+    ],
+    "correct_answer": "Government services can act as symbolic parental figures, influencing citizens’ sense of trust and security."
+  },
+  {
+    "question": "Which of the following statements about the secure base concept could easily be misunderstood but is actually correct?",
+    "options": [
+      "A secure base means the child never separates from the caregiver.",
+      "A secure base represents both emotional availability and encouragement of exploration.",
+      "Secure base implies attachment only forms through constant physical proximity.",
+      "Secure base functions as the opposite of safe haven."
+    ],
+    "correct_answer": "A secure base represents both emotional availability and encouragement of exploration."
+  }
+]

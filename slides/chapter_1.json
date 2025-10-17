@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Which statement most accurately reflects the purpose of theory in social work practice?",
+    "options": [
+      "A theory only describes what happens but never predicts future outcomes.",
+      "A theory is an organized explanation that both interprets and anticipates patterns of behavior.",
+      "A theory provides concrete steps for all interventions.",
+      "A theory is a personal belief system unrelated to evidence."
+    ],
+    "correct_answer": "A theory is an organized explanation that both interprets and anticipates patterns of behavior."
+  },
+  {
+    "question": "Why is applying general social science theories to social work practice often challenging?",
+    "options": [
+      "Because social work rejects the use of theoretical models.",
+      "Because theories from other disciplines may not align fully with social work’s values or contexts.",
+      "Because social work primarily focuses on laboratory experiments.",
+      "Because social workers must avoid empirical evidence."
+    ],
+    "correct_answer": "Because theories from other disciplines may not align fully with social work’s values or contexts."
+  },
+  {
+    "question": "In the context of HBSE, what does 'person as context' primarily emphasize?",
+    "options": [
+      "Behavior shaped exclusively by physical environments.",
+      "The idea that individual traits and dispositions influence both personal behavior and surrounding systems.",
+      "That development occurs independently of personal characteristics.",
+      "That environments are static and unrelated to behavior."
+    ],
+    "correct_answer": "The idea that individual traits and dispositions influence both personal behavior and surrounding systems."
+  },
+  {
+    "question": "Which of the following best distinguishes 'person in context' from 'person of context'?",
+    "options": [
+      "'Person in context' focuses on static settings; 'person of context' focuses on dynamic processes.",
+      "'Person in context' considers how situations shape behavior, while 'person of context' focuses on environments shaping long-term development.",
+      "'Person of context' ignores situational influences entirely.",
+      "'Person in context' denies environmental constraints."
+    ],
+    "correct_answer": "'Person in context' considers how situations shape behavior, while 'person of context' focuses on environments shaping long-term development."
+  },
+  {
+    "question": "According to Elder’s Life Course Perspective, which principle best explains how individuals' opportunities are constrained or expanded?",
+    "options": [
+      "Human agency and self-regulation.",
+      "Lives in time and place.",
+      "Timing of lives.",
+      "Linked lives."
+    ],
+    "correct_answer": "Lives in time and place."
+  },
+  {
+    "question": "Why might middle-range theories be considered more suitable for social work application than grand theories?",
+    "options": [
+      "Because they are abstract and detached from empirical data.",
+      "Because they are narrower and can be tested and applied more directly to practice situations.",
+      "Because they completely replace research evidence.",
+      "Because they eliminate the need for theoretical reflection."
+    ],
+    "correct_answer": "Because they are narrower and can be tested and applied more directly to practice situations."
+  },
+  {
+    "question": "Hunt’s extension of the Life Course Approach adds which key postmodern dimensions to understanding human development?",
+    "options": [
+      "Shortened life expectancy and community collectivism.",
+      "Globalization, technology, consumerism, and individualism.",
+      "Isolationism, spirituality, and ecological awareness.",
+      "Biological determinism and behavioral conditioning."
+    ],
+    "correct_answer": "Globalization, technology, consumerism, and individualism."
+  },
+  {
+    "question": "Which of the following most accurately contrasts Systems Theory with Social Capital Theory?",
+    "options": [
+      "Systems Theory focuses on interactions among parts of a whole, whereas Social Capital Theory emphasizes relationships as social resources.",
+      "Systems Theory focuses on individuals, while Social Capital Theory examines institutions only.",
+      "Both reject the idea of interdependence among systems.",
+      "Systems Theory prioritizes competition rather than cooperation."
+    ],
+    "correct_answer": "Systems Theory focuses on interactions among parts of a whole, whereas Social Capital Theory emphasizes relationships as social resources."
+  },
+  {
+    "question": "Why is Institutional Theory important for understanding social work organizations?",
+    "options": [
+      "It shows that human service organizations operate strictly on rational and efficient principles.",
+      "It highlights how cultural norms and institutional logics shape what is considered legitimate practice.",
+      "It focuses solely on economic transactions in agencies.",
+      "It disregards historical and political influences."
+    ],
+    "correct_answer": "It highlights how cultural norms and institutional logics shape what is considered legitimate practice."
+  },
+  {
+    "question": "Which example best reflects a 'systems theory process' within a community organization?",
+    "options": [
+      "A neighborhood group ignoring leadership roles to avoid conflict.",
+      "An agency adjusting internal communication and leadership in response to environmental change.",
+      "A client focusing on self-regulation through mindfulness training.",
+      "A teacher grading students based solely on attendance."
+    ],
+    "correct_answer": "An agency adjusting internal communication and leadership in response to environmental change."
+  }
+]

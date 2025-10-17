@@ -1,0 +1,102 @@
+[
+  {
+    "question": "A social worker observes that a client’s stress reactions worsen in crowded environments but improve when surrounded by supportive family members. Which theoretical lens best helps explain this pattern?",
+    "options": [
+      "Psychodynamic theory focusing on internal drives.",
+      "Person in context framework emphasizing situational constraints on behavior.",
+      "Person as context framework emphasizing fixed personality traits.",
+      "Opportunity theory focusing on delinquent behavior formation."
+    ],
+    "correct_answer": "Person in context framework emphasizing situational constraints on behavior."
+  },
+  {
+    "question": "Two clients in the same neighborhood experience unemployment differently—one becomes involved in community organizing, while the other isolates and disengages. Which HBSE framework best explains these differing outcomes?",
+    "options": [
+      "Cultural understanding of human development.",
+      "Social capital theory, emphasizing variations in relational networks and trust.",
+      "Institutional theory, focusing on formal rules and sanctions.",
+      "Systems theory, describing only organizational hierarchies."
+    ],
+    "correct_answer": "Social capital theory, emphasizing variations in relational networks and trust."
+  },
+  {
+    "question": "A school social worker designing programs to reduce youth violence considers both peer-group influence and neighborhood norms. Which theory most directly supports this integrated approach?",
+    "options": [
+      "Opportunity framework.",
+      "Neighborhood effects theory.",
+      "Attachment theory.",
+      "Institutional theory."
+    ],
+    "correct_answer": "Neighborhood effects theory."
+  },
+  {
+    "question": "A social worker examines how agency policies reinforce inequality despite staff’s good intentions. Which principle from institutional theory explains this paradox?",
+    "options": [
+      "The normative pillar that shapes moral judgments.",
+      "Institutional logics that define legitimate actions within social systems.",
+      "The regulative pillar emphasizing rules and sanctions.",
+      "Systems theory concept of equilibrium."
+    ],
+    "correct_answer": "Institutional logics that define legitimate actions within social systems."
+  },
+  {
+    "question": "A practitioner emphasizes that a client’s behavior patterns result from both biological changes and sociocultural expectations associated with age. This reasoning reflects which concept from Elder’s life course perspective?",
+    "options": [
+      "Linked lives.",
+      "Timing of lives.",
+      "Human agency.",
+      "Social capital."
+    ],
+    "correct_answer": "Timing of lives."
+  },
+  {
+    "question": "A social work agency shifts from individual therapy to community-based interventions after analyzing systemic poverty data. Which theoretical orientation most strongly supports this decision?",
+    "options": [
+      "Systems theory emphasizing interdependence between individuals and environments.",
+      "Opportunity theory emphasizing delinquency patterns.",
+      "Attachment theory focusing on emotional bonds.",
+      "Behavioral theory emphasizing conditioning."
+    ],
+    "correct_answer": "Systems theory emphasizing interdependence between individuals and environments."
+  },
+  {
+    "question": "A client believes personal failure is due to fate, while the social worker stresses structural barriers such as limited educational access. Which theoretical tension does this represent?",
+    "options": [
+      "Agency versus structure within the person–environment relationship.",
+      "Individualism versus collectivism within cultural theory.",
+      "Life-span versus stage theories of development.",
+      "Empiricism versus constructivism in research design."
+    ],
+    "correct_answer": "Agency versus structure within the person–environment relationship."
+  },
+  {
+    "question": "A practitioner notices that an elderly client’s sense of purpose improves after mentoring younger community members. Which HBSE principle most directly explains this change?",
+    "options": [
+      "Generativity in late adulthood consistent with life course and psychosocial theories.",
+      "Opportunity framework emphasizing risk behaviors.",
+      "Institutional theory focusing on normative pillars.",
+      "Social capital theory emphasizing structural holes."
+    ],
+    "correct_answer": "Generativity in late adulthood consistent with life course and psychosocial theories."
+  },
+  {
+    "question": "A nonprofit adopts a diversity initiative because funding agencies and accreditation bodies expect it, not because staff perceive its value. Which concept best explains this compliance?",
+    "options": [
+      "Cultural–cognitive pillar of institutional theory.",
+      "Normative pillar guiding ethical conduct.",
+      "Regulative pillar enforcing compliance through sanctions.",
+      "Social learning theory emphasizing modeling."
+    ],
+    "correct_answer": "Regulative pillar enforcing compliance through sanctions."
+  },
+  {
+    "question": "A social worker interprets a client’s coping strategy as both a product of individual resilience and systemic discrimination. This interpretation best demonstrates which HBSE perspective?",
+    "options": [
+      "Ecological systems perspective integrating personal and environmental factors.",
+      "Person-as-context framework emphasizing internal consistency.",
+      "Institutional logic emphasizing macro-level order.",
+      "Life-span theory limited to biological development."
+    ],
+    "correct_answer": "Ecological systems perspective integrating personal and environmental factors."
+  }
+]

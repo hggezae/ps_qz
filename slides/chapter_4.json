@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Which best captures the mediational model central to cognitive-behavioral theory?",
+    "options": [
+      "Behavior is shaped directly by environmental reinforcement.",
+      "Environmental experiences are filtered through cognition, influencing emotion and behavior.",
+      "Cognitive processes occur independently of environmental factors.",
+      "Emotions mediate all behaviors without cognitive input."
+    ],
+    "correct_answer": "Environmental experiences are filtered through cognition, influencing emotion and behavior."
+  },
+  {
+    "question": "What shift marked the transition from behavior therapy to cognitive-behavioral theory?",
+    "options": [
+      "From reciprocal determinism to environmental determinism.",
+      "From cognitive determinism to psychodynamic determinism.",
+      "From environmental determinism to reciprocal determinism.",
+      "From schema-based learning to operant learning."
+    ],
+    "correct_answer": "From environmental determinism to reciprocal determinism."
+  },
+  {
+    "question": "In cognitive-behavioral theory, the stability of cognitive-affective structures is considered:",
+    "options": [
+      "Entirely maladaptive because it resists change.",
+      "Both beneficial for efficiency and risky when maladaptive.",
+      "Irrelevant to long-term behavioral consistency.",
+      "A temporary phase before extinction of cognition."
+    ],
+    "correct_answer": "Both beneficial for efficiency and risky when maladaptive."
+  },
+  {
+    "question": "According to CBT principles, what best describes 'core beliefs'?",
+    "options": [
+      "Surface-level thoughts easily altered by self-reflection.",
+      "Deep cognitive structures that function as tacit truths resistant to change.",
+      "Momentary emotions guiding immediate reactions.",
+      "Culturally transmitted behaviors unrelated to cognition."
+    ],
+    "correct_answer": "Deep cognitive structures that function as tacit truths resistant to change."
+  },
+  {
+    "question": "Which example best represents a 'cognitive error' as defined in CBT?",
+    "options": [
+      "Creating a detailed plan to solve a problem.",
+      "Assuming failure after one setback and ignoring success.",
+      "Rationally evaluating pros and cons before acting.",
+      "Practicing mindfulness to manage stress."
+    ],
+    "correct_answer": "Assuming failure after one setback and ignoring success."
+  },
+  {
+    "question": "Why is self-regulation considered a cornerstone of cognitive-behavioral interventions?",
+    "options": [
+      "It allows individuals to automatically react to stimuli without analysis.",
+      "It emphasizes external control rather than self-monitoring.",
+      "It enables observation and modification of one’s own thoughts, emotions, and behaviors.",
+      "It discourages clients from questioning their cognitive assumptions."
+    ],
+    "correct_answer": "It enables observation and modification of one’s own thoughts, emotions, and behaviors."
+  },
+  {
+    "question": "Which statement about information processing in CBT is most accurate?",
+    "options": [
+      "It is linear, with cognition leading directly to behavior.",
+      "It involves an interconnected system where meaning assignment evokes emotional and behavioral reactions.",
+      "It separates emotion and cognition to analyze behavior objectively.",
+      "It prioritizes physiological responses over cognitive filters."
+    ],
+    "correct_answer": "It involves an interconnected system where meaning assignment evokes emotional and behavioral reactions."
+  },
+  {
+    "question": "How do practitioners typically identify clients’ cognitive content during assessment in CBT?",
+    "options": [
+      "By analyzing physiological data such as heart rate and muscle tension only.",
+      "Through self-monitoring exercises and 'think-aloud' tasks revealing automatic thoughts and beliefs.",
+      "By interpreting dreams and unconscious conflicts.",
+      "Through reinforcement-based behavioral observation alone."
+    ],
+    "correct_answer": "Through self-monitoring exercises and 'think-aloud' tasks revealing automatic thoughts and beliefs."
+  },
+  {
+    "question": "Which factor is emphasized in the collaborative relationship between client and practitioner in CBT?",
+    "options": [
+      "The practitioner serves as the sole expert, guiding the passive client.",
+      "Both bring expertise—clients about their experiences, practitioners about theory and technique.",
+      "Collaboration is discouraged to maintain objectivity.",
+      "The client provides reinforcement while the practitioner observes."
+    ],
+    "correct_answer": "Both bring expertise—clients about their experiences, practitioners about theory and technique."
+  },
+  {
+    "question": "Which criticism of CBT challenges its compatibility with complex social contexts?",
+    "options": [
+      "It overemphasizes historical and psychodynamic factors.",
+      "It can be overly rationalistic and insufficiently focused on contextual social forces.",
+      "It lacks empirical support for multicultural application.",
+      "It ignores behavior change in favor of emotional expression."
+    ],
+    "correct_answer": "It can be overly rationalistic and insufficiently focused on contextual social forces."
+  }
+]
