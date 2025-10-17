@@ -10,9 +10,7 @@ import uuid
 import os
 import sqlite3
 from contextlib import contextmanager
-# Add these imports at the top
 import hashlib
-import os
 
 # Set page configuration
 st.set_page_config(
@@ -322,6 +320,67 @@ def get_quiz_files(path_dir="qa"):
     """Get all quiz files from the qa directory."""
     quiz_files = sorted(glob.glob(f"{path_dir}/**/*.json", recursive=True))
     return quiz_files
+
+def display_load_quiz_page():
+    """Display the page for loading a custom quiz from a JSON file."""
+    st.header("Load Custom Quiz")
+    st.write("Upload a quiz file in JSON format to add it to your quiz collection.")
+    
+    # File uploader
+    uploaded_file = st.file_uploader("Choose a JSON file", type=["json"])
+    
+    if uploaded_file is not None:
+        try:
+            # Read the uploaded file
+            quiz_content = json.loads(uploaded_file.getvalue().decode("utf-8"))
+            
+            # Validate the quiz format
+            if not isinstance(quiz_content, list):
+                st.error("Invalid quiz format. Quiz must be a list of questions.")
+                return
+            
+            # Check if each question has the required fields
+            for i, question in enumerate(quiz_content):
+                if not all(key in question for key in ["question", "options", "correct_answer"]):
+                    st.error(f"Question {i+1} is missing required fields (question, options, correct_answer).")
+                    return
+                if not isinstance(question["options"], list):
+                    st.error(f"Question {i+1} options must be a list.")
+                    return
+                if question["correct_answer"] not in question["options"]:
+                    st.error(f"Question {i+1} correct answer must be one of the options.")
+                    return
+            
+            # Save the quiz file
+            quiz_name = st.text_input("Enter a name for this quiz:", 
+                                     value=uploaded_file.name.replace(".json", ""))
+            
+            if st.button("Save Quiz"):
+                # Create directory if it doesn't exist
+                custom_dir = Path("qa/custom")
+                custom_dir.mkdir(parents=True, exist_ok=True)
+                
+                # Save the file
+                file_path = custom_dir / f"{quiz_name}.json"
+                with open(file_path, "w", encoding="utf-8") as f:
+                    json.dump(quiz_content, f, indent=4)
+                
+                st.success(f"Quiz '{quiz_name}' has been saved successfully!")
+                st.info("The quiz will be available in the quiz selection list.")
+                
+                # Add a button to go to the quiz selection
+                if st.button("Go to Quiz Selection"):
+                    st.session_state.current_questions = None
+                    st.session_state.user_answers = None
+                    st.session_state.submitted = False
+                    st.session_state.current_quiz_index = None
+                    st.session_state.page = "home"
+                    st.rerun()
+                
+        except json.JSONDecodeError:
+            st.error("Invalid JSON format. Please check your file.")
+        except Exception as e:
+            st.error(f"An error occurred: {str(e)}")
 
 def load_questions(file_path):
     """Load questions from a JSON file."""
@@ -644,8 +703,18 @@ def display_quiz_questions(current_quiz_file=None):
             
             st.divider()
         
-        # Create two columns for submit and skip buttons
-        col1, col2 = st.columns(2)
+        # Create three columns for submit, return to list, and skip buttons
+        col1, col2, col3 = st.columns(3)
+        
+        # Return to Quiz List button
+        with col2:
+            if st.button("Return to Quiz List"):
+                # Reset quiz state
+                st.session_state.current_questions = None
+                st.session_state.user_answers = None
+                st.session_state.submitted = False
+                st.session_state.current_quiz_index = None
+                st.rerun()
         
         # Submit button
         if not st.session_state.submitted:
@@ -657,6 +726,12 @@ def display_quiz_questions(current_quiz_file=None):
                     else:
                         st.session_state.submitted = True
                         st.rerun()
+            
+            # Skip button (only show if not submitted)
+            with col3:
+                if st.button("Skip Remaining"):
+                    st.session_state.submitted = True
+                    st.rerun()
 
 def display_quiz_results(current_quiz_file=None, quiz_files=None):
     """Display quiz results after submission."""
@@ -1085,7 +1160,7 @@ def main():
     
     # Add navigation
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ["Home", "Saved Sessions", "Analytics", "Achievements"])
+    page = st.sidebar.radio("Go to", ["Home", "Load Quiz", "Saved Sessions", "Analytics", "Achievements"])
     
     if page == "Home":
         # Existing quiz functionality
@@ -1102,7 +1177,9 @@ def main():
                 if not st.session_state.is_exam and st.session_state.current_quiz_index is not None:
                     current_quiz_file = quiz_files[st.session_state.current_quiz_index]
                 display_quiz_results(current_quiz_file, quiz_files)
-                display_quiz_review(current_quiz_file)
+    elif page == "Load Quiz":
+        # Display the load quiz page
+        display_load_quiz_page()
     
     elif page == "Saved Sessions":
         display_saved_sessions_page()
